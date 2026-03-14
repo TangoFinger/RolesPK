@@ -12,18 +12,20 @@
     "coverImage": "",
     "accentColor": "#7c3aed",
     "stats": { "attack": 96, "defense": 99, "speed": 98, "intelligence": 96, "stamina": 92, "special": 99 },
-    "overallScore": 7800,
-    "baseScore": 7800,
+    "overallScore": 8400,
+    "baseScore": 8400,
     "forms": [
-      { "name": "无下限（蓝）", "description": "引发无限收缩的虚式", "overallScore": 5000, "stats": { "attack": 82, "defense": 95, "speed": 92, "intelligence": 96, "stamina": 82, "special": 88 } },
-      { "name": "无下限（红）", "description": "引发无限膨胀的反转术式", "overallScore": 6200, "stats": { "attack": 90, "defense": 97, "speed": 96, "intelligence": 96, "stamina": 87, "special": 94 } },
-      { "name": "无量空处", "description": "领域展开·无限空间认知涌入", "overallScore": 7800, "stats": { "attack": 96, "defense": 99, "speed": 98, "intelligence": 96, "stamina": 92, "special": 99 } }
+      { "name": "无下限（蓝）", "description": "引发无限收缩的虚式", "overallScore": 5500, "stats": { "attack": 82, "defense": 95, "speed": 92, "intelligence": 96, "stamina": 82, "special": 88 } },
+      { "name": "无下限（红）", "description": "引发无限膨胀的反转术式", "overallScore": 7000, "stats": { "attack": 90, "defense": 97, "speed": 96, "intelligence": 96, "stamina": 87, "special": 94 } },
+      { "name": "无量空处", "description": "领域展开·无限空间认知涌入", "overallScore": 8400, "stats": { "attack": 96, "defense": 99, "speed": 98, "intelligence": 96, "stamina": 92, "special": 99 } }
     ],
     "evidence": [
       { "desc": "领域展开「无量空处」使敌人脑部认知过载陷入无力状态", "source": "咒术回战 第15话" },
-      { "desc": "单人击败特级咒灵真人，与宿傩持续交战", "source": "咒术回战 第234话" }
+      { "desc": "「无下限」令任何物理攻击在到达前无限减速，常规手段无法破防", "source": "咒术回战 原著设定" },
+      { "desc": "与宿傩完全体激战，宿傩须借助神器「天逆鉾」方能斩断无限，而非正面破防", "source": "咒术回战 第236话" },
+      { "desc": "六眼赋予术式精度与咒力效率的极限，被宿傩认定为最麻烦的对手", "source": "咒术回战 第221话" }
     ],
-    "rank": 4
+    "rank": 3
   },
   {
     "id": "yuji",
@@ -114,18 +116,18 @@
     "coverImage": "",
     "accentColor": "#0ea5e9",
     "stats": { "attack": 94, "defense": 88, "speed": 91, "intelligence": 88, "stamina": 94, "special": 97 },
-    "overallScore": 7200,
-    "baseScore": 7200,
+    "overallScore": 6900,
+    "baseScore": 6900,
     "forms": [
-      { "name": "基础状态", "description": "庞大咒力加持的剑术与术式复制", "overallScore": 5200, "stats": { "attack": 85, "defense": 80, "speed": 83, "intelligence": 88, "stamina": 85, "special": 86 } },
-      { "name": "里香显现", "description": "诅咒里香完全降临，咒力量爆发", "overallScore": 6500, "stats": { "attack": 90, "defense": 85, "speed": 88, "intelligence": 88, "stamina": 91, "special": 93 } },
-      { "name": "完全体·术式复制·里香", "description": "里香完全解放配合任意术式复制", "overallScore": 7200, "stats": { "attack": 94, "defense": 88, "speed": 91, "intelligence": 88, "stamina": 94, "special": 97 } }
+      { "name": "基础状态", "description": "庞大咒力加持的剑术与术式复制", "overallScore": 5000, "stats": { "attack": 85, "defense": 80, "speed": 83, "intelligence": 88, "stamina": 85, "special": 86 } },
+      { "name": "里香显现", "description": "诅咒里香完全降临，咒力量爆发", "overallScore": 6200, "stats": { "attack": 90, "defense": 85, "speed": 88, "intelligence": 88, "stamina": 91, "special": 93 } },
+      { "name": "完全体·术式复制·里香", "description": "里香完全解放配合任意术式复制", "overallScore": 6900, "stats": { "attack": 94, "defense": 88, "speed": 91, "intelligence": 88, "stamina": 94, "special": 97 } }
     ],
     "evidence": [
       { "desc": "以复制的反転術式从死亡边缘治愈自己，并击败真人", "source": "咒术回战 第177话" },
       { "desc": "五条悟认定其咒力总量足以与特级咒灵抗衡", "source": "咒术回战 第0话" }
     ],
-    "rank": 5
+    "rank": 10
   },
   {
     "id": "toji",

@@ -22,7 +22,7 @@
     "evidence": [
       { "desc": "Gear5状态与四皇凯多战斗", "source": "海贼王 第1049话" }
     ],
-    "rank": 11
+    "rank": 13
   },
   {
     "id": "roger",
@@ -37,16 +37,16 @@
     "coverImage": "",
     "accentColor": "#f59e0b",
     "stats": { "attack": 99, "defense": 95, "speed": 96, "intelligence": 92, "stamina": 97, "special": 99 },
-    "overallScore": 9500,
-    "baseScore": 9500,
+    "overallScore": 8000,
+    "baseScore": 8000,
     "forms": [
-      { "name": "常规战斗", "description": "霸气全开的巅峰状态", "overallScore": 9500, "stats": { "attack": 99, "defense": 95, "speed": 96, "intelligence": 92, "stamina": 97, "special": 99 } }
+      { "name": "常规战斗", "description": "霸气全开的巅峰状态", "overallScore": 8000, "stats": { "attack": 99, "defense": 95, "speed": 96, "intelligence": 92, "stamina": 97, "special": 99 } }
     ],
     "evidence": [
       { "desc": "与白胡子势均力敌对战三天三夜", "source": "海贼王 第966话" },
       { "desc": "被称为史上最强的海贼", "source": "海贼王 原著" }
     ],
-    "rank": 1
+    "rank": 3
   },
   {
     "id": "whitebeard",
@@ -61,16 +61,16 @@
     "coverImage": "",
     "accentColor": "#6b7280",
     "stats": { "attack": 98, "defense": 96, "speed": 78, "intelligence": 88, "stamina": 95, "special": 99 },
-    "overallScore": 9200,
-    "baseScore": 9200,
+    "overallScore": 7800,
+    "baseScore": 7800,
     "forms": [
-      { "name": "常规战斗", "description": "震震果实全力状态", "overallScore": 9200, "stats": { "attack": 98, "defense": 96, "speed": 78, "intelligence": 88, "stamina": 95, "special": 99 } },
-      { "name": "垂死之战", "description": "身中枪伤与剑伤后的顶上战争末期", "overallScore": 7000, "stats": { "attack": 90, "defense": 70, "speed": 60, "intelligence": 88, "stamina": 60, "special": 95 } }
+      { "name": "常规战斗", "description": "震震果实全力状态", "overallScore": 7800, "stats": { "attack": 98, "defense": 96, "speed": 78, "intelligence": 88, "stamina": 95, "special": 99 } },
+      { "name": "垂死之战", "description": "身中枪伤与剑伤后的顶上战争末期", "overallScore": 5800, "stats": { "attack": 90, "defense": 70, "speed": 60, "intelligence": 88, "stamina": 60, "special": 95 } }
     ],
     "evidence": [
       { "desc": "顶上战争身中267处弹伤、152处刀伤、46处炮伤，背对敌人站立而死", "source": "海贼王 第577话" }
     ],
-    "rank": 2
+    "rank": 5
   },
   {
     "id": "kaido",
@@ -85,17 +85,17 @@
     "coverImage": "",
     "accentColor": "#7c3aed",
     "stats": { "attack": 99, "defense": 99, "speed": 82, "intelligence": 78, "stamina": 99, "special": 97 },
-    "overallScore": 9400,
-    "baseScore": 9400,
+    "overallScore": 7900,
+    "baseScore": 7900,
     "forms": [
-      { "name": "人形态", "description": "霸气全覆的人形战斗", "overallScore": 7500, "stats": { "attack": 95, "defense": 99, "speed": 82, "intelligence": 78, "stamina": 99, "special": 90 } },
-      { "name": "青龙形态", "description": "幻兽种·青龙完全体", "overallScore": 9400, "stats": { "attack": 99, "defense": 99, "speed": 82, "intelligence": 78, "stamina": 99, "special": 97 } },
-      { "name": "武装形态（Boro Breath）", "description": "龙形喷射霸气火焰", "overallScore": 9000, "stats": { "attack": 99, "defense": 99, "speed": 70, "intelligence": 78, "stamina": 99, "special": 95 } }
+      { "name": "人形态", "description": "霸气全覆的人形战斗", "overallScore": 6200, "stats": { "attack": 95, "defense": 99, "speed": 82, "intelligence": 78, "stamina": 99, "special": 90 } },
+      { "name": "青龙形态", "description": "幻兽种·青龙完全体", "overallScore": 7900, "stats": { "attack": 99, "defense": 99, "speed": 82, "intelligence": 78, "stamina": 99, "special": 97 } },
+      { "name": "武装形态（Boro Breath）", "description": "龙形喷射霸气火焰", "overallScore": 7400, "stats": { "attack": 99, "defense": 99, "speed": 70, "intelligence": 78, "stamina": 99, "special": 95 } }
     ],
     "evidence": [
       { "desc": "从玛丽乔亚坠落海中而毫发无损", "source": "海贼王 第795话" }
     ],
-    "rank": 3
+    "rank": 4
   },
   {
     "id": "bigmom",
@@ -110,16 +110,16 @@
     "coverImage": "",
     "accentColor": "#e11d48",
     "stats": { "attack": 97, "defense": 95, "speed": 75, "intelligence": 85, "stamina": 97, "special": 98 },
-    "overallScore": 8900,
-    "baseScore": 8900,
+    "overallScore": 7600,
+    "baseScore": 7600,
     "forms": [
-      { "name": "常规战斗", "description": "三仆从辅助的战斗形态", "overallScore": 8900, "stats": { "attack": 97, "defense": 95, "speed": 75, "intelligence": 85, "stamina": 97, "special": 98 } },
-      { "name": "狂饿暴走", "description": "陷入暴食发作的失控状态", "overallScore": 9200, "stats": { "attack": 99, "defense": 99, "speed": 80, "intelligence": 30, "stamina": 99, "special": 95 } }
+      { "name": "常规战斗", "description": "三仆从辅助的战斗形态", "overallScore": 7600, "stats": { "attack": 97, "defense": 95, "speed": 75, "intelligence": 85, "stamina": 97, "special": 98 } },
+      { "name": "狂饿暴走", "description": "陷入暴食发作的失控状态，理智归零但战力暴增", "overallScore": 7600, "stats": { "attack": 99, "defense": 99, "speed": 80, "intelligence": 30, "stamina": 99, "special": 95 } }
     ],
     "evidence": [
       { "desc": "徒手接下炮击，以一人之力对抗整支海军", "source": "海贼王 原著" }
     ],
-    "rank": 4
+    "rank": 6
   },
   {
     "id": "shanks",
@@ -134,16 +134,16 @@
     "coverImage": "",
     "accentColor": "#dc2626",
     "stats": { "attack": 97, "defense": 93, "speed": 95, "intelligence": 96, "stamina": 94, "special": 98 },
-    "overallScore": 9100,
-    "baseScore": 9100,
+    "overallScore": 7700,
+    "baseScore": 7700,
     "forms": [
-      { "name": "常规战斗", "description": "单臂剑术与霸气的极致运用", "overallScore": 9100, "stats": { "attack": 97, "defense": 93, "speed": 95, "intelligence": 96, "stamina": 94, "special": 98 } }
+      { "name": "常规战斗", "description": "单臂剑术与霸气的极致运用", "overallScore": 7700, "stats": { "attack": 97, "defense": 93, "speed": 95, "intelligence": 96, "stamina": 94, "special": 98 } }
     ],
     "evidence": [
       { "desc": "仅凭霸气令顶上战争双方停战", "source": "海贼王 第580话" },
       { "desc": "与白胡子旗鼓相当的剑术对决", "source": "海贼王 第434话" }
     ],
-    "rank": 5
+    "rank": 7
   },
   {
     "id": "aokiji",
@@ -158,15 +158,15 @@
     "coverImage": "",
     "accentColor": "#38bdf8",
     "stats": { "attack": 93, "defense": 92, "speed": 90, "intelligence": 90, "stamina": 88, "special": 96 },
-    "overallScore": 7800,
-    "baseScore": 7800,
+    "overallScore": 6600,
+    "baseScore": 6600,
     "forms": [
-      { "name": "常规战斗", "description": "冰系能力全力输出", "overallScore": 7800, "stats": { "attack": 93, "defense": 92, "speed": 90, "intelligence": 90, "stamina": 88, "special": 96 } }
+      { "name": "常规战斗", "description": "冰系能力全力输出", "overallScore": 6600, "stats": { "attack": 93, "defense": 92, "speed": 90, "intelligence": 90, "stamina": 88, "special": 96 } }
     ],
     "evidence": [
       { "desc": "与赤犬在小岛决战十天，将整座岛分成冰火两半", "source": "海贼王 第700话" }
     ],
-    "rank": 14
+    "rank": 16
   },
   {
     "id": "kizaru",
@@ -181,15 +181,15 @@
     "coverImage": "",
     "accentColor": "#fbbf24",
     "stats": { "attack": 96, "defense": 88, "speed": 99, "intelligence": 82, "stamina": 85, "special": 97 },
-    "overallScore": 8100,
-    "baseScore": 8100,
+    "overallScore": 6800,
+    "baseScore": 6800,
     "forms": [
-      { "name": "常规战斗", "description": "光速移动与激光炮全开", "overallScore": 8100, "stats": { "attack": 96, "defense": 88, "speed": 99, "intelligence": 82, "stamina": 85, "special": 97 } }
+      { "name": "常规战斗", "description": "光速移动与激光炮全开", "overallScore": 6800, "stats": { "attack": 96, "defense": 88, "speed": 99, "intelligence": 82, "stamina": 85, "special": 97 } }
     ],
     "evidence": [
       { "desc": "以光速踢飞索隆等多名草帽船员", "source": "海贼王 第510话" }
     ],
-    "rank": 12
+    "rank": 15
   },
   {
     "id": "akainu",
@@ -204,16 +204,16 @@
     "coverImage": "",
     "accentColor": "#ef4444",
     "stats": { "attack": 98, "defense": 94, "speed": 82, "intelligence": 86, "stamina": 92, "special": 98 },
-    "overallScore": 8400,
-    "baseScore": 8400,
+    "overallScore": 7100,
+    "baseScore": 7100,
     "forms": [
-      { "name": "常规战斗", "description": "岩浆能力全力输出", "overallScore": 8400, "stats": { "attack": 98, "defense": 94, "speed": 82, "intelligence": 86, "stamina": 92, "special": 98 } }
+      { "name": "常规战斗", "description": "岩浆能力全力输出", "overallScore": 7100, "stats": { "attack": 98, "defense": 94, "speed": 82, "intelligence": 86, "stamina": 92, "special": 98 } }
     ],
     "evidence": [
       { "desc": "与青雉决战十天后当选海军元帅", "source": "海贼王 第700话" },
       { "desc": "顶上战争击杀火拳艾斯", "source": "海贼王 第574话" }
     ],
-    "rank": 8
+    "rank": 11
   },
   {
     "id": "zoro",
@@ -228,17 +228,17 @@
     "coverImage": "",
     "accentColor": "#16a34a",
     "stats": { "attack": 95, "defense": 90, "speed": 88, "intelligence": 72, "stamina": 95, "special": 93 },
-    "overallScore": 6800,
-    "baseScore": 6800,
+    "overallScore": 6400,
+    "baseScore": 6400,
     "forms": [
-      { "name": "常规三刀流", "description": "三刀流的基础战斗形态", "overallScore": 4000, "stats": { "attack": 80, "defense": 78, "speed": 80, "intelligence": 72, "stamina": 85, "special": 75 } },
-      { "name": "鬼斩·修罗", "description": "九刀流·阎王之名", "overallScore": 6800, "stats": { "attack": 95, "defense": 90, "speed": 88, "intelligence": 72, "stamina": 95, "special": 93 } }
+      { "name": "常规三刀流", "description": "三刀流的基础战斗形态", "overallScore": 3800, "stats": { "attack": 80, "defense": 78, "speed": 80, "intelligence": 72, "stamina": 85, "special": 75 } },
+      { "name": "鬼斩·修罗", "description": "九刀流·阎王之名", "overallScore": 6400, "stats": { "attack": 95, "defense": 90, "speed": 88, "intelligence": 72, "stamina": 95, "special": 93 } }
     ],
     "evidence": [
       { "desc": "以一刀击败米霍克的弟子达兹·波涅斯", "source": "海贼王 原著" },
       { "desc": "顶上战争后修炼，能以一击重创大将级对手", "source": "海贼王 新世界篇" }
     ],
-    "rank": 16
+    "rank": 17
   },
   {
     "id": "sanji",
@@ -253,16 +253,16 @@
     "coverImage": "",
     "accentColor": "#f59e0b",
     "stats": { "attack": 92, "defense": 85, "speed": 96, "intelligence": 80, "stamina": 90, "special": 88 },
-    "overallScore": 6400,
-    "baseScore": 6400,
+    "overallScore": 6100,
+    "baseScore": 6100,
     "forms": [
-      { "name": "地狱腿法", "description": "普通燃火腿战斗形态", "overallScore": 4200, "stats": { "attack": 80, "defense": 75, "speed": 88, "intelligence": 80, "stamina": 80, "special": 78 } },
-      { "name": "Ifrit Jambe", "description": "改造人觉醒·极焰腿", "overallScore": 6400, "stats": { "attack": 92, "defense": 85, "speed": 96, "intelligence": 80, "stamina": 90, "special": 88 } }
+      { "name": "地狱腿法", "description": "普通燃火腿战斗形态", "overallScore": 4000, "stats": { "attack": 80, "defense": 75, "speed": 88, "intelligence": 80, "stamina": 80, "special": 78 } },
+      { "name": "Ifrit Jambe", "description": "改造人觉醒·极焰腿", "overallScore": 6100, "stats": { "attack": 92, "defense": 85, "speed": 96, "intelligence": 80, "stamina": 90, "special": 88 } }
     ],
     "evidence": [
       { "desc": "以Ifrit Jambe重创玛格瑞拉", "source": "海贼王 第1031话" }
     ],
-    "rank": 18
+    "rank": 20
   },
   {
     "id": "nami",

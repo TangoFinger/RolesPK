@@ -15,9 +15,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center text-white font-black text-sm shadow-lg shadow-orange-500/30">战</div>
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center text-white font-black text-sm shadow-lg shadow-orange-500/30">R</div>
             <span className="font-black text-xl tracking-tight">
-              <span className="text-gradient">战力</span><span className="text-white">图谱</span>
+              <span className="text-gradient">Roles</span><span className="text-white">PK</span>
             </span>
           </Link>
           <div className="hidden md:flex items-center gap-1">

@@ -23,9 +23,7 @@ export default function HomePage() {
               全宇宙战力数据库 · 持续更新中
             </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-5 leading-tight">
-              <span className="text-gradient">战力图谱</span>
-              <br />
-              <span className="text-white text-3xl sm:text-4xl font-bold">影视人物战斗力终极排行</span>
+              <span className="text-white text-3xl sm:text-4xl font-bold">影视/动漫角色战斗力终极排行</span>
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
               收录 {characters.length}+ 部影视/动漫作品的角色战力数据，六维评分体系，跨宇宙横向比较，找到你心目中最强的那个人。
@@ -163,7 +161,7 @@ export default function HomePage() {
       </section>
 
       <footer className="border-t border-[#2d2d4e] py-8 px-4 text-center text-gray-600 text-sm">
-        战力图谱 PowerRank · 数据仅供娱乐参考 · 版权归原作者所有
+        RolesPK · 数据仅供娱乐参考 · 版权归原作者所有
       </footer>
     </div>
   )

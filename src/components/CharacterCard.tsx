@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import type { Character } from '../types'
-import { getUniverseById } from '../data/mockData'
+import { useAppDataContext } from '../App'
 
 interface Props { character: Character; showRank?: boolean }
 
 export default function CharacterCard({ character, showRank }: Props) {
-  const universe = getUniverseById(character.universeId)
+  const { universes } = useAppDataContext()
+  const universe = universes.find(u => u.id === character.universeId)
   const scoreColor = character.overallScore >= 8000 ? 'text-orange-400' : character.overallScore >= 5000 ? 'text-yellow-400' : character.overallScore >= 3000 ? 'text-green-400' : 'text-gray-400'
 
   return (

@@ -1,17 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import type { BattleRecord } from '../types'
-import { getCharacterById, getUniverseById } from '../data/mockData'
+import { useAppDataContext } from '../App'
 
 export default function BattleCard({ battle }: { battle: BattleRecord }) {
-  const charA = getCharacterById(battle.charA)
-  const charB = getCharacterById(battle.charB)
+  const { characters, universes } = useAppDataContext()
+  const charA = characters.find(c => c.id === battle.charA)
+  const charB = characters.find(c => c.id === battle.charB)
   if (!charA || !charB) return null
   const total = battle.votesA + battle.votesB
   const pctA = Math.round((battle.votesA / total) * 100)
   const pctB = 100 - pctA
-  const uA = getUniverseById(charA.universeId)
-  const uB = getUniverseById(charB.universeId)
+  const uA = universes.find(u => u.id === charA.universeId)
+  const uB = universes.find(u => u.id === charB.universeId)
 
   return (
     <Link to={`/battle`}>

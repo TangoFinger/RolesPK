@@ -1,8 +1,7 @@
 import type { Character, Skill, BattleCharacter, BattleEvent, BattleRound, BattleResult } from '../types'
-import { skillsMap } from '../data/mockData'
 
 // ============ 初始化对战角色 ============
-export function initBattleCharacter(character: Character): BattleCharacter {
+export function initBattleCharacter(character: Character, skillsMap: Record<string, Skill[]>): BattleCharacter {
   const maxHp = Math.round(character.overallScore * 2)
   const maxStamina = Math.round(character.stats.stamina * 10)
   const skills = skillsMap[character.id] ?? []
@@ -104,9 +103,9 @@ function generateEndNarrative(winner: BattleCharacter, loser: BattleCharacter, t
 }
 
 // ============ 核心模拟函数 ============
-export function simulateBattle(charA: Character, charB: Character): BattleResult {
-  const bcA = initBattleCharacter(charA)
-  const bcB = initBattleCharacter(charB)
+export function simulateBattle(charA: Character, charB: Character, skillsMap: Record<string, Skill[]>): BattleResult {
+  const bcA = initBattleCharacter(charA, skillsMap)
+  const bcB = initBattleCharacter(charB, skillsMap)
   const rounds: BattleRound[] = []
   const MAX_ROUNDS = 12
 

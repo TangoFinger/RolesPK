@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { characters, universes, getUniverseById } from '../data/mockData'
+import { useAppDataContext } from '../App'
 
 type SortKey = 'overall' | 'attack' | 'defense' | 'speed' | 'intelligence' | 'stamina' | 'special'
 const SORT_TABS: { key: SortKey; label: string; icon: string }[] = [
@@ -14,6 +14,7 @@ const SORT_TABS: { key: SortKey; label: string; icon: string }[] = [
 ]
 
 export default function RankingPage() {
+  const { characters, universes } = useAppDataContext()
   const [sortKey, setSortKey] = useState<SortKey>('overall')
   const [universeFilter, setUniverseFilter] = useState('all')
 
@@ -97,7 +98,7 @@ export default function RankingPage() {
             <div className="col-span-3 text-right">{SORT_TABS.find(t => t.key === sortKey)?.icon} {SORT_TABS.find(t => t.key === sortKey)?.label}</div>
           </div>
           {sorted.map((char, idx) => {
-            const universe = getUniverseById(char.universeId)
+            const universe = universes.find(u => u.id === char.universeId)
             const score = sortKey === 'overall' ? char.overallScore : char.stats[sortKey]
             const maxScore = sortKey === 'overall' ? 10000 : 100
             return (

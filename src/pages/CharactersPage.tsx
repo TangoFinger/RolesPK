@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import CharacterCard from '../components/CharacterCard'
-import { characters, universes } from '../data/mockData'
+import { useAppDataContext } from '../App'
 
 const SORT_OPTIONS = [
   { value: 'score-desc', label: '战力从高到低' },
@@ -10,6 +10,7 @@ const SORT_OPTIONS = [
 ]
 
 export default function CharactersPage() {
+  const { characters, universes } = useAppDataContext()
   const [searchParams] = useSearchParams()
   const [search, setSearch] = useState('')
   const [universeFilter, setUniverseFilter] = useState(searchParams.get('universe') || 'all')
@@ -28,7 +29,7 @@ export default function CharactersPage() {
       case 'name': list.sort((a, b) => a.name.localeCompare(b.name, 'zh')); break
     }
     return list
-  }, [search, universeFilter, sort])
+  }, [characters, search, universeFilter, sort])
 
   return (
     <div className="min-h-screen pt-20 pb-16 px-4">

@@ -1,0 +1,9 @@
+[
+  { "id": "dbz", "title": "龙珠Z", "type": "anime", "universeId": "dragon-ball", "year": 1989, "cover": "" },
+  { "id": "dbs", "title": "龙珠超", "type": "anime", "universeId": "dragon-ball", "year": 2015, "cover": "" },
+  { "id": "avengers", "title": "复仇者联盟", "type": "film", "universeId": "mcu", "year": 2012, "cover": "" },
+  { "id": "naruto-s", "title": "火影忍者疾风传", "type": "anime", "universeId": "naruto", "year": 2007, "cover": "" },
+  { "id": "one-piece-s", "title": "海贼王", "type": "anime", "universeId": "one-piece", "year": 1999, "cover": "" },
+  { "id": "aot-s", "title": "进击的巨人", "type": "anime", "universeId": "attack-on-titan", "year": 2013, "cover": "" },
+  { "id": "bleach-s", "title": "死神 BLEACH", "type": "anime", "universeId": "bleach", "year": 2004, "cover": "" }
+]

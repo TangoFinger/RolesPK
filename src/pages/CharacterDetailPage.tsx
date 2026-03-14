@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import RadarChart from '../components/RadarChart'
-import { getCharacterById, getUniverseById, getWorkById, characters, skillsMap } from '../data/mockData'
+import { useAppDataContext } from '../App'
 import type { Skill } from '../types'
 
 const STAT_LABELS: Record<string, string> = { attack: '攻击力', defense: '防御力', speed: '速度', intelligence: '智力', stamina: '持久力', special: '特殊能力' }
@@ -57,7 +57,9 @@ function SkillCard({ skill, accentColor }: { skill: Skill; accentColor: string }
 export default function CharacterDetailPage() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
-  const char = getCharacterById(id || '')
+  const { characters, universes, works, skillsMap } = useAppDataContext()
+
+  const char = characters.find(c => c.id === (id || ''))
   const [activeForm, setActiveForm] = useState(char?.forms.length ? char.forms.length - 1 : 0)
 
   if (!char) return (
@@ -68,8 +70,8 @@ export default function CharacterDetailPage() {
     </div>
   )
 
-  const universe = getUniverseById(char.universeId)
-  const work = getWorkById(char.workId)
+  const universe = universes.find(u => u.id === char.universeId)
+  const work = works.find(w => w.id === char.workId)
   const currentForm = char.forms[activeForm]
   const displayStats = currentForm ? currentForm.stats : char.stats
   const displayScore = currentForm ? currentForm.overallScore : char.overallScore

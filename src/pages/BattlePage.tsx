@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { characters, skillsMap } from '../data/mockData'
+import { useAppDataContext } from '../App'
 import { simulateBattle } from '../engine/battleEngine'
 import type { BattleResult, BattleEvent, Character, Skill } from '../types'
 
@@ -46,6 +46,7 @@ function CharacterSelector({
   onSelect: (c: Character) => void
   exclude?: string
 }) {
+  const { characters, skillsMap } = useAppDataContext()
   const [open, setOpen] = useState(false)
   const list = characters.filter(c => c.id !== exclude)
   const skills = selected ? (skillsMap[selected.id] ?? []) : []
@@ -225,6 +226,7 @@ interface HistoryEntry {
 
 // ============ 主页面 ============
 export default function BattlePage() {
+  const { characters, skillsMap } = useAppDataContext()
   const [charA, setCharA] = useState<Character | null>(null)
   const [charB, setCharB] = useState<Character | null>(null)
   const [result, setResult] = useState<BattleResult | null>(null)
@@ -252,7 +254,7 @@ export default function BattlePage() {
     setDisplayedEvents([])
     setResult(null)
 
-    const battleResult = simulateBattle(charA, charB)
+    const battleResult = simulateBattle(charA, charB, skillsMap)
     setResult(battleResult)
 
     const maxA = charA.overallScore * 2

@@ -1,0 +1,10 @@
+[
+  { "id": "dragon-ball", "name": "龙珠宇宙", "tier": "S", "tierCoeff": 1.5, "color": "#f97316" },
+  { "id": "marvel", "name": "漫威宇宙", "tier": "A", "tierCoeff": 1.2, "color": "#e11d48" },
+  { "id": "dc", "name": "DC宇宙", "tier": "A", "tierCoeff": 1.2, "color": "#2563eb" },
+  { "id": "naruto", "name": "火影宇宙", "tier": "B", "tierCoeff": 1.0, "color": "#f59e0b" },
+  { "id": "one-piece", "name": "海贼王宇宙", "tier": "B", "tierCoeff": 1.0, "color": "#10b981" },
+  { "id": "attack-on-titan", "name": "进击的巨人", "tier": "C", "tierCoeff": 0.8, "color": "#6b7280" },
+  { "id": "mcu", "name": "MCU", "tier": "A", "tierCoeff": 1.1, "color": "#dc2626" },
+  { "id": "bleach", "name": "死神宇宙", "tier": "B", "tierCoeff": 1.0, "color": "#38bdf8" }
+]

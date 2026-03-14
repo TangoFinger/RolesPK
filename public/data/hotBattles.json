@@ -1,0 +1,6 @@
+[
+  { "id": "b1", "charA": "goku", "charB": "naruto", "votesA": 8432, "votesB": 5621, "hot": true },
+  { "id": "b2", "charA": "luffy", "charB": "naruto", "votesA": 6120, "votesB": 5980, "hot": true },
+  { "id": "b3", "charA": "thanos", "charB": "vegeta", "votesA": 4210, "votesB": 7830, "hot": true },
+  { "id": "b4", "charA": "sasuke", "charB": "ironman", "votesA": 9100, "votesB": 2300, "hot": false }
+]

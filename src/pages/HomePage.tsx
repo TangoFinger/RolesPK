@@ -2,11 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import CharacterCard from '../components/CharacterCard'
 import BattleCard from '../components/BattleCard'
-import { characters, hotBattles, universes } from '../data/mockData'
-
-const topChars = [...characters].sort((a, b) => b.overallScore - a.overallScore).slice(0, 6)
+import { useAppDataContext } from '../App'
 
 export default function HomePage() {
+  const { characters, hotBattles, universes } = useAppDataContext()
+  const topChars = [...characters].sort((a, b) => b.overallScore - a.overallScore).slice(0, 6)
+
   return (
     <div className="min-h-screen">
       {/* Hero */}
@@ -36,7 +37,6 @@ export default function HomePage() {
               <Link to="/battle" className="px-8 py-3 bg-gradient-to-r from-red-600 to-orange-600 text-white font-bold rounded-xl hover:from-red-500 hover:to-orange-500 transition-all shadow-xl shadow-red-500/30 hover:scale-105 text-base">
                 模拟对战 🔥
               </Link>
-
             </div>
           </div>
           <div className="grid grid-cols-3 gap-4 max-w-sm mx-auto">

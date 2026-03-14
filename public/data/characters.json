@@ -1,0 +1,252 @@
+[
+  {
+    "id": "goku",
+    "name": "孙悟空",
+    "alias": ["卡卡罗特", "Son Goku"],
+    "workId": "dbs",
+    "universeId": "dragon-ball",
+    "tags": ["超级赛亚人", "宇宙级", "力量型", "速度型"],
+    "race": "赛亚人",
+    "faction": "正义",
+    "description": "来自赛亚星的地球守护者，不断突破极限的最强战士，掌握超级赛亚人神·超级赛亚人变换。",
+    "coverImage": "",
+    "accentColor": "#f97316",
+    "stats": { "attack": 99, "defense": 88, "speed": 97, "intelligence": 72, "stamina": 95, "special": 98 },
+    "overallScore": 9800,
+    "baseScore": 6533,
+    "forms": [
+      { "name": "普通态", "description": "基础状态", "overallScore": 3200, "stats": { "attack": 70, "defense": 65, "speed": 68, "intelligence": 72, "stamina": 75, "special": 60 } },
+      { "name": "超级赛亚人", "description": "第一次超越极限", "overallScore": 5500, "stats": { "attack": 82, "defense": 75, "speed": 80, "intelligence": 72, "stamina": 80, "special": 78 } },
+      { "name": "超级赛亚人神", "description": "神之力量", "overallScore": 7800, "stats": { "attack": 91, "defense": 84, "speed": 90, "intelligence": 72, "stamina": 88, "special": 90 } },
+      { "name": "超级赛亚人·神蓝", "description": "神之力与赛亚人之力的融合", "overallScore": 9800, "stats": { "attack": 99, "defense": 88, "speed": 97, "intelligence": 72, "stamina": 95, "special": 98 } }
+    ],
+    "evidence": [
+      { "desc": "与贝吉塔的战斗中展现神蓝等级战力", "source": "龙珠超 第27集" },
+      { "desc": "本能之极·完全体突破界王神等级", "source": "龙珠超 第129集" }
+    ],
+    "rank": 1
+  },
+  {
+    "id": "vegeta",
+    "name": "贝吉塔",
+    "alias": ["赛亚人王子", "Vegeta"],
+    "workId": "dbs",
+    "universeId": "dragon-ball",
+    "tags": ["超级赛亚人", "宇宙级", "力量型", "王族"],
+    "race": "赛亚人",
+    "faction": "正义",
+    "description": "赛亚人王子，自尊心极强的精英战士，从宿敌到盟友，战力始终与悟空并驾齐驱。",
+    "coverImage": "",
+    "accentColor": "#8b5cf6",
+    "stats": { "attack": 98, "defense": 87, "speed": 95, "intelligence": 85, "stamina": 93, "special": 95 },
+    "overallScore": 9650,
+    "baseScore": 6433,
+    "forms": [
+      { "name": "普通态", "description": "基础状态", "overallScore": 3100, "stats": { "attack": 68, "defense": 63, "speed": 66, "intelligence": 85, "stamina": 72, "special": 58 } },
+      { "name": "超级赛亚人蓝", "description": "超越极限的蓝发形态", "overallScore": 9650, "stats": { "attack": 98, "defense": 87, "speed": 95, "intelligence": 85, "stamina": 93, "special": 95 } }
+    ],
+    "evidence": [
+      { "desc": "神蓝等级与悟空势均力敌", "source": "龙珠超 第27集" }
+    ],
+    "rank": 2
+  },
+  {
+    "id": "naruto",
+    "name": "漩涡鸣人",
+    "alias": ["七代目火影", "Naruto Uzumaki"],
+    "workId": "naruto-s",
+    "universeId": "naruto",
+    "tags": ["忍者", "尾兽人柱力", "仙术", "六道"],
+    "race": "人类",
+    "faction": "木叶村",
+    "description": "从被村子排斥的孤儿成长为守护世界的七代目火影，六道仙人查克拉持有者。",
+    "coverImage": "",
+    "accentColor": "#f59e0b",
+    "stats": { "attack": 95, "defense": 88, "speed": 92, "intelligence": 70, "stamina": 97, "special": 96 },
+    "overallScore": 6530,
+    "baseScore": 6530,
+    "forms": [
+      { "name": "普通模式", "description": "基础忍者形态", "overallScore": 2200, "stats": { "attack": 60, "defense": 55, "speed": 58, "intelligence": 70, "stamina": 80, "special": 55 } },
+      { "name": "仙人模式", "description": "吸收自然能量", "overallScore": 3800, "stats": { "attack": 78, "defense": 72, "speed": 75, "intelligence": 70, "stamina": 85, "special": 78 } },
+      { "name": "尾兽模式", "description": "九尾查克拉模式", "overallScore": 5200, "stats": { "attack": 88, "defense": 82, "speed": 86, "intelligence": 70, "stamina": 93, "special": 88 } },
+      { "name": "六道仙人模式", "description": "六道仙人力量", "overallScore": 6530, "stats": { "attack": 95, "defense": 88, "speed": 92, "intelligence": 70, "stamina": 97, "special": 96 } }
+    ],
+    "evidence": [
+      { "desc": "与佐助联手击败大筒木辉夜", "source": "火影忍者疾风传 第479集" }
+    ],
+    "rank": 3
+  },
+  {
+    "id": "thanos",
+    "name": "灭霸",
+    "alias": ["疯狂泰坦", "Thanos"],
+    "workId": "avengers",
+    "universeId": "mcu",
+    "tags": ["宇宙级", "无限手套", "力量型", "智力型"],
+    "race": "永恒族衍生种",
+    "faction": "反派",
+    "description": "来自泰坦星的宇宙征服者，集齐无限宝石后拥有宇宙最强战力，一弹指消灭宇宙半数生命。",
+    "coverImage": "",
+    "accentColor": "#a855f7",
+    "stats": { "attack": 92, "defense": 91, "speed": 78, "intelligence": 95, "stamina": 94, "special": 99 },
+    "overallScore": 6380,
+    "baseScore": 5800,
+    "forms": [
+      { "name": "普通态", "description": "无宝石状态", "overallScore": 4200, "stats": { "attack": 85, "defense": 84, "speed": 78, "intelligence": 95, "stamina": 88, "special": 70 } },
+      { "name": "无限手套（六宝石）", "description": "集齐六颗无限宝石", "overallScore": 6380, "stats": { "attack": 92, "defense": 91, "speed": 78, "intelligence": 95, "stamina": 94, "special": 99 } }
+    ],
+    "evidence": [
+      { "desc": "单挑几乎击败复仇者联盟全员", "source": "复仇者联盟：无限战争" }
+    ],
+    "rank": 4
+  },
+  {
+    "id": "luffy",
+    "name": "蒙奇·D·路飞",
+    "alias": ["草帽路飞", "五皇路飞"],
+    "workId": "one-piece-s",
+    "universeId": "one-piece",
+    "tags": ["海贼", "橡皮果实", "霸气", "五皇"],
+    "race": "人类",
+    "faction": "草帽海贼团",
+    "description": "目标是成为海贼王的男人，拥有橡皮橡皮果实能力，觉醒后进入Gear5白色蓬蒙形态。",
+    "coverImage": "",
+    "accentColor": "#10b981",
+    "stats": { "attack": 94, "defense": 85, "speed": 90, "intelligence": 65, "stamina": 96, "special": 95 },
+    "overallScore": 6200,
+    "baseScore": 6200,
+    "forms": [
+      { "name": "Gear2", "description": "加速血液流动", "overallScore": 2500, "stats": { "attack": 70, "defense": 58, "speed": 82, "intelligence": 65, "stamina": 75, "special": 65 } },
+      { "name": "Gear4 蛇人", "description": "气压弹性与流速结合", "overallScore": 4800, "stats": { "attack": 85, "defense": 78, "speed": 88, "intelligence": 65, "stamina": 82, "special": 85 } },
+      { "name": "Gear5 太阳神", "description": "果实觉醒·最高形态", "overallScore": 6200, "stats": { "attack": 94, "defense": 85, "speed": 90, "intelligence": 65, "stamina": 96, "special": 95 } }
+    ],
+    "evidence": [
+      { "desc": "Gear5状态与四皇凯多战斗", "source": "海贼王 第1049话" }
+    ],
+    "rank": 5
+  },
+  {
+    "id": "sasuke",
+    "name": "宇智波佐助",
+    "alias": ["最后的宇智波", "Sasuke Uchiha"],
+    "workId": "naruto-s",
+    "universeId": "naruto",
+    "tags": ["写轮眼", "忍者", "六道", "速度型"],
+    "race": "人类",
+    "faction": "木叶村",
+    "description": "宇智波族最后的传人，拥有万花筒写轮眼与轮回眼，六道级别的力量。",
+    "coverImage": "",
+    "accentColor": "#6366f1",
+    "stats": { "attack": 94, "defense": 85, "speed": 93, "intelligence": 90, "stamina": 88, "special": 95 },
+    "overallScore": 6480,
+    "baseScore": 6480,
+    "forms": [
+      { "name": "万花筒写轮眼", "description": "须佐能乎完全体", "overallScore": 5000, "stats": { "attack": 88, "defense": 82, "speed": 87, "intelligence": 90, "stamina": 82, "special": 88 } },
+      { "name": "六道轮回眼", "description": "六道仙人力量", "overallScore": 6480, "stats": { "attack": 94, "defense": 85, "speed": 93, "intelligence": 90, "stamina": 88, "special": 95 } }
+    ],
+    "evidence": [
+      { "desc": "六道级须佐能乎与鸣人六道尾兽玉交锋", "source": "火影忍者疾风传 第476集" }
+    ],
+    "rank": 6
+  },
+  {
+    "id": "ironman",
+    "name": "托尼·斯塔克",
+    "alias": ["钢铁侠", "Iron Man"],
+    "workId": "avengers",
+    "universeId": "mcu",
+    "tags": ["科技型", "智力型", "盔甲", "复仇者"],
+    "race": "人类",
+    "faction": "复仇者联盟",
+    "description": "拥有全球最先进科技的天才亿万富翁，纳米装甲战斗力极强，最终用无限手套拯救宇宙。",
+    "coverImage": "",
+    "accentColor": "#ef4444",
+    "stats": { "attack": 82, "defense": 86, "speed": 80, "intelligence": 99, "stamina": 75, "special": 88 },
+    "overallScore": 4850,
+    "baseScore": 4400,
+    "forms": [
+      { "name": "Mark III", "description": "早期钢铁侠盔甲", "overallScore": 2000, "stats": { "attack": 65, "defense": 68, "speed": 60, "intelligence": 99, "stamina": 60, "special": 62 } },
+      { "name": "Mark L 纳米盔甲", "description": "纳米技术盔甲", "overallScore": 4850, "stats": { "attack": 82, "defense": 86, "speed": 80, "intelligence": 99, "stamina": 75, "special": 88 } }
+    ],
+    "evidence": [
+      { "desc": "独自对抗灭霸坚持数回合", "source": "复仇者联盟：无限战争" }
+    ],
+    "rank": 7
+  },
+  {
+    "id": "eren",
+    "name": "艾伦·耶格尔",
+    "alias": ["自由之鸟", "Eren Yeager"],
+    "workId": "aot-s",
+    "universeId": "attack-on-titan",
+    "tags": ["巨人", "始祖", "战槌", "进击"],
+    "race": "人类/巨人",
+    "faction": "地鸣",
+    "description": "继承始祖、进击、战槌三种巨人之力，发动地鸣试图消灭岛外所有生命。",
+    "coverImage": "",
+    "accentColor": "#6b7280",
+    "stats": { "attack": 88, "defense": 80, "speed": 72, "intelligence": 86, "stamina": 85, "special": 92 },
+    "overallScore": 3520,
+    "baseScore": 4400,
+    "forms": [
+      { "name": "进击的巨人", "description": "基础巨人形态", "overallScore": 2200, "stats": { "attack": 72, "defense": 65, "speed": 60, "intelligence": 86, "stamina": 75, "special": 68 } },
+      { "name": "始祖巨人（地鸣）", "description": "骸骨巨人·终极形态", "overallScore": 3520, "stats": { "attack": 88, "defense": 80, "speed": 72, "intelligence": 86, "stamina": 85, "special": 92 } }
+    ],
+    "evidence": [
+      { "desc": "驱动万千巨人踏平陆地", "source": "进击的巨人 第131话" }
+    ],
+    "rank": 8
+  },
+  {
+    "id": "ichigo",
+    "name": "黑崎一护",
+    "alias": ["替身死神", "最强死神", "Ichigo Kurosaki"],
+    "workId": "bleach-s",
+    "universeId": "bleach",
+    "tags": ["死神", "虚", "混血", "卍解", "速度型"],
+    "race": "死神/虚/完现术者",
+    "faction": "护廷十三队",
+    "description": "拥有死神、虚、完现术者三重血脉的最强替身死神，卍解天锁斩月压缩全部灵压于一刃，最终月牙天冲更与斩月合而为一。",
+    "coverImage": "",
+    "accentColor": "#38bdf8",
+    "stats": { "attack": 96, "defense": 84, "speed": 96, "intelligence": 74, "stamina": 92, "special": 94 },
+    "overallScore": 6350,
+    "baseScore": 6350,
+    "forms": [
+      { "name": "普通死神态", "description": "替身死神基础形态", "overallScore": 2400, "stats": { "attack": 72, "defense": 65, "speed": 74, "intelligence": 74, "stamina": 76, "special": 68 } },
+      { "name": "卍解·天锁斩月", "description": "灵压极度压缩的黑刀形态", "overallScore": 4800, "stats": { "attack": 88, "defense": 76, "speed": 90, "intelligence": 74, "stamina": 84, "special": 86 } },
+      { "name": "最终月牙天冲", "description": "与斩月合一，成为月牙天冲", "overallScore": 6350, "stats": { "attack": 96, "defense": 84, "speed": 96, "intelligence": 74, "stamina": 92, "special": 94 } }
+    ],
+    "evidence": [
+      { "desc": "卍解状态下与藍染持续交战", "source": "BLEACH 第388话" },
+      { "desc": "最终月牙天冲将藍染斩落", "source": "BLEACH 第420话" }
+    ],
+    "rank": 9
+  },
+  {
+    "id": "aizen",
+    "name": "蓝染惣右介",
+    "alias": ["前五番队队长", "神に最も近い男", "Sosuke Aizen"],
+    "workId": "bleach-s",
+    "universeId": "bleach",
+    "tags": ["死神", "崩玉", "完全催眠", "智力型", "反派"],
+    "race": "死神/崩玉融合体",
+    "faction": "虚圈",
+    "description": "前护廷十三队五番队队长，以镜花水月操控一切感官，融合崩玉后超越死神与虚的界限，是整个死神世界最危险的存在。",
+    "coverImage": "",
+    "accentColor": "#c084fc",
+    "stats": { "attack": 93, "defense": 90, "speed": 88, "intelligence": 99, "stamina": 90, "special": 99 },
+    "overallScore": 6720,
+    "baseScore": 6000,
+    "forms": [
+      { "name": "队长态", "description": "护廷十三队五番队队长", "overallScore": 4500, "stats": { "attack": 85, "defense": 82, "speed": 84, "intelligence": 99, "stamina": 82, "special": 90 } },
+      { "name": "崩玉融合·第一阶段", "description": "身体开始融合崩玉", "overallScore": 5800, "stats": { "attack": 90, "defense": 87, "speed": 86, "intelligence": 99, "stamina": 87, "special": 96 } },
+      { "name": "崩玉融合·完全体", "description": "超越死神与虚的界限", "overallScore": 6720, "stats": { "attack": 93, "defense": 90, "speed": 88, "intelligence": 99, "stamina": 90, "special": 99 } }
+    ],
+    "evidence": [
+      { "desc": "镜花水月同时催眠护廷十三队全员", "source": "BLEACH 第176话" },
+      { "desc": "崩玉融合后独自对抗四大貴族战力", "source": "BLEACH 第411话" }
+    ],
+    "rank": 10
+  }
+]

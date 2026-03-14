@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative pt-24 pb-16 px-4 overflow-hidden">
+      <section className="relative pt-20 pb-16 px-4 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-orange-500/5 rounded-full blur-3xl" />
           <div className="absolute top-32 left-1/4 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl" />
@@ -21,14 +21,14 @@ export default function HomePage() {
           <div className="text-center mb-8 sm:mb-10">
             
             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black mb-4 sm:mb-5 leading-tight">
-              <span className="text-white text-xl sm:text-3xl font-bold">影视/动漫角色战斗力终极排行</span>
+              <span className="text-white text-base sm:text-xl font-bold">影视/动漫角色战斗力终极排行</span>
             </h1>
             <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto mb-6 sm:mb-8">
               收录 {characters.length}+ 部影视/动漫作品的角色战力数据，六维评分体系，跨宇宙横向比较，找到你心目中最强的那个人。
             </p>
             <div className="flex items-center justify-center gap-2 sm:gap-4">
               <Link to="/ranking" className="px-4 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-xl hover:from-orange-400 hover:to-orange-500 transition-all shadow-xl shadow-orange-500/30 hover:scale-105 text-sm sm:text-base whitespace-nowrap">
-                全宇宙战力总榜 🏆
+                战力总榜 🏆
               </Link>
               <Link to="/battle" className="px-4 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-red-600 to-orange-600 text-white font-bold rounded-xl hover:from-red-500 hover:to-orange-500 transition-all shadow-xl shadow-red-500/30 hover:scale-105 text-sm sm:text-base whitespace-nowrap">
                 模拟对战 🔥

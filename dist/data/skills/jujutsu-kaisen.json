@@ -83,13 +83,13 @@
       ]
     },
     {
-      "id": "yuji-reverse-hit", "name": "逆髪勁", "type": "energy",
+      "id": "yuji-reverse-hit", "name": "逆発勁", "type": "energy",
       "description": "以反転咒力将治愈能量逆转为破坏性冲击，可伤害咒灵",
       "damageMult": 2.0, "staminaCost": 30, "cooldown": 3, "hitRate": 0.85,
       "effectDesc": "治愈之力逆转为破坏，摧毁咒灵本质",
       "narrativeTemplates": [
-        "{attacker}将反髪咒力注入拳头——「逆髪勁！」那股本该治愈的力量被逆转成最纯粹的破坏，{target}的咒力防御瞬间崩溃！",
-        "「咒灵的克星。」{attacker}以逆髪勁轰出，那股正向咒力对{target}的存在本身造成了撕裂性的破坏！"
+        "{attacker}将反転咒力注入拳头——「逆発劲！」那股本该治愈的力量被逆转成最纯粹的破坏，{target}的咒力防御瞬间崩溃！",
+        "「咒灵的克星。」{attacker}以逆発劲轰出，那股正向咒力对{target}的存在本身造成了撕裂性的破坏！"
       ]
     },
     {
@@ -158,7 +158,7 @@
   "sukuna": [
     {
       "id": "sukuna-dismantle", "name": "術式·解", "type": "physical",
-      "description": "以无形之刃切断一切，可远程斩击",
+      "description": "以无形之刃切断一切，可远程斩击，速度之快肉眼难以捕捉",
       "damageMult": 1.8, "staminaCost": 15, "cooldown": 0, "hitRate": 0.96,
       "effectDesc": "无形斩击，切断目标所有防御",
       "narrativeTemplates": [
@@ -177,6 +177,16 @@
       ]
     },
     {
+      "id": "sukuna-fire-arrow", "name": "焰·箭矢", "type": "energy",
+      "description": "以火焰术式凝聚成高密度箭矢，穿透目标并引发爆燃",
+      "damageMult": 2.0, "staminaCost": 22, "cooldown": 1, "hitRate": 0.92,
+      "effectDesc": "焰矢穿身，命中后爆燃持续灼烧",
+      "narrativeTemplates": [
+        "猩红的火焰在{attacker}指尖聚集成形，「焰。」一道炽热的箭矢破空而出，{target}躲避不及被贯穿，随后爆燃将周围全部焚尽！",
+        "{attacker}以火焰术式凝成箭矢，精准锁定{target}——那道焰矢比子弹更快，落下之处不仅穿透，更引发连续的爆燃，灼烧一切！"
+      ]
+    },
+    {
       "id": "sukuna-reversed-cursed-technique", "name": "反転術式·治愈强化", "type": "defense",
       "description": "以反転術式瞬间治愈自身伤势，同时强化下一次攻击",
       "damageMult": 1.3, "staminaCost": 20, "cooldown": 2, "hitRate": 1.0,
@@ -187,13 +197,23 @@
       ]
     },
     {
-      "id": "sukuna-domain-expansion", "name": "領域展開·伏魔御厨子", "type": "ultimate",
-      "description": "展开伏魔御厨子领域，「解」「捌」精准必中，切断覆盖范围内的一切",
-      "damageMult": 3.6, "staminaCost": 65, "cooldown": 5, "hitRate": 1.0,
-      "effectDesc": "领域内斩击精准必中，任何防御均无效",
+      "id": "sukuna-ten-shadows-steal", "name": "十影術式·式神驱使", "type": "special",
+      "description": "以占据伏黑惠肉体所获得的十影术式召唤式神，发动强力式神攻击",
+      "damageMult": 2.7, "staminaCost": 40, "cooldown": 3, "hitRate": 0.91,
+      "effectDesc": "驱使他人术式中的式神，力量远超原主",
       "narrativeTemplates": [
-        "「领域展开——伏魔御厨子。」世界在瞬间改变，{target}发现自己置身于无数无形刀刃之中。「解」「捌」同时启动，精准必中——{target}在这片领域里根本没有逃脱的可能！",
-        "宿傩展开的领域中，「解」与「捌」以必中的精准反复切割，{target}的防御彻底失去意义，每一次斩击都以最有效的方式落下，直到{target}再无还手之力。"
+        "宿傩以伏黑的肉体展开十影术式，召唤的式神在其咒力的驱动下远比原版更加凶猛——{target}面对这个以「咒术之王」之力驱使的式神，根本无力招架！",
+        "「有趣的术式。」{attacker}以十影术式召唤式神扑向{target}，那只式神被宿傩的咒力灌注后爆发出数倍于平时的破坏力，{target}在攻势下节节败退！"
+      ]
+    },
+    {
+      "id": "sukuna-domain-expansion", "name": "領域展開·伏魔御厨子", "type": "ultimate",
+      "description": "展开伏魔御厨子领域，「解」「捌」精准必中，焰矢同时启动，切断与焚烧覆盖范围内的一切",
+      "damageMult": 3.6, "staminaCost": 65, "cooldown": 5, "hitRate": 1.0,
+      "effectDesc": "领域内斩击与焰矢精准必中，任何防御均无效",
+      "narrativeTemplates": [
+        "「领域展开——伏魔御厨子。」世界在瞬间改变，{target}发现自己置身于无数无形刀刃与焰矢之中。「解」「捌」「焰」同时启动，精准必中——{target}在这片领域里根本没有逃脱的可能！",
+        "宿傩展开的领域中，「解」「捌」与火焰术式以必中的精准反复切割焚烧，{target}的防御彻底失去意义，每一次斩击与焰矢都以最有效的方式落下，直到{target}再无还手之力。"
       ]
     }
   ],

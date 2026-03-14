@@ -14,9 +14,16 @@ const SORT_TABS: { key: SortKey; label: string; icon: string }[] = [
   { key: 'special',      label: '特殊',     icon: '✨' },
 ]
 
-const MEDAL_COLORS = ['#c0a060', '#a0a0b0', '#cd7f32']
-const MEDAL_LABELS = ['冠军', '亚军', '季军']
-const MEDALS = ['🥇', '🥈', '🥉']
+const MEDAL_COLORS = ['#ffd700', '#c0c0c0', '#cd7f32'] // 金、银、铜
+const MEDAL_GLOW = ['#ffd700', '#c0c0c0', '#cd7f32'] // 流光颜色
+const MEDALS = ['🥇', '🥈', '🥉'] // 列表中的奖牌
+
+// 渐变边框样式（降低透明度）
+const MEDAL_BORDER_STYLE = [
+  'linear-gradient(135deg, #ffd70088 0%, #ffec8b 25%, #ffd70088 50%, #ffec8b 75%, #ffd70088 100%)', // 金
+  'linear-gradient(135deg, #c0c0c088 0%, #e8e8e8 25%, #c0c0c088 50%, #e8e8e8 75%, #c0c0c088 100%)', // 银
+  'linear-gradient(135deg, #cd7f3288 0%, #e8a75c 25%, #cd7f3288 50%, #e8a75c 75%, #cd7f3288 100%)', // 铜
+]
 
 export default function RankingPage() {
   const { characters, universes } = useAppDataContext()
@@ -178,28 +185,31 @@ export default function RankingPage() {
                 const scoreSize = col === 1 ? 'text-xl' : 'text-base'
                 return (
                   <Link key={char.id} to={`/characters/${char.id}`} className="flex flex-col items-center group">
-                    {/* Medal badge */}
-                    <div
-                      className="text-xs font-bold px-2 py-0.5 rounded-full mb-2 border"
-                      style={{
-                        color: MEDAL_COLORS[rankIdx],
-                        borderColor: MEDAL_COLORS[rankIdx] + '60',
-                        background: MEDAL_COLORS[rankIdx] + '15',
-                      }}
-                    >
-                      {MEDAL_LABELS[rankIdx]}
-                    </div>
-                    {/* Avatar */}
-                    <div
-                      className={`${avatarSize} rounded-2xl flex items-center justify-center font-black mb-2 border-2 transition-transform group-hover:scale-105`}
-                      style={{
-                        background: char.accentColor + '20',
-                        color: char.accentColor,
-                        borderColor: char.accentColor + '70',
-                        boxShadow: col === 1 ? `0 0 24px ${char.accentColor}40` : undefined,
-                      }}
-                    >
-                      {char.name[0]}
+                    {/* Avatar with premium medal effect */}
+                    <div className="relative mb-2">
+                      {/* 外圈发光 */}
+                      <div 
+                        className={`absolute -inset-1 rounded-2xl opacity-75 ${col === 1 ? 'animate-pulse' : ''}`}
+                        style={{ background: MEDAL_GLOW[rankIdx], filter: 'blur(8px)' }}
+                      />
+                      {/* 渐变边框 */}
+                      <div 
+                        className={`${avatarSize} rounded-2xl flex items-center justify-center font-black relative`}
+                        style={{ 
+                          background: MEDAL_BORDER_STYLE[rankIdx],
+                          boxShadow: `0 0 20px ${MEDAL_GLOW[rankIdx]}40, 0 4px 12px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.3)`,
+                        }}
+                      >
+                        {/* 内部背景 */}
+                        <div 
+                          className="absolute inset-1 rounded-xl flex items-center justify-center"
+                          style={{ background: char.accentColor + '25' }}
+                        >
+                          <span className="font-black" style={{ color: col === 1 ? MEDAL_GLOW[rankIdx] : char.accentColor }}>
+                            {char.name[0]}
+                          </span>
+                        </div>
+                      </div>
                     </div>
                     {/* Name */}
                     <div className={`font-bold text-white ${nameSize} text-center truncate max-w-full px-1 mb-0.5`}>
@@ -217,7 +227,7 @@ export default function RankingPage() {
                       className={`w-full ${podiumH} rounded-t-xl flex flex-col items-center justify-center border border-b-0`}
                       style={{ background: char.accentColor + '12', borderColor: char.accentColor + '30' }}
                     >
-                      <span className="text-2xl">{MEDALS[rankIdx]}</span>
+                      <span className="text-lg" style={{ color: MEDAL_GLOW[rankIdx] }}>TOP {rankIdx + 1}</span>
                     </div>
                   </Link>
                 )

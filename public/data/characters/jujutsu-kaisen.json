@@ -22,7 +22,7 @@
     "evidence": [
       { "desc": "领域展开「无量空处」使敌人脑部认知过载陷入无力状态", "source": "咒术回战 第15话" },
       { "desc": "「无下限」令任何物理攻击在到达前无限减速，常规手段无法破防", "source": "咒术回战 原著设定" },
-      { "desc": "与宿傩完全体激战，宿傩须借助神器「天逆鉾」方能斩断无限，而非正面破防", "source": "咒术回战 第236话" },
+      { "desc": "与宿傩完全体激战，宿傩以「解」「捌」方能斩断无限", "source": "咒术回战 第236话" },
       { "desc": "六眼赋予术式精度与咒力效率的极限，被宿傩认定为最麻烦的对手", "source": "咒术回战 第221话" }
     ],
     "rank": 3
@@ -83,10 +83,10 @@
     "alias": ["咒术之王", "百鬼夜行", "Ryomen Sukuna"],
     "workId": "jjk-s",
     "universeId": "jujutsu-kaisen",
-    "tags": ["特级咒灵", "反転術式", "天逆鉾", "领域展开", "反派"],
+    "tags": ["特级咒灵", "反転術式", "领域展开", "反派"],
     "race": "特级咒灵/虎杖之器",
     "faction": "无",
-    "description": "一千年前以一己之力令整个咒术界束手无策的「咒术之王」，拥有「解」「捌」两种切断术式与「反転術式」，领域展开「伏魔御厨子」精准必中，天逆鉾更能斩断一切无形之物。",
+    "description": "一千年前以一己之力令整个咒术界束手无策的「咒术之王」，拥有「解」「捌」两种切断术式与「反転術式」，领域展开「伏魔御厨子」精准必中。",
     "coverImage": "",
     "accentColor": "#dc2626",
     "stats": { "attack": 99, "defense": 95, "speed": 97, "intelligence": 98, "stamina": 96, "special": 99 },
@@ -95,11 +95,11 @@
     "forms": [
       { "name": "虎杖体（部分显现）", "description": "借用虎杖肉体，实力受限", "overallScore": 6800, "stats": { "attack": 95, "defense": 88, "speed": 93, "intelligence": 98, "stamina": 88, "special": 94 } },
       { "name": "伏魔御厨子（领域展开）", "description": "领域内切断精准必中", "overallScore": 7800, "stats": { "attack": 98, "defense": 92, "speed": 95, "intelligence": 98, "stamina": 93, "special": 98 } },
-      { "name": "完全体·天逆鉾", "description": "以天逆鉾斩断无限，最强形态", "overallScore": 8500, "stats": { "attack": 99, "defense": 95, "speed": 97, "intelligence": 98, "stamina": 96, "special": 99 } }
+      { "name": "完全体", "description": "最强形态", "overallScore": 8500, "stats": { "attack": 99, "defense": 95, "speed": 97, "intelligence": 98, "stamina": 96, "special": 99 } }
     ],
     "evidence": [
       { "desc": "领域展开「伏魔御厨子」精准必中，令五条悟的无量空処失效", "source": "咒术回战 第221话" },
-      { "desc": "天逆鉾斩断无限，击败五条悟", "source": "咒术回战 第236话" }
+      { "desc": "以「解」「捌」切断术式正面击破无限", "source": "咒术回战 第236话" }
     ],
     "rank": 3
   },
@@ -135,7 +135,7 @@
     "alias": ["天元之刃", "术师杀手", "Toji Fushiguro"],
     "workId": "jjk-s",
     "universeId": "jujutsu-kaisen",
-    "tags": ["无咒力", "肉体强化", "神器使用者", "天才战士"],
+    "tags": ["无咒力", "肉体强化", "天逆鉾", "神器使用者", "天才战士"],
     "race": "人类（咒力归零体质）",
     "faction": "无（佣兵）",
     "description": "生来咒力为零却进化出超越术师极限的肉体，依靠储物之虫携带各类咒具，以纯粹的战斗本能与天才身体能力成为令特级术师闻风丧胆的「术师杀手」。",

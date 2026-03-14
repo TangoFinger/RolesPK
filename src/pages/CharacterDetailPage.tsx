@@ -80,70 +80,96 @@ export default function CharacterDetailPage() {
   const skills = skillsMap[char.id] ?? []
 
   return (
-    <div className="min-h-screen pt-20 pb-16">
-      {/* Hero */}
-      <div className="relative overflow-hidden px-3 py-8 sm:py-10"
-        style={{ background: `linear-gradient(135deg, ${char.accentColor}18 0%, #0f0f0f 60%)` }}>
-        <div className="absolute -right-10 top-1/2 -translate-y-1/2 text-[160px] sm:text-[200px] font-black opacity-5 select-none pointer-events-none"
+    <div className="min-h-screen pt-16 sm:pt-20 pb-16">
+      {/* Hero - 重新设计，移动端更紧凑 */}
+      <div className="relative overflow-hidden px-3 py-5 sm:py-8"
+        style={{ background: `linear-gradient(180deg, ${char.accentColor}15 0%, #0f0f0f 100%)` }}>
+        <div className="absolute -right-10 top-1/2 -translate-y-1/2 text-[140px] sm:text-[180px] font-black opacity-5 select-none pointer-events-none"
           style={{ color: char.accentColor }}>{char.name[0]}</div>
         <div className="max-w-7xl mx-auto">
-          <nav className="flex items-center gap-2 text-xs sm:text-sm text-gray-500 mb-4 sm:mb-6 overflow-x-auto whitespace-nowrap">
+          {/* 面包屑 */}
+          <nav className="flex items-center gap-2 text-xs text-gray-500 mb-4 overflow-x-auto whitespace-nowrap">
             <Link to="/" className="hover:text-gray-300">首页</Link><span>/</span>
             <Link to="/characters" className="hover:text-gray-300">角色库</Link><span>/</span>
             <span style={{ color: char.accentColor }}>{char.name}</span>
           </nav>
-          <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
-            <div className="flex-1 min-w-0">
-              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl flex items-center justify-center text-4xl sm:text-5xl mb-4 border border-[#2d2d4e]"
-                style={{ background: char.accentColor + '22', color: char.accentColor }}>{char.name[0]}</div>
-              <h1 className="text-3xl sm:text-4xl font-black text-white mb-1">{char.name}</h1>
-              <p className="text-gray-400 text-sm sm:text-base mb-4">{char.alias.join(' · ')}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {universe && <span className="text-xs sm:text-sm px-2.5 sm:px-3 py-1 rounded-full border font-semibold"
+<br/>
+          {/* 主要内容区 - 移动端纵向，桌面端横向 */}
+          <div className="flex flex-col sm:flex-row gap-5 sm:gap-8 items-center">
+            {/* 头像 - 移动端在最上 */}
+            <div className="order-1">
+              <div className="w-28 h-28 sm:w-36 sm:h-36 lg:w-44 lg:h-44 rounded-2xl sm:rounded-3xl flex items-center justify-center text-5xl sm:text-6xl lg:text-7xl border-2"
+                style={{ background: char.accentColor + '22', color: char.accentColor, borderColor: char.accentColor + '50', boxShadow: `0 0 30px ${char.accentColor}25` }}>{char.name[0]}</div>
+            </div>
+
+            {/* 中间：名字和信息 */}
+            <div className="flex-1 min-w-0 text-center sm:text-left order-2 w-full">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-1">{char.name}</h1>
+              <p className="text-gray-400 text-sm mb-3">{char.alias.join(' · ')}</p>
+
+              {/* 标签行 */}
+              <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 justify-center sm:justify-start">
+                {universe && <span className="text-xs px-2 py-0.5 sm:py-1 rounded-full border font-semibold"
                   style={{ color: char.accentColor, borderColor: char.accentColor + '50', background: char.accentColor + '18' }}>{universe.name}</span>}
-                {universe && <span className="text-xs sm:text-sm px-2.5 sm:px-3 py-1 rounded-full bg-[#2d2d4e] text-gray-300 font-mono">{universe.tier}级 ×{universe.tierCoeff}</span>}
-                <span className="text-xs sm:text-sm px-2.5 sm:px-3 py-1 rounded-full bg-[#2d2d4e] text-gray-300">{char.race}</span>
-                <span className={`text-xs sm:text-sm px-2.5 sm:px-3 py-1 rounded-full font-semibold ${char.faction === '反派' ? 'bg-red-500/20 text-red-400' : 'bg-emerald-500/20 text-emerald-400'}`}>{char.faction}</span>
+                {universe && <span className="text-xs px-2 py-0.5 sm:py-1 rounded-full bg-[#2d2d4e] text-gray-300 font-mono">{universe.tier}级</span>}
+                <span className="text-xs px-2 py-0.5 sm:py-1 rounded-full bg-[#2d2d4e] text-gray-300">{char.race}</span>
+                <span className={`text-xs px-2 py-0.5 sm:py-1 rounded-full font-semibold ${char.faction === '反派' ? 'bg-red-500/20 text-red-400' : 'bg-emerald-500/20 text-emerald-400'}`}>{char.faction}</span>
               </div>
-              <div className="flex flex-wrap gap-1.5 mb-4 sm:mb-5">
-                {char.tags.map(tag => <span key={tag} className="text-xs bg-[#1a1a2e] border border-[#2d2d4e] text-gray-400 px-2 py-1 rounded-lg">{tag}</span>)}
+
+              {/* 战力值 */}
+              <div className="flex items-center justify-center sm:justify-start gap-4 mb-3">
+                <div className="text-center">
+                  <div className="text-xs text-gray-500">{currentForm ? currentForm.name : '综合战力'}</div>
+                  <div className="text-2xl sm:text-3xl font-black tabular-nums" style={{ color: char.accentColor }}>{displayScore.toLocaleString()}</div>
+                </div>
+                {char.rank && <div className="text-xs text-gray-500 px-2 py-1 bg-[#1a1a2e] rounded-lg">全宇宙 #{char.rank}</div>}
               </div>
-              <p className="text-gray-300 leading-relaxed text-sm sm:text-base mb-4 sm:mb-5 max-w-xl">{char.description}</p>
-              {work && <p className="text-xs sm:text-sm text-gray-500">📺 出自：<span className="text-gray-300">{work.title}</span><span className="text-gray-600 ml-2">({work.year})</span></p>}
-              <div className="flex gap-3 mt-4 sm:mt-5 flex-wrap">
-                <button onClick={() => navigate(`/battle`)}
-                  className="px-5 sm:px-6 py-2.5 bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold rounded-xl hover:from-orange-400 hover:to-red-500 transition-all shadow-lg shadow-orange-500/25 text-sm">
-                  🔥 模拟对战
-                </button>
+
+              {/* 标签 */}
+              <div className="flex flex-wrap gap-1 justify-center sm:justify-start">
+                {char.tags.map(tag => <span key={tag} className="text-[10px] bg-[#1a1a2e] border border-[#2d2d4e] text-gray-400 px-1.5 py-0.5 rounded">{tag}</span>)}
               </div>
             </div>
-            <div className="flex flex-col items-center gap-3 sm:gap-4 w-full sm:w-auto">
-              <div className="bg-[#1a1a2e] border border-[#2d2d4e] rounded-2xl px-6 sm:px-8 py-4 sm:py-5 text-center min-w-[160px] sm:min-w-[200px] w-full sm:w-auto">
-                <div className="text-xs text-gray-500 mb-1">{currentForm ? currentForm.name : '综合战力值'}</div>
-                <div className="text-4xl sm:text-5xl font-black tabular-nums" style={{ color: char.accentColor }}>{displayScore.toLocaleString()}</div>
-                {char.rank && <div className="text-xs text-gray-500 mt-2">全宇宙排名 #{char.rank}</div>}
-              </div>
+
+            {/* 雷达图 - 移动端隐藏或简化 */}
+            <div className="order-3 hidden sm:block">
               <div className="bg-[#1a1a2e] border border-[#2d2d4e] rounded-2xl p-2">
-                <RadarChart stats={displayStats} color={char.accentColor} size={240} />
+                <RadarChart stats={displayStats} color={char.accentColor} size={200} />
               </div>
+            </div>
+          </div>
+
+          {/* 简介 - 移动端在下方 */}
+          <div className="mt-4 sm:mt-6">
+            <p className="text-gray-300 leading-relaxed text-sm max-w-2xl">{char.description}</p>
+            {work && <p className="text-xs text-gray-500 mt-2">📺 出自《{work.title}》({work.year})</p>}
+          </div>
+
+          {/* 移动端雷达图 */}
+          <div className="sm:hidden mt-4 flex justify-center">
+            <div className="bg-[#1a1a2e] border border-[#2d2d4e] rounded-xl p-1">
+              <RadarChart stats={displayStats} color={char.accentColor} size={200} />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 mt-8 space-y-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 mt-6 sm:mt-8 space-y-4 sm:space-y-6">
         {/* Stat Bars */}
-        <div className="bg-[#1a1a2e] border border-[#2d2d4e] rounded-2xl p-6">
-          <h2 className="text-lg font-bold text-white mb-5">📊 六维评分</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="bg-[#1a1a2e] border border-[#2d2d4e] rounded-2xl p-4 sm:p-6">
+          <h2 className="text-base sm:text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <span className="w-1 h-4 rounded-full" style={{ background: char.accentColor }}></span>
+            六维评分
+          </h2>
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
             {STAT_KEYS.map(key => (
               <div key={key}>
-                <div className="flex items-center justify-between mb-1.5">
-                  <div className="flex items-center gap-2 text-sm text-gray-300"><span>{STAT_ICONS[key]}</span>{STAT_LABELS[key]}</div>
-                  <span className="text-sm font-black tabular-nums"
+                <div className="flex items-center justify-between mb-1">
+                  <div className="flex items-center gap-1.5 text-xs sm:text-sm text-gray-300"><span>{STAT_ICONS[key]}</span>{STAT_LABELS[key]}</div>
+                  <span className="text-xs sm:text-sm font-black tabular-nums"
                     style={{ color: displayStats[key] >= 90 ? char.accentColor : displayStats[key] >= 70 ? '#fbbf24' : '#9ca3af' }}>{displayStats[key]}</span>
                 </div>
-                <div className="h-2.5 bg-[#2d2d4e] rounded-full overflow-hidden">
+                <div className="h-1.5 sm:h-2 bg-[#2d2d4e] rounded-full overflow-hidden">
                   <div className="h-full rounded-full transition-all duration-700"
                     style={{ width: `${displayStats[key]}%`, background: `linear-gradient(90deg, ${char.accentColor}88, ${char.accentColor})` }} />
                 </div>
@@ -154,19 +180,15 @@ export default function CharacterDetailPage() {
 
         {/* Skills */}
         {skills.length > 0 && (
-          <div className="bg-[#1a1a2e] border border-[#2d2d4e] rounded-2xl p-6">
-            <div className="flex items-center justify-between mb-5">
-              <h2 className="text-lg font-bold text-white flex items-center gap-2">
-                🎯 技能库
-                <span className="text-sm font-normal text-gray-500">({skills.length} 个技能)</span>
+          <div className="bg-[#1a1a2e] border border-[#2d2d4e] rounded-2xl p-4 sm:p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+                <span className="w-1 h-4 rounded-full" style={{ background: char.accentColor }}></span>
+                技能库
+                <span className="text-xs sm:text-sm font-normal text-gray-500">({skills.length})</span>
               </h2>
-              <button onClick={() => navigate('/battle')}
-                className="text-xs px-3 py-1.5 rounded-lg font-medium transition-colors"
-                style={{ color: char.accentColor, background: char.accentColor + '15', border: `1px solid ${char.accentColor}40` }}>
-                用这些技能去对战 →
-              </button>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
               {skills.map(skill => <SkillCard key={skill.id} skill={skill} accentColor={char.accentColor} />)}
             </div>
           </div>
@@ -174,12 +196,15 @@ export default function CharacterDetailPage() {
 
         {/* Forms */}
         {char.forms.length > 0 && (
-          <div className="bg-[#1a1a2e] border border-[#2d2d4e] rounded-2xl p-6">
-            <h2 className="text-lg font-bold text-white mb-5">🔄 形态列表</h2>
-            <div className="flex flex-wrap gap-2 mb-5">
+          <div className="bg-[#1a1a2e] border border-[#2d2d4e] rounded-2xl p-4 sm:p-6">
+            <h2 className="text-base sm:text-lg font-bold text-white mb-4 flex items-center gap-2">
+              <span className="w-1 h-4 rounded-full" style={{ background: char.accentColor }}></span>
+              形态切换
+            </h2>
+            <div className="flex flex-wrap gap-2 mb-4">
               {char.forms.map((form, i) => (
                 <button key={i} onClick={() => setActiveForm(i)}
-                  className="px-4 py-2 rounded-xl text-sm font-medium transition-all border"
+                  className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all border"
                   style={activeForm === i
                     ? { borderColor: char.accentColor + '60', background: char.accentColor + '20', color: char.accentColor }
                     : { borderColor: '#2d2d4e', color: '#9ca3af' }}>
@@ -188,16 +213,18 @@ export default function CharacterDetailPage() {
               ))}
             </div>
             {currentForm && (
-              <div className="flex flex-col sm:flex-row gap-6 items-start">
-                <div className="flex-1">
-                  <h3 className="font-bold text-white text-xl mb-1">{currentForm.name}</h3>
-                  <p className="text-gray-400 text-sm mb-3">{currentForm.description}</p>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-bold text-white text-lg mb-1">{currentForm.name}</h3>
+                  <p className="text-gray-400 text-sm mb-2">{currentForm.description}</p>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-sm text-gray-500">形态战力值</span>
-                    <span className="text-3xl font-black" style={{ color: char.accentColor }}>{currentForm.overallScore.toLocaleString()}</span>
+                    <span className="text-xs sm:text-sm text-gray-500">战力</span>
+                    <span className="text-2xl sm:text-3xl font-black" style={{ color: char.accentColor }}>{currentForm.overallScore.toLocaleString()}</span>
                   </div>
                 </div>
-                <RadarChart stats={currentForm.stats} color={char.accentColor} size={220} />
+                <div className="shrink-0 sm:mt-1">
+                  <RadarChart stats={currentForm.stats} color={char.accentColor} size={160} />
+                </div>
               </div>
             )}
           </div>
@@ -205,16 +232,19 @@ export default function CharacterDetailPage() {
 
         {/* Evidence */}
         {char.evidence.length > 0 && (
-          <div className="bg-[#1a1a2e] border border-[#2d2d4e] rounded-2xl p-6">
-            <h2 className="text-lg font-bold text-white mb-5">📋 战力依据</h2>
-            <div className="space-y-3">
+          <div className="bg-[#1a1a2e] border border-[#2d2d4e] rounded-2xl p-4 sm:p-6">
+            <h2 className="text-base sm:text-lg font-bold text-white mb-4 flex items-center gap-2">
+              <span className="w-1 h-4 rounded-full" style={{ background: char.accentColor }}></span>
+              战力依据
+            </h2>
+            <div className="space-y-2 sm:space-y-3">
               {char.evidence.map((ev, i) => (
-                <div key={i} className="flex gap-3 p-3 bg-[#0f0f0f] rounded-xl border border-[#2d2d4e]">
-                  <div className="w-6 h-6 rounded-lg flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
+                <div key={i} className="flex gap-2 sm:gap-3 p-2.5 sm:p-3 bg-[#0f0f0f] rounded-xl border border-[#2d2d4e]">
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-lg flex items-center justify-center text-[10px] sm:text-xs font-bold shrink-0"
                     style={{ background: char.accentColor + '25', color: char.accentColor }}>{i + 1}</div>
-                  <div>
-                    <p className="text-gray-200 text-sm">{ev.desc}</p>
-                    <p className="text-gray-500 text-xs mt-1">📍 {ev.source}</p>
+                  <div className="min-w-0">
+                    <p className="text-gray-200 text-xs sm:text-sm leading-relaxed">{ev.desc}</p>
+                    <p className="text-gray-500 text-[10px] sm:text-xs mt-1">📍 {ev.source}</p>
                   </div>
                 </div>
               ))}
@@ -224,16 +254,19 @@ export default function CharacterDetailPage() {
 
         {/* Related */}
         {related.length > 0 && (
-          <div>
-            <h2 className="text-lg font-bold text-white mb-4">🌌 同宇宙角色</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div className="bg-[#1a1a2e] border border-[#2d2d4e] rounded-2xl p-4 sm:p-6">
+            <h2 className="text-base sm:text-lg font-bold text-white mb-4 flex items-center gap-2">
+              <span className="w-1 h-4 rounded-full" style={{ background: char.accentColor }}></span>
+              同宇宙角色
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
               {related.map(c => (
                 <Link key={c.id} to={`/characters/${c.id}`}>
-                  <div className="bg-[#1a1a2e] border border-[#2d2d4e] rounded-xl p-3 hover:border-orange-500/30 transition-all group text-center">
-                    <div className="w-10 h-10 rounded-lg mx-auto flex items-center justify-center text-xl mb-2"
+                  <div className="bg-[#0f0f0f] border border-[#2d2d4e] rounded-xl p-2.5 sm:p-3 hover:border-orange-500/40 hover:bg-[#1a1a2e] transition-all group text-center">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg mx-auto flex items-center justify-center text-lg sm:text-xl mb-1.5 sm:mb-2"
                       style={{ background: c.accentColor + '22', color: c.accentColor }}>{c.name[0]}</div>
-                    <div className="text-sm font-bold text-white group-hover:text-orange-300 transition-colors">{c.name}</div>
-                    <div className="text-xs tabular-nums mt-1" style={{ color: c.accentColor }}>{c.overallScore.toLocaleString()}</div>
+                    <div className="text-xs sm:text-sm font-bold text-white group-hover:text-orange-300 transition-colors truncate">{c.name}</div>
+                    <div className="text-[10px] sm:text-xs tabular-nums mt-0.5" style={{ color: c.accentColor }}>{c.overallScore.toLocaleString()}</div>
                   </div>
                 </Link>
               ))}

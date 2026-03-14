@@ -83,13 +83,13 @@
       ]
     },
     {
-      "id": "yuji-reverse-hit", "name": "逆発勁", "type": "energy",
+      "id": "yuji-reverse-hit", "name": "逆髪勁", "type": "energy",
       "description": "以反転咒力将治愈能量逆转为破坏性冲击，可伤害咒灵",
       "damageMult": 2.0, "staminaCost": 30, "cooldown": 3, "hitRate": 0.85,
       "effectDesc": "治愈之力逆转为破坏，摧毁咒灵本质",
       "narrativeTemplates": [
-        "{attacker}将反転咒力注入拳头——「逆発劲！」那股本该治愈的力量被逆转成最纯粹的破坏，{target}的咒力防御瞬间崩溃！",
-        "「咒灵的克星。」{attacker}以逆発劲轰出，那股正向咒力对{target}的存在本身造成了撕裂性的破坏！"
+        "{attacker}将反髪咒力注入拳头——「逆髪勁！」那股本该治愈的力量被逆转成最纯粹的破坏，{target}的咒力防御瞬间崩溃！",
+        "「咒灵的克星。」{attacker}以逆髪勁轰出，那股正向咒力对{target}的存在本身造成了撕裂性的破坏！"
       ]
     },
     {
@@ -195,16 +195,6 @@
         "「领域展开——伏魔御厨子。」世界在瞬间改变，{target}发现自己置身于无数无形刀刃之中。「解」「捌」同时启动，精准必中——{target}在这片领域里根本没有逃脱的可能！",
         "宿傩展开的领域中，「解」与「捌」以必中的精准反复切割，{target}的防御彻底失去意义，每一次斩击都以最有效的方式落下，直到{target}再无还手之力。"
       ]
-    },
-    {
-      "id": "sukuna-amenonuhoko", "name": "天逆鉾", "type": "ultimate",
-      "description": "以神代之器天逆鉾斩断无形之物，令「无限」等无形防御彻底失效",
-      "damageMult": 4.0, "staminaCost": 80, "cooldown": 6, "hitRate": 0.95,
-      "effectDesc": "斩断无限，穿透一切无形防御",
-      "narrativeTemplates": [
-        "宿傩取出那柄神代之器，「天逆鉾。」——无限在那一刻被斩断，{target}引以为傲的无形防御彻底崩溃，「那道无限……消失了？」剧烈的冲击将{target}轰飞！",
-        "「你的无限我知道怎么破。」{attacker}以天逆鉾斩出，那道能切断无形之物的神器令{target}的一切咒术防御形同虚设，绝望与伤害同时袭来！"
-      ]
     }
   ],
   "yuta": [
@@ -308,6 +298,16 @@
       "narrativeTemplates": [
         "甚尔的眼神变了——不再是玩耍，那是真正的「杀手」的眼睛。{attacker}在一瞬间找到了{target}全身上下唯一的破绽，全力一击砸下，那一刻世界仿佛都静止了！",
         "「够了，认真了。」{attacker}以杀手的直觉锁定{target}，调动全身每一块肌肉，以一生战斗磨砺出的最强一击落下——{target}在这一击面前，所有的防御都显得那么脆弱。"
+      ]
+    },
+    {
+      "id": "toji-amenonuhoko", "name": "天逆鉾", "type": "ultimate",
+      "description": "以神代之器天逆鉾斩断无形之物，令「无限」等无形防御彻底失效",
+      "damageMult": 4.0, "staminaCost": 80, "cooldown": 6, "hitRate": 0.95,
+      "effectDesc": "斩断无限，穿透一切无形防御",
+      "narrativeTemplates": [
+        "「这可是神器。」{attacker}取出那柄神代之器「天逆鉾」——无限在那一刻被斩断，{target}引以为傲的无形防御彻底崩溃！",
+        "{attacker}以天逆鉾斩出，那道能切断无形之物的神器令{target}的一切咒术防御形同虚设，绝望与伤害同时袭来！"
       ]
     }
   ]

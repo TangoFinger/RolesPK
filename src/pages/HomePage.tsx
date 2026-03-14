@@ -19,21 +19,18 @@ export default function HomePage() {
         </div>
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-8 sm:mb-10">
-            <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs px-3 py-1.5 rounded-full mb-4 sm:mb-6 font-medium">
-              <span className="w-1.5 h-1.5 bg-orange-400 rounded-full animate-pulse" />
-              全宇宙战力数据库 · 持续更新中
-            </div>
+            
             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black mb-4 sm:mb-5 leading-tight">
               <span className="text-white text-xl sm:text-3xl font-bold">影视/动漫角色战斗力终极排行</span>
             </h1>
             <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto mb-6 sm:mb-8">
               收录 {characters.length}+ 部影视/动漫作品的角色战力数据，六维评分体系，跨宇宙横向比较，找到你心目中最强的那个人。
             </p>
-            <div className="flex items-center justify-center gap-4 flex-wrap">
-              <Link to="/ranking" className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-xl hover:from-orange-400 hover:to-orange-500 transition-all shadow-xl shadow-orange-500/30 hover:scale-105 text-base">
-                查看战力总榜 🏆
+            <div className="flex items-center justify-center gap-2 sm:gap-4">
+              <Link to="/ranking" className="px-4 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-xl hover:from-orange-400 hover:to-orange-500 transition-all shadow-xl shadow-orange-500/30 hover:scale-105 text-sm sm:text-base whitespace-nowrap">
+                全宇宙战力总榜 🏆
               </Link>
-              <Link to="/battle" className="px-8 py-3 bg-gradient-to-r from-red-600 to-orange-600 text-white font-bold rounded-xl hover:from-red-500 hover:to-orange-500 transition-all shadow-xl shadow-red-500/30 hover:scale-105 text-base">
+              <Link to="/battle" className="px-4 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-red-600 to-orange-600 text-white font-bold rounded-xl hover:from-red-500 hover:to-orange-500 transition-all shadow-xl shadow-red-500/30 hover:scale-105 text-sm sm:text-base whitespace-nowrap">
                 模拟对战 🔥
               </Link>
             </div>
@@ -61,17 +58,21 @@ export default function HomePage() {
               <Link key={char.id} to={`/characters/${char.id}`}>
                 <div className="relative rounded-2xl overflow-hidden border border-[#2d2d4e] hover:border-orange-500/40 transition-all duration-300 card-glow group"
                   style={{ background: `linear-gradient(135deg, ${char.accentColor}22 0%, #1a1a2e 60%)` }}>
-                  <div className="p-6">
-                    <div className="text-3xl mb-3">{['🥇', '🥈', '🥉'][i]}</div>
-                    <div className="w-20 h-20 rounded-2xl flex items-center justify-center text-4xl mb-4 border border-[#2d2d4e]"
-                      style={{ background: char.accentColor + '22', color: char.accentColor }}>{char.name[0]}</div>
-                    <h3 className="text-2xl font-black text-white mb-1">{char.name}</h3>
-                    <p className="text-sm text-gray-400 mb-4 line-clamp-2">{char.description}</p>
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-xs text-gray-500">综合战力</span>
-                      <span className="text-3xl font-black tabular-nums" style={{ color: char.accentColor }}>{char.overallScore.toLocaleString()}</span>
+                  <div className="p-5">
+                    {/* 顶部：奖牌 + 头像 + 名字 */}
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-2xl">{['🥇', '🥈', '🥉'][i]}</span>
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center text-3xl sm:text-4xl border border-[#2d2d4e] flex-shrink-0"
+                        style={{ background: char.accentColor + '22', color: char.accentColor }}>{char.name[0]}</div>
+                      <div className="min-w-0">
+                        <h3 className="text-lg sm:text-xl font-black text-white truncate">{char.name}</h3>
+                        <span className="text-xs font-black tabular-nums" style={{ color: char.accentColor }}>{char.overallScore.toLocaleString()}</span>
+                      </div>
                     </div>
-                    <div className="flex flex-wrap gap-1.5 mt-3">
+                    {/* 描述 */}
+                    <p className="text-sm text-gray-400 mb-3 line-clamp-2">{char.description}</p>
+                    {/* 标签 */}
+                    <div className="flex flex-wrap gap-1.5">
                       {char.tags.slice(0, 3).map(tag => (
                         <span key={tag} className="text-xs px-2 py-0.5 rounded-full border font-medium"
                           style={{ color: char.accentColor, borderColor: char.accentColor + '40', background: char.accentColor + '15' }}>{tag}</span>

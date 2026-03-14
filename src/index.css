@@ -20,6 +20,16 @@
   .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 }
 
+@keyframes shine {
+ 0% { transform: translateX(-100%); }
+ 50%, 100% { transform: translateX(100%); }
+}
+
+@keyframes medal-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #1a1a2e; }
 ::-webkit-scrollbar-thumb { background: #f97316; border-radius: 3px; }

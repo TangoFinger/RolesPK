@@ -259,7 +259,7 @@ export default function BattlePage() {
     el.style.maxHeight = 'none'
     const full = el.scrollHeight
     el.style.maxHeight = prev
-    setFilterNeedsCollapse(full > 36)
+    setFilterNeedsCollapse(full > 32)
   }, [])
 
   useEffect(() => {
@@ -365,7 +365,7 @@ export default function BattlePage() {
         {/* 筛选面板 */}
         <div className="bg-[#1a1a2e] border border-[#2d2d4e] rounded-2xl p-3 sm:p-4 mb-4">
           <div className="text-xs text-gray-500 font-medium uppercase tracking-wider mb-2 flex items-center gap-1.5">
-            <span>🔍</span> 角色筛选
+            <span>🔍</span> 宇宙筛选
             {filterNeedsCollapse && (
               <button
                 onClick={() => setFilterExpanded(v => !v)}
@@ -378,7 +378,7 @@ export default function BattlePage() {
           <div
             ref={filterRef}
             className="flex flex-wrap gap-1.5 overflow-hidden transition-all duration-300"
-            style={{ maxHeight: filterExpanded ? '500px' : '36px' }}
+            style={{ maxHeight: filterExpanded ? '500px' : '32px' }}
           >
             {/* 宇宙筛选 */}
             {['all', ...universes.map(u => u.id)].map(uid => {

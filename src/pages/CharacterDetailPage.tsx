@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import RadarChart from '../components/RadarChart'
+import Footer from '../components/Footer'
 import { useAppDataContext } from '../App'
 import type { Skill } from '../types'
 
@@ -240,6 +241,7 @@ export default function CharacterDetailPage() {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   )
 }

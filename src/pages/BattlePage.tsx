@@ -1,7 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import { useAppDataContext } from '../App'
 import { simulateBattle } from '../engine/battleEngine'
+import Footer from '../components/Footer'
 import type { BattleResult, BattleEvent, Character, Skill } from '../types'
 
 // 技能类型配色
@@ -39,15 +40,23 @@ function CharacterSelector({
   selected,
   onSelect,
   exclude,
+  universeFilter,
 }: {
   label: string
   selected: Character | null
   onSelect: (c: Character) => void
   exclude?: string
+  universeFilter: string
 }) {
   const { characters, skillsMap } = useAppDataContext()
   const [open, setOpen] = useState(false)
-  const list = characters.filter(c => c.id !== exclude)
+  
+  // 根据筛选过滤角色列表，按综合战力排序
+  const list = characters
+    .filter(c => c.id !== exclude)
+    .filter(c => universeFilter === 'all' || c.universeId === universeFilter)
+    .sort((a, b) => b.overallScore - a.overallScore)
+  
   const skills = selected ? (skillsMap[selected.id] ?? []) : []
 
   return (
@@ -225,7 +234,7 @@ interface HistoryEntry {
 
 // ============ 主页面 ============
 export default function BattlePage() {
-  const { characters, skillsMap } = useAppDataContext()
+  const { characters, universes, skillsMap } = useAppDataContext()
   const [charA, setCharA] = useState<Character | null>(null)
   const [charB, setCharB] = useState<Character | null>(null)
   const [result, setResult] = useState<BattleResult | null>(null)
@@ -236,6 +245,33 @@ export default function BattlePage() {
   const [maxHpA, setMaxHpA] = useState(0)
   const [maxHpB, setMaxHpB] = useState(0)
   const [history, setHistory] = useState<HistoryEntry[]>([])
+  
+  // 筛选状态
+  const [universeFilter, setUniverseFilter] = useState('all')
+  const [filterExpanded, setFilterExpanded] = useState(false)
+  const filterRef = useRef<HTMLDivElement>(null)
+  const [filterNeedsCollapse, setFilterNeedsCollapse] = useState(false)
+
+  const checkCollapse = useCallback(() => {
+    const el = filterRef.current
+    if (!el) return
+    const prev = el.style.maxHeight
+    el.style.maxHeight = 'none'
+    const full = el.scrollHeight
+    el.style.maxHeight = prev
+    setFilterNeedsCollapse(full > 36)
+  }, [])
+
+  useEffect(() => {
+    const timer = setTimeout(checkCollapse, 100)
+    const handleResize = () => checkCollapse()
+    window.addEventListener('resize', handleResize)
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [universes, checkCollapse])
+
   const bottomRef = useRef<HTMLDivElement>(null)
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
@@ -326,11 +362,54 @@ export default function BattlePage() {
           <p className="text-gray-400 text-sm">选择两位角色，观看一场专属于他们的战斗叙事</p>
         </div>
 
+        {/* 筛选面板 */}
+        <div className="bg-[#1a1a2e] border border-[#2d2d4e] rounded-2xl p-3 sm:p-4 mb-4">
+          <div className="text-xs text-gray-500 font-medium uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <span>🔍</span> 角色筛选
+            {filterNeedsCollapse && (
+              <button
+                onClick={() => setFilterExpanded(v => !v)}
+                className="ml-auto text-xs text-orange-400 hover:text-orange-300 transition-colors"
+              >
+                {filterExpanded ? '收起 ▲' : '展开 ▼'}
+              </button>
+            )}
+          </div>
+          <div
+            ref={filterRef}
+            className="flex flex-wrap gap-1.5 overflow-hidden transition-all duration-300"
+            style={{ maxHeight: filterExpanded ? '500px' : '36px' }}
+          >
+            {/* 宇宙筛选 */}
+            {['all', ...universes.map(u => u.id)].map(uid => {
+              const u = universes.find(x => x.id === uid)
+              const active = universeFilter === uid
+              return (
+                <button
+                  key={`uni-${uid}`}
+                  onClick={() => setUniverseFilter(uid)}
+                  className="text-xs px-2.5 py-1 rounded-full border font-medium transition-all shrink-0 whitespace-nowrap"
+                  style={
+                    active && u
+                      ? { background: u.color + '25', borderColor: u.color + '60', color: u.color }
+                      : active
+                      ? { background: 'rgba(249,115,22,0.2)', borderColor: 'rgba(249,115,22,0.4)', color: '#fb923c' }
+                      : { borderColor: '#2d2d4e', color: '#6b7280' }
+                  }
+                >
+                  {uid === 'all' ? '全宇宙' : u?.name}
+                </button>
+              )
+            })}
+          </div>
+        </div>
+
         {/* 角色选择 + 技能预览 */}
         <div className="bg-[#1a1a1a] rounded-2xl p-3 sm:p-6 mb-6 border border-gray-800">
           <div className="flex flex-row gap-2 sm:gap-6 items-start">
             <CharacterSelector label="⚡ 先手" selected={charA}
-              onSelect={c => { setCharA(c); reset() }} exclude={charB?.id} />
+              onSelect={c => { setCharA(c); reset() }} exclude={charB?.id}
+              universeFilter={universeFilter} />
             <div className="hidden sm:flex flex-col items-center justify-start pt-16 px-2 flex-shrink-0">
               <div className="text-4xl font-black text-orange-400 drop-shadow-[0_0_20px_rgba(249,115,22,0.5)]">VS</div>
             </div>
@@ -338,7 +417,8 @@ export default function BattlePage() {
               <div className="text-xl font-black text-orange-400">VS</div>
             </div>
             <CharacterSelector label="🛡️ 后手" selected={charB}
-              onSelect={c => { setCharB(c); reset() }} exclude={charA?.id} />
+              onSelect={c => { setCharB(c); reset() }} exclude={charA?.id}
+              universeFilter={universeFilter} />
           </div>
 
           {/* 战力对比条 */}
@@ -493,6 +573,7 @@ export default function BattlePage() {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   )
 }

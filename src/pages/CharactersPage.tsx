@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import CharacterCard from '../components/CharacterCard'
+import Footer from '../components/Footer'
 import { useAppDataContext } from '../App'
 
 const SORT_OPTIONS = [
@@ -76,6 +77,7 @@ export default function CharactersPage() {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   )
 }

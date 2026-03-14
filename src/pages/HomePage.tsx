@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import CharacterCard from '../components/CharacterCard'
 import BattleCard from '../components/BattleCard'
+import Footer from '../components/Footer'
 import { useAppDataContext } from '../App'
 
 export default function HomePage() {
@@ -160,9 +161,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <footer className="border-t border-[#2d2d4e] py-8 px-4 text-center text-gray-600 text-sm">
-        RolesPK · 数据仅供娱乐参考 · 版权归原作者所有
-      </footer>
+      <Footer />
     </div>
   )
 }

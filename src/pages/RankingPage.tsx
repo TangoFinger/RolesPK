@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
 import { Link } from 'react-router-dom'
+import Footer from '../components/Footer'
 import { useAppDataContext } from '../App'
 
 type SortKey = 'overall' | 'attack' | 'defense' | 'speed' | 'intelligence' | 'stamina' | 'special'
@@ -39,11 +40,21 @@ export default function RankingPage() {
       el.style.maxHeight = 'none'
       const full = el.scrollHeight
       el.style.maxHeight = prev
-      setter(full > 44)
+      // 固定阈值，超过一行就显示展开按钮
+      setter(full > 36)
     }
   }, [])
 
-  useEffect(() => { checkCollapse() }, [universes, checkCollapse])
+  useEffect(() => { 
+    // 延迟执行确保 DOM 已渲染
+    const timer = setTimeout(checkCollapse, 100)
+    const handleResize = () => checkCollapse()
+    window.addEventListener('resize', handleResize)
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [universes, checkCollapse])
 
   const sorted = [...characters]
     .filter(c => universeFilter === 'all' || c.universeId === universeFilter)
@@ -78,6 +89,14 @@ export default function RankingPage() {
           <div>
             <div className="text-xs text-gray-500 font-medium uppercase tracking-wider mb-2 flex items-center gap-1.5">
               <span>🌐</span> 宇宙筛选
+              {uniNeedsCollapse && (
+                <button
+                  onClick={() => setUniExpanded(v => !v)}
+                  className="ml-auto text-xs text-orange-400 hover:text-orange-300 transition-colors"
+                >
+                  {uniExpanded ? '收起 ▲' : '展开 ▼'}
+                </button>
+              )}
             </div>
             <div
               ref={uniRef}
@@ -104,15 +123,6 @@ export default function RankingPage() {
                   </button>
                 )
               })}
-              {uniNeedsCollapse && (
-                <button
-                  onClick={() => setUniExpanded(v => !v)}
-                  className="text-xs px-3 py-1.5 rounded-full border font-medium transition-all shrink-0"
-                  style={{ borderColor: '#2d2d4e', color: '#fb923c' }}
-                >
-                  {uniExpanded ? '收起 ▲' : '展开 ▼'}
-                </button>
-              )}
             </div>
           </div>
 
@@ -123,6 +133,14 @@ export default function RankingPage() {
           <div>
             <div className="text-xs text-gray-500 font-medium uppercase tracking-wider mb-2 flex items-center gap-1.5">
               <span>📊</span> 排序维度
+              {sortNeedsCollapse && (
+                <button
+                  onClick={() => setSortExpanded(v => !v)}
+                  className="ml-auto text-xs text-orange-400 hover:text-orange-300 transition-colors"
+                >
+                  {sortExpanded ? '收起 ▲' : '展开 ▼'}
+                </button>
+              )}
             </div>
             <div
               ref={sortRef}
@@ -142,15 +160,6 @@ export default function RankingPage() {
                   <span>{tab.icon}</span>{tab.label}
                 </button>
               ))}
-              {sortNeedsCollapse && (
-                <button
-                  onClick={() => setSortExpanded(v => !v)}
-                  className="flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap border transition-all shrink-0 border-[#2d2d4e]"
-                  style={{ color: '#fb923c' }}
-                >
-                  {sortExpanded ? '收起 ▲' : '展开 ▼'}
-                </button>
-              )}
             </div>
           </div>
         </div>
@@ -320,6 +329,7 @@ export default function RankingPage() {
         )}
 
       </div>
+      <Footer />
     </div>
   )
 }

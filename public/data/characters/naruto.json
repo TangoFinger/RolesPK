@@ -391,14 +391,14 @@
     "description": "被称为「木叶的苍蓝野兽」，八门遁甲的极致使用者，能与斑一战的体术王者。",
     "coverImage": "",
     "accentColor": "#16a34a",
-    "stats": { "attack": 88, "defense": 72, "speed": 95, "intelligence": 50, "stamina": 85, "special": 55 },
-    "overallScore": 3800,
-    "baseScore": 3800,
+    "stats": { "attack": 72, "defense": 62, "speed": 82, "intelligence": 45, "stamina": 75, "special": 50 },
+    "overallScore": 3400,
+    "baseScore": 3400,
     "forms": [
-      { "name": "八门全开", "description": "八门遁甲之阵", "overallScore": 3800, "stats": { "attack": 88, "defense": 72, "speed": 95, "intelligence": 50, "stamina": 85, "special": 55 } }
+      { "name": "八门全开", "description": "八门遁甲之阵，昼虎秒杀秽土斑", "overallScore": 7000, "stats": { "attack": 99, "defense": 88, "speed": 100, "intelligence": 50, "stamina": 99, "special": 70 } }
     ],
     "evidence": [
-      { "desc": "八门全开与完全体须佐能乎斑激战，险些踢出大结局", "source": "火影忍者 第679话" }
+      { "desc": "八门全开昼虎秒杀秽土斑，斑承认这是最强的一击", "source": "火影忍者 第679话" }
     ],
     "rank": 27
   }

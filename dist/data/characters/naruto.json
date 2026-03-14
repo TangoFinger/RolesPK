@@ -1,0 +1,52 @@
+[
+  {
+    "id": "naruto",
+    "name": "漩涡鸣人",
+    "alias": ["七代目火影", "Naruto Uzumaki"],
+    "workId": "naruto-s",
+    "universeId": "naruto",
+    "tags": ["忍者", "尾兽人柱力", "仙术", "六道"],
+    "race": "人类",
+    "faction": "木叶村",
+    "description": "从被村子排斥的孤儿成长为守护世界的七代目火影，六道仙人查克拉持有者。",
+    "coverImage": "",
+    "accentColor": "#f59e0b",
+    "stats": { "attack": 95, "defense": 88, "speed": 92, "intelligence": 70, "stamina": 97, "special": 96 },
+    "overallScore": 6530,
+    "baseScore": 6530,
+    "forms": [
+      { "name": "普通模式", "description": "基础忍者形态", "overallScore": 2200, "stats": { "attack": 60, "defense": 55, "speed": 58, "intelligence": 70, "stamina": 80, "special": 55 } },
+      { "name": "仙人模式", "description": "吸收自然能量", "overallScore": 3800, "stats": { "attack": 78, "defense": 72, "speed": 75, "intelligence": 70, "stamina": 85, "special": 78 } },
+      { "name": "尾兽模式", "description": "九尾查克拉模式", "overallScore": 5200, "stats": { "attack": 88, "defense": 82, "speed": 86, "intelligence": 70, "stamina": 93, "special": 88 } },
+      { "name": "六道仙人模式", "description": "六道仙人力量", "overallScore": 6530, "stats": { "attack": 95, "defense": 88, "speed": 92, "intelligence": 70, "stamina": 97, "special": 96 } }
+    ],
+    "evidence": [
+      { "desc": "与佐助联手击败大筒木辉夜", "source": "火影忍者疾风传 第479集" }
+    ],
+    "rank": 7
+  },
+  {
+    "id": "sasuke",
+    "name": "宇智波佐助",
+    "alias": ["最后的宇智波", "Sasuke Uchiha"],
+    "workId": "naruto-s",
+    "universeId": "naruto",
+    "tags": ["写轮眼", "忍者", "六道", "速度型"],
+    "race": "人类",
+    "faction": "木叶村",
+    "description": "宇智波族最后的传人，拥有万花筒写轮眼与轮回眼，六道级别的力量。",
+    "coverImage": "",
+    "accentColor": "#6366f1",
+    "stats": { "attack": 94, "defense": 85, "speed": 93, "intelligence": 90, "stamina": 88, "special": 95 },
+    "overallScore": 6480,
+    "baseScore": 6480,
+    "forms": [
+      { "name": "万花筒写轮眼", "description": "须佐能乎完全体", "overallScore": 5000, "stats": { "attack": 88, "defense": 82, "speed": 87, "intelligence": 90, "stamina": 82, "special": 88 } },
+      { "name": "六道轮回眼", "description": "六道仙人力量", "overallScore": 6480, "stats": { "attack": 94, "defense": 85, "speed": 93, "intelligence": 90, "stamina": 88, "special": 95 } }
+    ],
+    "evidence": [
+      { "desc": "六道级须佐能乎与鸣人六道尾兽玉交锋", "source": "火影忍者疾风传 第476集" }
+    ],
+    "rank": 8
+  }
+]

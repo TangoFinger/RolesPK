@@ -1,0 +1,53 @@
+[
+  {
+    "id": "goku",
+    "name": "孙悟空",
+    "alias": ["卡卡罗特", "Son Goku"],
+    "workId": "dbs",
+    "universeId": "dragon-ball",
+    "tags": ["超级赛亚人", "宇宙级", "力量型", "速度型"],
+    "race": "赛亚人",
+    "faction": "正义",
+    "description": "来自赛亚星的地球守护者，不断突破极限的最强战士，掌握超级赛亚人神·超级赛亚人变换。",
+    "coverImage": "",
+    "accentColor": "#f97316",
+    "stats": { "attack": 99, "defense": 88, "speed": 97, "intelligence": 72, "stamina": 95, "special": 98 },
+    "overallScore": 9800,
+    "baseScore": 6533,
+    "forms": [
+      { "name": "普通态", "description": "基础状态", "overallScore": 3200, "stats": { "attack": 70, "defense": 65, "speed": 68, "intelligence": 72, "stamina": 75, "special": 60 } },
+      { "name": "超级赛亚人", "description": "第一次超越极限", "overallScore": 5500, "stats": { "attack": 82, "defense": 75, "speed": 80, "intelligence": 72, "stamina": 80, "special": 78 } },
+      { "name": "超级赛亚人神", "description": "神之力量", "overallScore": 7800, "stats": { "attack": 91, "defense": 84, "speed": 90, "intelligence": 72, "stamina": 88, "special": 90 } },
+      { "name": "超级赛亚人·神蓝", "description": "神之力与赛亚人之力的融合", "overallScore": 9800, "stats": { "attack": 99, "defense": 88, "speed": 97, "intelligence": 72, "stamina": 95, "special": 98 } }
+    ],
+    "evidence": [
+      { "desc": "与贝吉塔的战斗中展现神蓝等级战力", "source": "龙珠超 第27集" },
+      { "desc": "本能之极·完全体突破界王神等级", "source": "龙珠超 第129集" }
+    ],
+    "rank": 1
+  },
+  {
+    "id": "vegeta",
+    "name": "贝吉塔",
+    "alias": ["赛亚人王子", "Vegeta"],
+    "workId": "dbs",
+    "universeId": "dragon-ball",
+    "tags": ["超级赛亚人", "宇宙级", "力量型", "王族"],
+    "race": "赛亚人",
+    "faction": "正义",
+    "description": "赛亚人王子，自尊心极强的精英战士，从宿敌到盟友，战力始终与悟空并驾齐驱。",
+    "coverImage": "",
+    "accentColor": "#8b5cf6",
+    "stats": { "attack": 98, "defense": 87, "speed": 95, "intelligence": 85, "stamina": 93, "special": 95 },
+    "overallScore": 9650,
+    "baseScore": 6433,
+    "forms": [
+      { "name": "普通态", "description": "基础状态", "overallScore": 3100, "stats": { "attack": 68, "defense": 63, "speed": 66, "intelligence": 85, "stamina": 72, "special": 58 } },
+      { "name": "超级赛亚人蓝", "description": "超越极限的蓝发形态", "overallScore": 9650, "stats": { "attack": 98, "defense": 87, "speed": 95, "intelligence": 85, "stamina": 93, "special": 95 } }
+    ],
+    "evidence": [
+      { "desc": "神蓝等级与悟空势均力敌", "source": "龙珠超 第27集" }
+    ],
+    "rank": 2
+  }
+]

@@ -1,0 +1,290 @@
+[
+  {
+    "id": "luffy",
+    "name": "蒙奇·D·路飞",
+    "alias": ["草帽路飞", "五皇路飞"],
+    "workId": "one-piece-s",
+    "universeId": "one-piece",
+    "tags": ["海贼", "橡皮果实", "霸气", "五皇"],
+    "race": "人类",
+    "faction": "草帽海贼团",
+    "description": "目标是成为海贼王的男人，拥有橡皮橡皮果实能力，觉醒后进入Gear5白色蓬蒙形态。",
+    "coverImage": "",
+    "accentColor": "#10b981",
+    "stats": { "attack": 94, "defense": 85, "speed": 90, "intelligence": 65, "stamina": 96, "special": 95 },
+    "overallScore": 6200,
+    "baseScore": 6200,
+    "forms": [
+      { "name": "Gear2", "description": "加速血液流动", "overallScore": 2500, "stats": { "attack": 70, "defense": 58, "speed": 82, "intelligence": 65, "stamina": 75, "special": 65 } },
+      { "name": "Gear4 蛇人", "description": "气压弹性与流速结合", "overallScore": 4800, "stats": { "attack": 85, "defense": 78, "speed": 88, "intelligence": 65, "stamina": 82, "special": 85 } },
+      { "name": "Gear5 太阳神", "description": "果实觉醒·最高形态", "overallScore": 6200, "stats": { "attack": 94, "defense": 85, "speed": 90, "intelligence": 65, "stamina": 96, "special": 95 } }
+    ],
+    "evidence": [
+      { "desc": "Gear5状态与四皇凯多战斗", "source": "海贼王 第1049话" }
+    ],
+    "rank": 13
+  },
+  {
+    "id": "roger",
+    "name": "哥尔·D·罗杰",
+    "alias": ["海贼王", "罗杰船长", "Gold Roger"],
+    "workId": "one-piece-s",
+    "universeId": "one-piece",
+    "tags": ["海贼王", "霸气", "征服者", "传说级"],
+    "race": "人类",
+    "faction": "罗杰海贼团",
+    "description": "世界上唯一到达拉夫德尔、称霸大海的男人，史上最强海贼王，拥有最完整的霸王色霸气。",
+    "coverImage": "",
+    "accentColor": "#f59e0b",
+    "stats": { "attack": 99, "defense": 95, "speed": 96, "intelligence": 92, "stamina": 97, "special": 99 },
+    "overallScore": 8000,
+    "baseScore": 8000,
+    "forms": [
+      { "name": "常规战斗", "description": "霸气全开的巅峰状态", "overallScore": 8000, "stats": { "attack": 99, "defense": 95, "speed": 96, "intelligence": 92, "stamina": 97, "special": 99 } }
+    ],
+    "evidence": [
+      { "desc": "与白胡子势均力敌对战三天三夜", "source": "海贼王 第966话" },
+      { "desc": "被称为史上最强的海贼", "source": "海贼王 原著" }
+    ],
+    "rank": 3
+  },
+  {
+    "id": "whitebeard",
+    "name": "爱德华·纽盖特",
+    "alias": ["白胡子", "世界最强男人", "Whitebeard"],
+    "workId": "one-piece-s",
+    "universeId": "one-piece",
+    "tags": ["四皇", "震震果实", "霸气", "传说级"],
+    "race": "人类",
+    "faction": "白胡子海贼团",
+    "description": "曾与罗杰平起平坐的世界最强男人，震震果实能制造地震与海啸，顶上战争中即使重伤仍无人能击倒他。",
+    "coverImage": "",
+    "accentColor": "#6b7280",
+    "stats": { "attack": 98, "defense": 96, "speed": 78, "intelligence": 88, "stamina": 95, "special": 99 },
+    "overallScore": 7800,
+    "baseScore": 7800,
+    "forms": [
+      { "name": "常规战斗", "description": "震震果实全力状态", "overallScore": 7800, "stats": { "attack": 98, "defense": 96, "speed": 78, "intelligence": 88, "stamina": 95, "special": 99 } },
+      { "name": "垂死之战", "description": "身中枪伤与剑伤后的顶上战争末期", "overallScore": 5800, "stats": { "attack": 90, "defense": 70, "speed": 60, "intelligence": 88, "stamina": 60, "special": 95 } }
+    ],
+    "evidence": [
+      { "desc": "顶上战争身中267处弹伤、152处刀伤、46处炮伤，背对敌人站立而死", "source": "海贼王 第577话" }
+    ],
+    "rank": 5
+  },
+  {
+    "id": "kaido",
+    "name": "凯多",
+    "alias": ["百兽凯多", "鬼", "Kaido of the Beasts"],
+    "workId": "one-piece-s",
+    "universeId": "one-piece",
+    "tags": ["四皇", "幻兽种", "无敌身躯", "霸气"],
+    "race": "人类（鬼族血统）",
+    "faction": "百兽海贼团",
+    "description": "被誉为活着最强生物的男人，幻兽种青龙果实能力者，天生超强霸气覆体，曾被抓22次却每次都逃脱。",
+    "coverImage": "",
+    "accentColor": "#7c3aed",
+    "stats": { "attack": 99, "defense": 99, "speed": 82, "intelligence": 78, "stamina": 99, "special": 97 },
+    "overallScore": 7900,
+    "baseScore": 7900,
+    "forms": [
+      { "name": "人形态", "description": "霸气全覆的人形战斗", "overallScore": 6200, "stats": { "attack": 95, "defense": 99, "speed": 82, "intelligence": 78, "stamina": 99, "special": 90 } },
+      { "name": "青龙形态", "description": "幻兽种·青龙完全体", "overallScore": 7900, "stats": { "attack": 99, "defense": 99, "speed": 82, "intelligence": 78, "stamina": 99, "special": 97 } },
+      { "name": "武装形态（Boro Breath）", "description": "龙形喷射霸气火焰", "overallScore": 7400, "stats": { "attack": 99, "defense": 99, "speed": 70, "intelligence": 78, "stamina": 99, "special": 95 } }
+    ],
+    "evidence": [
+      { "desc": "从玛丽乔亚坠落海中而毫发无损", "source": "海贼王 第795话" }
+    ],
+    "rank": 4
+  },
+  {
+    "id": "bigmom",
+    "name": "夏洛特·玲玲",
+    "alias": ["大妈", "BIG MOM"],
+    "workId": "one-piece-s",
+    "universeId": "one-piece",
+    "tags": ["四皇", "魂魂果实", "灵魂操纵", "霸气"],
+    "race": "人类",
+    "faction": "大妈海贼团",
+    "description": "四皇之一，魂魂果实能力者，可夺取他人寿命创造仆从，拥有霸王色霸气，体格异常强悍。",
+    "coverImage": "",
+    "accentColor": "#e11d48",
+    "stats": { "attack": 97, "defense": 95, "speed": 75, "intelligence": 85, "stamina": 97, "special": 98 },
+    "overallScore": 7600,
+    "baseScore": 7600,
+    "forms": [
+      { "name": "常规战斗", "description": "三仆从辅助的战斗形态", "overallScore": 7600, "stats": { "attack": 97, "defense": 95, "speed": 75, "intelligence": 85, "stamina": 97, "special": 98 } },
+      { "name": "狂饿暴走", "description": "陷入暴食发作的失控状态，理智归零但战力暴增", "overallScore": 7600, "stats": { "attack": 99, "defense": 99, "speed": 80, "intelligence": 30, "stamina": 99, "special": 95 } }
+    ],
+    "evidence": [
+      { "desc": "徒手接下炮击，以一人之力对抗整支海军", "source": "海贼王 原著" }
+    ],
+    "rank": 6
+  },
+  {
+    "id": "shanks",
+    "name": "香克斯",
+    "alias": ["红发香克斯", "红发", "Shanks"],
+    "workId": "one-piece-s",
+    "universeId": "one-piece",
+    "tags": ["五皇", "霸气", "征服者", "剑客"],
+    "race": "人类",
+    "faction": "红发海贼团",
+    "description": "路飞的启蒙人，现任五皇之一，以惊世霸气著称，不依赖任何恶魔果实，凭剑术与霸气立于顶点。",
+    "coverImage": "",
+    "accentColor": "#dc2626",
+    "stats": { "attack": 97, "defense": 93, "speed": 95, "intelligence": 96, "stamina": 94, "special": 98 },
+    "overallScore": 7700,
+    "baseScore": 7700,
+    "forms": [
+      { "name": "常规战斗", "description": "单臂剑术与霸气的极致运用", "overallScore": 7700, "stats": { "attack": 97, "defense": 93, "speed": 95, "intelligence": 96, "stamina": 94, "special": 98 } }
+    ],
+    "evidence": [
+      { "desc": "仅凭霸气令顶上战争双方停战", "source": "海贼王 第580话" },
+      { "desc": "与白胡子旗鼓相当的剑术对决", "source": "海贼王 第434话" }
+    ],
+    "rank": 7
+  },
+  {
+    "id": "aokiji",
+    "name": "库赞",
+    "alias": ["青雉", "Aokiji"],
+    "workId": "one-piece-s",
+    "universeId": "one-piece",
+    "tags": ["海军", "冰冰果实", "元帅候选", "自然系"],
+    "race": "人类",
+    "faction": "黑胡子海贼团（前海军大将）",
+    "description": "前海军大将，冰冰果实能力者，可将一切冻结，与赤犬在阿鲁巴纳岛决战十天后失去一条腿。",
+    "coverImage": "",
+    "accentColor": "#38bdf8",
+    "stats": { "attack": 93, "defense": 92, "speed": 90, "intelligence": 90, "stamina": 88, "special": 96 },
+    "overallScore": 6600,
+    "baseScore": 6600,
+    "forms": [
+      { "name": "常规战斗", "description": "冰系能力全力输出", "overallScore": 6600, "stats": { "attack": 93, "defense": 92, "speed": 90, "intelligence": 90, "stamina": 88, "special": 96 } }
+    ],
+    "evidence": [
+      { "desc": "与赤犬在小岛决战十天，将整座岛分成冰火两半", "source": "海贼王 第700话" }
+    ],
+    "rank": 16
+  },
+  {
+    "id": "kizaru",
+    "name": "博萨利诺",
+    "alias": ["黄猿", "Kizaru"],
+    "workId": "one-piece-s",
+    "universeId": "one-piece",
+    "tags": ["海军", "光光果实", "大将", "自然系"],
+    "race": "人类",
+    "faction": "海军总部（大将）",
+    "description": "海军大将，光光果实能力者，以光速移动与激光攻击，近乎无懈可击的速度是他最大的武器。",
+    "coverImage": "",
+    "accentColor": "#fbbf24",
+    "stats": { "attack": 96, "defense": 88, "speed": 99, "intelligence": 82, "stamina": 85, "special": 97 },
+    "overallScore": 6800,
+    "baseScore": 6800,
+    "forms": [
+      { "name": "常规战斗", "description": "光速移动与激光炮全开", "overallScore": 6800, "stats": { "attack": 96, "defense": 88, "speed": 99, "intelligence": 82, "stamina": 85, "special": 97 } }
+    ],
+    "evidence": [
+      { "desc": "以光速踢飞索隆等多名草帽船员", "source": "海贼王 第510话" }
+    ],
+    "rank": 15
+  },
+  {
+    "id": "akainu",
+    "name": "萨卡兹基",
+    "alias": ["赤犬", "Akainu"],
+    "workId": "one-piece-s",
+    "universeId": "one-piece",
+    "tags": ["海军", "岩浆果实", "元帅", "自然系"],
+    "race": "人类",
+    "faction": "海军总部（元帅）",
+    "description": "现任海军元帅，岩浆岩浆果实能力者，彻底的正义推行者，在顶上战争中亲手终结了艾斯的性命。",
+    "coverImage": "",
+    "accentColor": "#ef4444",
+    "stats": { "attack": 98, "defense": 94, "speed": 82, "intelligence": 86, "stamina": 92, "special": 98 },
+    "overallScore": 7100,
+    "baseScore": 7100,
+    "forms": [
+      { "name": "常规战斗", "description": "岩浆能力全力输出", "overallScore": 7100, "stats": { "attack": 98, "defense": 94, "speed": 82, "intelligence": 86, "stamina": 92, "special": 98 } }
+    ],
+    "evidence": [
+      { "desc": "与青雉决战十天后当选海军元帅", "source": "海贼王 第700话" },
+      { "desc": "顶上战争击杀火拳艾斯", "source": "海贼王 第574话" }
+    ],
+    "rank": 11
+  },
+  {
+    "id": "zoro",
+    "name": "罗罗诺亚·索隆",
+    "alias": ["海贼猎人索隆", "鬼斩索隆", "Zoro"],
+    "workId": "one-piece-s",
+    "universeId": "one-piece",
+    "tags": ["剑客", "三刀流", "霸气", "副船长"],
+    "race": "人类",
+    "faction": "草帽海贼团",
+    "description": "目标成为世界第一剑客，三刀流宗师，使用阎魔与和道一文字等名刀，拥有霸王色霸气。",
+    "coverImage": "",
+    "accentColor": "#16a34a",
+    "stats": { "attack": 95, "defense": 90, "speed": 88, "intelligence": 72, "stamina": 95, "special": 93 },
+    "overallScore": 6400,
+    "baseScore": 6400,
+    "forms": [
+      { "name": "常规三刀流", "description": "三刀流的基础战斗形态", "overallScore": 3800, "stats": { "attack": 80, "defense": 78, "speed": 80, "intelligence": 72, "stamina": 85, "special": 75 } },
+      { "name": "鬼斩·修罗", "description": "九刀流·阎王之名", "overallScore": 6400, "stats": { "attack": 95, "defense": 90, "speed": 88, "intelligence": 72, "stamina": 95, "special": 93 } }
+    ],
+    "evidence": [
+      { "desc": "以一刀击败米霍克的弟子达兹·波涅斯", "source": "海贼王 原著" },
+      { "desc": "顶上战争后修炼，能以一击重创大将级对手", "source": "海贼王 新世界篇" }
+    ],
+    "rank": 17
+  },
+  {
+    "id": "sanji",
+    "name": "文斯莫克·山治",
+    "alias": ["黑脚山治", "Sanji"],
+    "workId": "one-piece-s",
+    "universeId": "one-piece",
+    "tags": ["厨师", "腿法", "燃火腿", "改造人"],
+    "race": "人类（改造人·文斯莫克家族）",
+    "faction": "草帽海贼团",
+    "description": "草帽团战斗三人组之一，以腿法为主，觉醒改造人基因后能力大幅提升，崇尚绅士风度绝不用手攻击。",
+    "coverImage": "",
+    "accentColor": "#f59e0b",
+    "stats": { "attack": 92, "defense": 85, "speed": 96, "intelligence": 80, "stamina": 90, "special": 88 },
+    "overallScore": 6100,
+    "baseScore": 6100,
+    "forms": [
+      { "name": "地狱腿法", "description": "普通燃火腿战斗形态", "overallScore": 4000, "stats": { "attack": 80, "defense": 75, "speed": 88, "intelligence": 80, "stamina": 80, "special": 78 } },
+      { "name": "Ifrit Jambe", "description": "改造人觉醒·极焰腿", "overallScore": 6100, "stats": { "attack": 92, "defense": 85, "speed": 96, "intelligence": 80, "stamina": 90, "special": 88 } }
+    ],
+    "evidence": [
+      { "desc": "以Ifrit Jambe重创玛格瑞拉", "source": "海贼王 第1031话" }
+    ],
+    "rank": 20
+  },
+  {
+    "id": "nami",
+    "name": "娜美",
+    "alias": ["小偷猫娜美", "航海士娜美", "Nami"],
+    "workId": "one-piece-s",
+    "universeId": "one-piece",
+    "tags": ["航海士", "气象棒", "天候棒", "智力型"],
+    "race": "人类",
+    "faction": "草帽海贼团",
+    "description": "草帽团航海士，天才导航员，使用宙斯（原大妈仆从）强化后的天候棒，能操控气象进行战斗。",
+    "coverImage": "",
+    "accentColor": "#f97316",
+    "stats": { "attack": 55, "defense": 45, "speed": 78, "intelligence": 97, "stamina": 50, "special": 82 },
+    "overallScore": 1800,
+    "baseScore": 1800,
+    "forms": [
+      { "name": "天候棒·宙斯模式", "description": "融合宙斯的气象棒强化形态", "overallScore": 1800, "stats": { "attack": 55, "defense": 45, "speed": 78, "intelligence": 97, "stamina": 50, "special": 82 } }
+    ],
+    "evidence": [
+      { "desc": "以宙斯之雷击败女儿岛强者乌尔缇", "source": "海贼王 第1013话" }
+    ],
+    "rank": 35
+  }
+]

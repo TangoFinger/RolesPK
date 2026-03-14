@@ -1,0 +1,8 @@
+[
+  { "id": "dragon-ball", "name": "龙珠宇宙", "tier": "S", "tierCoeff": 1.5, "color": "#f97316" },
+  { "id": "naruto", "name": "火影宇宙", "tier": "B", "tierCoeff": 1.0, "color": "#f59e0b" },
+  { "id": "one-piece", "name": "海贼王宇宙", "tier": "B", "tierCoeff": 1.0, "color": "#10b981" },
+  { "id": "attack-on-titan", "name": "进击的巨人", "tier": "C", "tierCoeff": 0.8, "color": "#6b7280" },
+  { "id": "bleach", "name": "死神宇宙", "tier": "B", "tierCoeff": 1.0, "color": "#38bdf8" },
+  { "id": "jujutsu-kaisen", "name": "咒术回战宇宙", "tier": "A", "tierCoeff": 1.15, "color": "#7c3aed" }
+]

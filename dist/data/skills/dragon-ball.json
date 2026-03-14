@@ -1,0 +1,99 @@
+{
+  "goku": [
+    {
+      "id": "goku-kamehameha", "name": "龟派气功", "type": "energy",
+      "description": "汇聚全身气弹形成强大能量波",
+      "damageMult": 1.8, "staminaCost": 20, "cooldown": 1, "hitRate": 0.92,
+      "effectDesc": "炽烈的蓝色能量波席卷而来",
+      "narrativeTemplates": [
+        "{attacker}双手合拢，低吼一声「龟——派——气——功！」，蓝色能量波如同小型海啸般轰向{target}！",
+        "{attacker}猛地伸出双掌，浓缩到极致的气弹瞬间释放，龟派气功将周围的空气撕裂，直冲{target}而去！"
+      ]
+    },
+    {
+      "id": "goku-instant", "name": "瞬身拳", "type": "physical",
+      "description": "利用瞬间移动发动奇袭重拳",
+      "damageMult": 1.5, "staminaCost": 15, "cooldown": 0, "hitRate": 0.85,
+      "effectDesc": "身影消失，拳头已至",
+      "narrativeTemplates": [
+        "{attacker}身形一晃，瞬间出现在{target}身后，一记重拳狠狠砸在对方背部！",
+        "{attacker}踏出瞬身步，{target}还没反应过来，已经被一记沉重的上勾拳击飞！"
+      ]
+    },
+    {
+      "id": "goku-spirit-bomb", "name": "元气弹", "type": "ultimate",
+      "description": "汇聚世间万物生命能量形成的终极技",
+      "damageMult": 3.5, "staminaCost": 60, "cooldown": 4, "hitRate": 0.80,
+      "effectDesc": "巨大的光球积聚了宇宙的能量",
+      "narrativeTemplates": [
+        "{attacker}双手高举过头，仰望苍穹，从宇宙四方汇聚而来的能量凝成一颗巨大光球！「元气弹！」——轰然砸下，{target}被淹没在耀眼的白光中！"
+      ]
+    },
+    {
+      "id": "goku-god-ki", "name": "神之气·爆发", "type": "special",
+      "description": "激发超级赛亚人神蓝的神之气",
+      "damageMult": 2.2, "staminaCost": 35, "cooldown": 2, "hitRate": 0.88,
+      "effectDesc": "神圣的蓝色火焰将悟空整个包裹",
+      "narrativeTemplates": [
+        "{attacker}全身涌现出神圣的蓝色气焰，瞳孔化为碧蓝，神之气瞬间压垮了周围的空间，{target}感到一股无形的力量将自己压制！"
+      ]
+    },
+    {
+      "id": "goku-counter", "name": "本能回避", "type": "defense",
+      "description": "极意功·本能状态下的直觉反应",
+      "damageMult": 0.5, "staminaCost": 10, "cooldown": 0, "hitRate": 1.0,
+      "effectDesc": "身体自动躲避攻击并反击",
+      "narrativeTemplates": [
+        "{attacker}的身体仿佛拥有自己的意识，不经思考便闪过了{target}的攻击，随即以一记反手掌击精准回击！"
+      ]
+    }
+  ],
+  "vegeta": [
+    {
+      "id": "vegeta-bigbang", "name": "终极闪光", "type": "energy",
+      "description": "集中全部战斗力于一点爆发",
+      "damageMult": 2.0, "staminaCost": 25, "cooldown": 1, "hitRate": 0.90,
+      "effectDesc": "白金色的能量柱刺破天际",
+      "narrativeTemplates": [
+        "{attacker}将右手伸向{target}，轻声说「终……极……闪光」，下一瞬间白金色能量柱将周遭一切轰为虚无！",
+        "{attacker}双手交叉蓄力，凝聚的气压将地面压出深坑，「终极闪光！」——毁灭性的能量直奔{target}！"
+      ]
+    },
+    {
+      "id": "vegeta-galick", "name": "加力卡炮", "type": "energy",
+      "description": "紫色气炮强力齐射",
+      "damageMult": 1.6, "staminaCost": 18, "cooldown": 0, "hitRate": 0.92,
+      "effectDesc": "紫色能量弹密集倾泻",
+      "narrativeTemplates": [
+        "{attacker}双手抵住侧脸，紫色光芒爆发，「加——力——卡——炮！」，{target}被漫天紫色气弹覆盖！"
+      ]
+    },
+    {
+      "id": "vegeta-pride", "name": "赛亚人之傲", "type": "special",
+      "description": "激发王族血脉，短暂大幅提升攻击",
+      "damageMult": 2.5, "staminaCost": 40, "cooldown": 3, "hitRate": 0.88,
+      "effectDesc": "赛亚人王族的骄傲燃烧殆尽",
+      "narrativeTemplates": [
+        "「我是赛亚人的王子！」——{attacker}怒吼着，蓝色气焰冲天，随即以超越极限的爆发力将{target}轰飞！"
+      ]
+    },
+    {
+      "id": "vegeta-rush", "name": "精英连击", "type": "physical",
+      "description": "高速连续出拳踢击",
+      "damageMult": 1.4, "staminaCost": 12, "cooldown": 0, "hitRate": 0.88,
+      "effectDesc": "拳影残留空气中",
+      "narrativeTemplates": [
+        "{attacker}身形如残影般快速移动，对{target}展开上中下三路的精准连击，每一拳都蕴含着赛亚人精英的骄傲！"
+      ]
+    },
+    {
+      "id": "vegeta-overload", "name": "超越极限", "type": "ultimate",
+      "description": "突破自身极限爆发全部力量",
+      "damageMult": 3.2, "staminaCost": 55, "cooldown": 4, "hitRate": 0.85,
+      "effectDesc": "超出身体承受极限的气劲将周围一切震飞",
+      "narrativeTemplates": [
+        "「我要超越你，卡卡罗特……也超越我自己！」——{attacker}爆发出远超极限的战斗气，将{target}与整片战场一同震碎！"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "ichigo": [
+    {
+      "id": "ichigo-getsuga-tensho", "name": "月牙天冲", "type": "energy",
+      "description": "以斩魄刀凝聚灵压斩出的新月形斩击",
+      "damageMult": 1.8, "staminaCost": 20, "cooldown": 1, "hitRate": 0.92,
+      "effectDesc": "黑色月牙形斩击撕裂空间",
+      "narrativeTemplates": [
+        "{attacker}高举斩月，灵压在刀身凝聚至极限，「月牙——天冲！」——漆黑的新月形斩击以毁灭之势横扫{target}！",
+        "{attacker}眼中赤红闪烁，斩月散发出死亡般的黑色灵压，月牙天冲斩出，{target}感到死神的气息扑面而来！"
+      ]
+    },
+    {
+      "id": "ichigo-bankai", "name": "卍解·天锁斩月", "type": "special",
+      "description": "卍解状态下压缩全部灵压于刀刃",
+      "damageMult": 2.4, "staminaCost": 35, "cooldown": 2, "hitRate": 0.90,
+      "effectDesc": "灵压极度压缩，刀身细长如锋",
+      "narrativeTemplates": [
+        "「卍解——天锁斩月。」——{attacker}的斩月缩短为一柄细长黑刀，却凝聚了全部的灵压，一击之下{target}感受到的是压倒性的纯粹斩击！"
+      ]
+    },
+    {
+      "id": "ichigo-final-getsuga", "name": "最终月牙天冲", "type": "ultimate",
+      "description": "与斩月合一，成为月牙天冲本身",
+      "damageMult": 4.0, "staminaCost": 80, "cooldown": 6, "hitRate": 0.88,
+      "effectDesc": "黑色发丝蔓延，存在本身化为斩击",
+      "narrativeTemplates": [
+        "{attacker}黑色发丝蔓延全身，眼神平静如死，「我……就是月牙天冲。」——与{target}之间的距离消失，那一击无声无息，却将一切斩断！"
+      ]
+    },
+    {
+      "id": "ichigo-hollow-mask", "name": "虚化·暴走", "type": "physical",
+      "description": "佩戴虚之面具爆发虚的力量",
+      "damageMult": 2.0, "staminaCost": 28, "cooldown": 2, "hitRate": 0.88,
+      "effectDesc": "白色面具浮现，战意变为纯粹的暴力",
+      "narrativeTemplates": [
+        "{attacker}白色面具自脸上浮现，虚的本能接管意识，「给我——消失！」——速度与力量暴涨，对{target}发动不计代价的狂暴猛攻！"
+      ]
+    },
+    {
+      "id": "ichigo-fullbring", "name": "完现术·觉醒", "type": "defense",
+      "description": "以完现术强化身体进行反击",
+      "damageMult": 1.4, "staminaCost": 15, "cooldown": 0, "hitRate": 0.93,
+      "effectDesc": "灵压与完现术融合强化防御",
+      "narrativeTemplates": [
+        "{attacker}感知到{target}的攻击轨迹，完现术在身上激活，以最小的动作化解来袭，随即反手一击精准切入破绽！"
+      ]
+    }
+  ],
+  "aizen": [
+    {
+      "id": "aizen-kyoka-suigetsu", "name": "镜花水月·完全催眠", "type": "special",
+      "description": "斩魄刀释放后永久催眠所有见过其刀的人",
+      "damageMult": 2.0, "staminaCost": 10, "cooldown": 0, "hitRate": 1.0,
+      "effectDesc": "感官被完全欺骗，所见皆为幻象",
+      "narrativeTemplates": [
+        "{attacker}嘴角微微上扬，「你所见到的一切……从一开始就是幻象。」——{target}猛然发现自己的攻击打在了空气上，而蓝染已在身后出现！",
+        "「镜花水月的催眠，对你而言已经毫无意义了吗？」——{attacker}平静地绕过{target}毫无预兆的一击，所有感官都在对{target}说谎！"
+      ]
+    },
+    {
+      "id": "aizen-hogyoku", "name": "崩玉·觉醒", "type": "ultimate",
+      "description": "崩玉融合后超越死神与虚的界限",
+      "damageMult": 3.8, "staminaCost": 60, "cooldown": 5, "hitRate": 0.95,
+      "effectDesc": "存在层次的跨越，凡人的攻击不再有效",
+      "narrativeTemplates": [
+        "{attacker}胸口崩玉散发出柔和的光，身体的形态已超越了死神与虚的界限，「这才是……我本来的样子。」——降临在{target}面前的，是不可名状的压迫感！"
+      ]
+    },
+    {
+      "id": "aizen-hado-90", "name": "破道九十·黑棺", "type": "energy",
+      "description": "以咒文省略施展最高等级破道",
+      "damageMult": 2.8, "staminaCost": 40, "cooldown": 3, "hitRate": 0.90,
+      "effectDesc": "黑色棺椁将目标与外界彻底隔绝",
+      "narrativeTemplates": [
+        "{attacker}抬起一只手，不发一言，「破道之九十——黑棺。」——漆黑的能量瞬间将{target}封入棺椁之中，重压从四面八方将其压碎！"
+      ]
+    },
+    {
+      "id": "aizen-overwhelming", "name": "绝对灵压·碾压", "type": "physical",
+      "description": "以远超对手的灵压直接压制",
+      "damageMult": 1.8, "staminaCost": 20, "cooldown": 1, "hitRate": 0.95,
+      "effectDesc": "灵压差异使对手连移动都困难",
+      "narrativeTemplates": [
+        "{attacker}缓步走向{target}，不施展任何技巧，仅仅是靠近——然而{target}感受到的是如山岳般碾压的灵压，双腿开始颤抖！"
+      ]
+    },
+    {
+      "id": "aizen-shunko", "name": "瞬步·残像虚晃", "type": "defense",
+      "description": "以超高速瞬步制造残像迷惑对手",
+      "damageMult": 1.2, "staminaCost": 12, "cooldown": 0, "hitRate": 0.98,
+      "effectDesc": "真实的身影消失在残像之中",
+      "narrativeTemplates": [
+        "{target}的攻击穿透了{attacker}的身体——那只是残像。蓝染已在三步之外，「你以为你打中了什么？」随即从容反击！"
+      ]
+    }
+  ]
+}

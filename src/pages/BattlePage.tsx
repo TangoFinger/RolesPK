@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { useAppDataContext } from '../App'
 import { simulateBattle } from '../engine/battleEngine'
 import Footer from '../components/Footer'
@@ -235,8 +235,10 @@ interface HistoryEntry {
 // ============ 主页面 ============
 export default function BattlePage() {
   const { characters, universes, skillsMap } = useAppDataContext()
+  const [searchParams] = useSearchParams()
   const [charA, setCharA] = useState<Character | null>(null)
   const [charB, setCharB] = useState<Character | null>(null)
+  const autoStarted = useRef(false) // 防止重复自动开始
   const [result, setResult] = useState<BattleResult | null>(null)
   const [isSimulating, setIsSimulating] = useState(false)
   const [displayedEvents, setDisplayedEvents] = useState<{ roundIdx: number; eventIdx: number }[]>([])
@@ -346,6 +348,25 @@ export default function BattlePage() {
     setDisplayedEvents([])
     setIsSimulating(false)
   }
+
+  // 自动从URL参数加载角色并开始对战
+  useEffect(() => {
+    const charAId = searchParams.get('a')
+    const charBId = searchParams.get('b')
+
+    if (charAId && charBId && !autoStarted.current) {
+      const foundA = characters.find(c => c.id === charAId)
+      const foundB = characters.find(c => c.id === charBId)
+
+      if (foundA && foundB) {
+        setCharA(foundA)
+        setCharB(foundB)
+        // 延迟一下确保状态更新完成后再开始战斗
+        autoStarted.current = true
+        setTimeout(() => startBattle(), 500)
+      }
+    }
+  }, [searchParams, characters])
 
   const winnerChar = result ? characters.find(c => c.id === result.winner) : null
 

@@ -6,6 +6,7 @@ import CharactersPage from './pages/CharactersPage'
 import CharacterDetailPage from './pages/CharacterDetailPage'
 import RankingPage from './pages/RankingPage'
 import BattlePage from './pages/BattlePage'
+import SharePage from './pages/SharePage'
 import { useAppData, AppData } from './data/useData'
 
 // ---- 全局数据 Context ----
@@ -56,6 +57,7 @@ export default function App() {
           <Route path="/characters/:id" element={<CharacterDetailPage />} />
           <Route path="/ranking" element={<RankingPage />} />
           <Route path="/battle" element={<BattlePage />} />
+          <Route path="/share" element={<SharePage />} />
           <Route path="*" element={
             <div className="min-h-screen flex flex-col items-center justify-center text-gray-500">
               <div className="text-6xl mb-4">🌌</div>

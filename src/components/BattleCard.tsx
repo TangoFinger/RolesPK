@@ -125,6 +125,17 @@ export default function BattleCard({ battle, allBattles }: { battle: BattleRecor
             </div>
           )}
         </div>
+
+        {/* 分享按钮 */}
+        <div className="mt-3 pt-3 border-t border-gray-800">
+          <Link
+            to={`/share?a=${battle.charA}&b=${battle.charB}`}
+            onClick={e => e.stopPropagation()}
+            className="flex items-center justify-center gap-2 text-xs text-gray-500 hover:text-purple-400 transition-colors"
+          >
+            <span>📣</span> 邀请好友投票
+          </Link>
+        </div>
       </div>
     </Link>
   )

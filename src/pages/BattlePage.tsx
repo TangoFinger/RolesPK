@@ -4,6 +4,8 @@ import { useAppDataContext } from '../App'
 import { simulateBattle } from '../engine/battleEngine'
 import Footer from '../components/Footer'
 import type { BattleResult, BattleEvent, Character, Skill } from '../types'
+import html2canvas from 'html2canvas'
+import QRCode from 'qrcode'
 
 // 技能类型配色
 const SKILL_TYPE_META: Record<string, { label: string; color: string; bg: string }> = {
@@ -248,6 +250,11 @@ export default function BattlePage() {
   const [maxHpB, setMaxHpB] = useState(0)
   const [history, setHistory] = useState<HistoryEntry[]>([])
   
+  // 分享相关状态
+  const shareRef = useRef<HTMLDivElement>(null)
+  const [qrcodeUrl, setQrcodeUrl] = useState('')
+  const [generating, setGenerating] = useState(false)
+
   // 筛选状态
   const [universeFilter, setUniverseFilter] = useState('all')
   const [filterExpanded, setFilterExpanded] = useState(false)
@@ -347,6 +354,48 @@ export default function BattlePage() {
     setResult(null)
     setDisplayedEvents([])
     setIsSimulating(false)
+  }
+
+  // 生成分享图片
+  async function generateShareImage(charA: Character, charB: Character, battleResult: BattleResult) {
+    if (!shareRef.current) return
+    setGenerating(true)
+
+    try {
+      // 生成二维码
+      const battleUrl = `${window.location.origin}/battle?a=${charA.id}&b=${charB.id}`
+      const qrcodeDataUrl = await QRCode.toDataURL(battleUrl, {
+        width: 120,
+        margin: 1,
+        color: {
+          dark: '#ffffff',
+          light: '#1a1a2e'
+        }
+      })
+      setQrcodeUrl(qrcodeDataUrl)
+
+      // 等待二维码渲染
+      await new Promise(resolve => setTimeout(resolve, 100))
+
+      // 生成长图
+      const canvas = await html2canvas(shareRef.current, {
+        backgroundColor: '#1a1a2e',
+        scale: 2,
+        useCORS: true,
+        windowWidth: 420,
+        logging: false,
+      })
+
+      // 下载图片
+      const link = document.createElement('a')
+      link.download = `battle-${charA.name}-vs-${charB.name}.png`
+      link.href = canvas.toDataURL('image/png')
+      link.click()
+    } catch (err) {
+      console.error('生成分享图失败:', err)
+    } finally {
+      setGenerating(false)
+    }
   }
 
   // 自动从URL参数加载角色并开始对战
@@ -492,6 +541,10 @@ export default function BattlePage() {
                   className="px-8 py-3 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-xl transition-colors">
                   🔀 重新选择
                 </button>
+                <button onClick={() => generateShareImage(charA!, charB!, result)}
+                  className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold rounded-xl transition-all shadow-lg hover:scale-105">
+                  📤 生成分享图
+                </button>
               </div>
             )}
           </div>
@@ -594,6 +647,126 @@ export default function BattlePage() {
           </div>
         )}
       </div>
+
+      {/* 隐藏的分享内容区域 - 用于生成分享图 */}
+      {result && charA && charB && (
+        <div ref={shareRef} className="fixed left-[-9999px] top-0 w-[420px] p-0" style={{ fontFamily: 'system-ui, sans-serif', maxHeight: 'none', overflow: 'visible' }}>
+          {/* 头部 - 渐变背景 */}
+          <div className="p-6 pb-8 rounded-t-2xl relative overflow-hidden" style={{
+            background: `linear-gradient(135deg, ${charA.accentColor}30 0%, #1a1a2e 50%, ${charB.accentColor}30 100%)`
+          }}>
+            {/* 装饰光晕 */}
+            <div className="absolute top-0 left-1/4 w-32 h-32 rounded-full blur-3xl" style={{ background: `${charA.accentColor}40` }} />
+            <div className="absolute bottom-0 right-1/4 w-32 h-32 rounded-full blur-3xl" style={{ background: `${charB.accentColor}40` }} />
+
+            {/* 对战双方 */}
+            <div className="relative z-10 flex items-center justify-between gap-2">
+              {/* 角色A */}
+              <div className="flex-1 text-center">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl mx-auto mb-2 flex items-center justify-center text-2xl font-black"
+                  style={{ 
+                    background: charA.accentColor, 
+                    color: '#fff',
+                    boxShadow: `0 0 20px ${charA.accentColor}60`
+                  }}>
+                  {charA.name[0]}
+                </div>
+                <div className="font-bold text-sm text-white">{charA.name}</div>
+                <div className="text-[10px] px-1.5 py-0.5 rounded-full inline-block mt-0.5" style={{ background: `${charA.accentColor}20`, color: charA.accentColor }}>
+                  {charA.overallScore.toLocaleString()}
+                </div>
+              </div>
+
+              {/* VS */}
+              <div className="font-black text-orange-400 text-2xl shrink-0">
+                VS
+              </div>
+
+              {/* 角色B */}
+              <div className="flex-1 text-center">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl mx-auto mb-2 flex items-center justify-center text-2xl font-black"
+                  style={{ 
+                    background: charB.accentColor, 
+                    color: '#fff',
+                    boxShadow: `0 0 20px ${charB.accentColor}60`
+                  }}>
+                  {charB.name[0]}
+                </div>
+                <div className="font-bold text-sm text-white">{charB.name}</div>
+                <div className="text-[10px] px-1.5 py-0.5 rounded-full inline-block mt-0.5" style={{ background: `${charB.accentColor}20`, color: charB.accentColor }}>
+                  {charB.overallScore.toLocaleString()}
+                </div>
+              </div>
+            </div>
+
+            {/* 胜者公告 - 横向通栏 */}
+            <div className="relative z-30 mt-4 text-center">
+              <span className="text-xl mr-1">🏆</span>
+              <span className="text-base font-black" style={{ color: winnerChar?.accentColor }}>
+                {winnerChar?.name}
+              </span>
+              <span className="text-white text-sm font-medium ml-1">获胜</span>
+            </div>
+          </div>
+
+          {/* 战斗过程 - 完整显示 */}
+          <div className="mx-6 mb-4 p-4 bg-[#0f0f0f] rounded-xl" style={{ maxHeight: 'none', overflow: 'visible' }}>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-orange-400">📜</span>
+              <span className="text-sm font-bold text-white">战斗过程</span>
+            </div>
+            <div className="text-xs text-gray-400 space-y-1.5">
+              {result.rounds.map((round, i) => (
+                <div key={i}>
+                  <div className="text-gray-600 text-[10px] mb-0.5">第 {i + 1} 回合</div>
+                  {round.events.map((event, j) => (
+                    <div key={j} className="leading-relaxed">
+                      <span className={
+                        event.type === 'critical' ? 'text-orange-400' :
+                        event.type === 'ultimate' ? 'text-yellow-400' :
+                        event.type === 'miss' ? 'text-gray-600' :
+                        'text-gray-400'
+                      }>
+                        {event.type === 'attack' && '⚔️ '}
+                        {event.type === 'critical' && '💥 '}
+                        {event.type === 'ultimate' && '🌟 '}
+                        {event.type === 'miss' && '💨 '}
+                        {event.type === 'defense' && '🛡️ '}
+                        {event.type === 'taunt' && '😤 '}
+                        {event.narrative}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 二维码 */}
+          <div className="mx-6 mb-4 p-5 bg-gradient-to-r from-[#1a1a2e] to-[#0f0f0f] rounded-xl border border-gray-800">
+            <div className="flex items-center justify-center gap-5">
+              {qrcodeUrl && (
+                <div className="p-2 bg-white rounded-lg">
+                  <img src={qrcodeUrl} alt="二维码" className="w-20 h-20" />
+                </div>
+              )}
+              <div className="text-center">
+                <div className="text-lg font-black text-white mb-1">扫码观战</div>
+                <div className="text-xs text-gray-500 mb-2">选择角色进行对战</div>
+                <div className="inline-flex items-center gap-1 text-xs px-2 py-1 bg-orange-500/20 text-orange-400 rounded-full">
+                  ⚔️ Battle Arena
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 底部水印 */}
+          <div className="pb-6 text-center">
+            <p className="text-xs text-gray-600">Powered by PowerRank</p>
+          </div>
+        </div>
+      )}
+
       <Footer />
     </div>
   )

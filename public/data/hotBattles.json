@@ -1,11 +1,6 @@
 [
   { "id": "b1", "charA": "goku", "charB": "naruto", "votesA": 8432, "votesB": 5621, "hot": true },
   { "id": "b2", "charA": "luffy", "charB": "naruto", "votesA": 6120, "votesB": 5980, "hot": true },
-
-  { "id": "b5", "charA": "gojo", "charB": "naruto", "votesA": 7650, "votesB": 4320, "hot": true },
-  { "id": "b6", "charA": "yuji", "charB": "sasuke", "votesA": 5890, "votesB": 6240, "hot": true },
   { "id": "b7", "charA": "sukuna", "charB": "gojo", "votesA": 9870, "votesB": 9340, "hot": true },
-  { "id": "b8", "charA": "yuta", "charB": "naruto", "votesA": 6100, "votesB": 5750, "hot": true },
-  { "id": "b9", "charA": "toji", "charB": "sasuke", "votesA": 7230, "votesB": 6810, "hot": true },
   { "id": "b10", "charA": "goku", "charB": "vegeta", "votesA": 12500, "votesB": 9800, "hot": true }
 ]

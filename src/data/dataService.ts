@@ -1,6 +1,6 @@
 import type { Universe, Work, Character, BattleRecord, Skill } from '../types'
 
-const BASE = '/data'
+const BASE = `${import.meta.env.BASE_URL}data`
 
 async function fetchJson<T>(path: string): Promise<T> {
   const res = await fetch(`${BASE}/${path}`)

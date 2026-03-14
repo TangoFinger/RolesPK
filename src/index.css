@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-[#0f0f0f] text-gray-100 font-sans; }
+  * { box-sizing: border-box; }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #f97316, #fb923c, #fbbf24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .card-glow { box-shadow: 0 0 20px rgba(249,115,22,0.15); }
+  .card-glow:hover { box-shadow: 0 0 35px rgba(249,115,22,0.3); }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #1a1a2e; }
+::-webkit-scrollbar-thumb { background: #f97316; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #ea580c; }

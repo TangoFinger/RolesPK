@@ -108,7 +108,7 @@ export default function HomePage() {
             <Link to="/battle" className="text-orange-400 text-sm hover:text-orange-300 font-medium">发起对战 →</Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {hotBattles.map(battle => <BattleCard key={battle.id} battle={battle} />)}
+            {hotBattles.map(battle => <BattleCard key={battle.id} battle={battle} allBattles={hotBattles} />)}
           </div>
         </div>
       </section>

@@ -42,39 +42,24 @@ export default function CharactersPage() {
           <div className="relative">
             <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">🔍</span>
             <input type="text" placeholder="搜索角色名、别称、能力标签…" value={search} onChange={e => setSearch(e.target.value)}
-              className="w-full bg-[#0f0f0f] border border-[#2d2d4e] rounded-xl pl-10 pr-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-orange-500/50 transition-colors" />
+              className="w-full bg-[#0f0f0f] border border-[#2d2d4e] rounded-xl pl-10 pr-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-orange-500/50 transition-colors text-base" />
           </div>
-          <div className="flex flex-wrap gap-3">
-            <div className="flex-1 min-w-[180px]">
+          <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex-1 min-w-0">
               <label className="text-xs text-gray-500 mb-1 block">宇宙/世界观</label>
               <select value={universeFilter} onChange={e => setUniverseFilter(e.target.value)}
-                className="w-full bg-[#0f0f0f] border border-[#2d2d4e] rounded-xl px-3 py-2 text-white focus:outline-none focus:border-orange-500/50 text-sm">
+                className="w-full bg-[#0f0f0f] border border-[#2d2d4e] rounded-xl px-3 py-2.5 text-white focus:outline-none focus:border-orange-500/50 text-sm">
                 <option value="all">全部宇宙</option>
                 {universes.map(u => <option key={u.id} value={u.id}>{u.name} ({u.tier}级)</option>)}
               </select>
             </div>
-            <div className="flex-1 min-w-[180px]">
+            <div className="flex-1 min-w-0">
               <label className="text-xs text-gray-500 mb-1 block">排序方式</label>
               <select value={sort} onChange={e => setSort(e.target.value)}
-                className="w-full bg-[#0f0f0f] border border-[#2d2d4e] rounded-xl px-3 py-2 text-white focus:outline-none focus:border-orange-500/50 text-sm">
+                className="w-full bg-[#0f0f0f] border border-[#2d2d4e] rounded-xl px-3 py-2.5 text-white focus:outline-none focus:border-orange-500/50 text-sm">
                 {SORT_OPTIONS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
               </select>
             </div>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {['all', ...universes.map(u => u.id)].map(uid => {
-              const u = universes.find(x => x.id === uid)
-              const active = universeFilter === uid
-              return (
-                <button key={uid} onClick={() => setUniverseFilter(uid)}
-                  className="text-xs px-3 py-1.5 rounded-full border font-medium transition-all"
-                  style={active && u ? { background: u.color + '20', borderColor: u.color + '60', color: u.color }
-                    : active ? { background: 'rgba(249,115,22,0.2)', borderColor: 'rgba(249,115,22,0.4)', color: '#fb923c' }
-                    : { borderColor: '#2d2d4e', color: '#6b7280' }}>
-                  {uid === 'all' ? '全部' : u?.name}
-                </button>
-              )
-            })}
           </div>
         </div>
 

@@ -17,15 +17,15 @@ export default function HomePage() {
           <div className="absolute top-32 left-1/4 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl" />
         </div>
         <div className="max-w-7xl mx-auto relative">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs px-3 py-1.5 rounded-full mb-6 font-medium">
+          <div className="text-center mb-8 sm:mb-10">
+            <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs px-3 py-1.5 rounded-full mb-4 sm:mb-6 font-medium">
               <span className="w-1.5 h-1.5 bg-orange-400 rounded-full animate-pulse" />
               全宇宙战力数据库 · 持续更新中
             </div>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-5 leading-tight">
-              <span className="text-white text-3xl sm:text-4xl font-bold">影视/动漫角色战斗力终极排行</span>
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black mb-4 sm:mb-5 leading-tight">
+              <span className="text-white text-xl sm:text-3xl font-bold">影视/动漫角色战斗力终极排行</span>
             </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
+            <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto mb-6 sm:mb-8">
               收录 {characters.length}+ 部影视/动漫作品的角色战力数据，六维评分体系，跨宇宙横向比较，找到你心目中最强的那个人。
             </p>
             <div className="flex items-center justify-center gap-4 flex-wrap">

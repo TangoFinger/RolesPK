@@ -17,17 +17,16 @@ const SKILL_TYPE_META: Record<string, { label: string; color: string; bg: string
 function SkillBadge({ skill }: { skill: Skill }) {
   const meta = SKILL_TYPE_META[skill.type] ?? { label: skill.type, color: '#9ca3af', bg: '#9ca3af20' }
   return (
-    <div className="flex items-start gap-2 p-2.5 rounded-lg bg-[#0f0f0f] border border-gray-800 hover:border-gray-600 transition-colors">
-      <span className="text-xs px-1.5 py-0.5 rounded font-bold flex-shrink-0 mt-0.5"
+    <div className="flex items-start gap-1.5 sm:gap-2 p-2 rounded-lg sm:p-2.5 bg-[#0f0f0f] border border-gray-800 hover:border-gray-600 transition-colors">
+      <span className="text-[10px] sm:text-xs px-1 py-0.5 rounded font-bold flex-shrink-0 mt-0.5"
         style={{ color: meta.color, background: meta.bg }}>{meta.label}</span>
-      <div className="min-w-0">
+      <div className="min-w-0 flex-1">
         <p className="text-white text-xs font-bold truncate">{skill.name}</p>
-        <p className="text-gray-500 text-xs leading-relaxed truncate">{skill.description}</p>
-        <div className="flex gap-2 mt-1 text-xs text-gray-600">
-          <span>伤害×{skill.damageMult}</span>
+        <p className="text-gray-500 text-[10px] sm:text-xs leading-relaxed truncate">{skill.description}</p>
+        <div className="flex gap-1.5 mt-0.5 sm:mt-1 text-[10px] sm:text-xs text-gray-600 whitespace-nowrap">
+          <span>伤×{skill.damageMult}</span>
           <span>·</span>
-          <span>体力 -{skill.staminaCost}</span>
-          {skill.cooldown > 0 && <><span>·</span><span>CD {skill.cooldown}回合</span></>}
+          <span>体-{skill.staminaCost}</span>
         </div>
       </div>
     </div>
@@ -53,29 +52,29 @@ function CharacterSelector({
 
   return (
     <div className="flex-1 min-w-0">
-      <p className="text-gray-400 text-sm mb-2 text-center font-medium">{label}</p>
+      <p className="text-gray-400 text-xs sm:text-sm mb-1 sm:mb-2 text-center font-medium">{label}</p>
 
       {/* 选择触发区 */}
       <div
-        className="relative cursor-pointer rounded-xl border-2 border-dashed border-gray-700 hover:border-orange-500 transition-colors mb-3"
+        className="relative cursor-pointer rounded-xl border-2 border-dashed border-gray-700 hover:border-orange-500 transition-colors mb-2 sm:mb-3"
         onClick={() => setOpen(!open)}
       >
         {selected ? (
           <div
-            className="p-4 rounded-xl text-center"
+            className="p-2 sm:p-4 rounded-xl text-center"
             style={{ background: `linear-gradient(135deg, ${selected.accentColor}22, #1a1a1a)` }}
           >
             <div
-              className="w-16 h-16 rounded-full mx-auto mb-2 flex items-center justify-center text-2xl font-bold text-white shadow-lg"
+              className="w-10 h-10 sm:w-14 sm:h-14 rounded-full mx-auto mb-1 sm:mb-2 flex items-center justify-center text-lg sm:text-2xl font-bold text-white shadow-lg"
               style={{ background: selected.accentColor, boxShadow: `0 0 20px ${selected.accentColor}50` }}
             >
               {selected.name[0]}
             </div>
-            <p className="text-white font-bold text-lg">{selected.name}</p>
-            <p className="text-xs mt-1 font-mono" style={{ color: selected.accentColor }}>
-              战力 {selected.overallScore.toLocaleString()}
+            <p className="text-white font-bold text-sm sm:text-base">{selected.name}</p>
+            <p className="text-[10px] sm:text-xs mt-0.5 font-mono" style={{ color: selected.accentColor }}>
+              {selected.overallScore.toLocaleString()}
             </p>
-            <div className="flex flex-wrap justify-center gap-1 mt-2">
+            <div className="hidden sm:flex flex-wrap justify-center gap-1 mt-2">
               {selected.tags.slice(0, 2).map(t => (
                 <span key={t} className="text-xs px-1.5 py-0.5 rounded-full border"
                   style={{ color: selected.accentColor, borderColor: selected.accentColor + '40', background: selected.accentColor + '15' }}>
@@ -83,38 +82,38 @@ function CharacterSelector({
                 </span>
               ))}
             </div>
-            <p className="text-gray-600 text-xs mt-2">点击更换角色</p>
+            <p className="text-gray-600 text-[10px] sm:text-xs mt-1 sm:mt-2">点击更换</p>
           </div>
         ) : (
-          <div className="p-8 text-center">
-            <div className="text-4xl mb-2">⚔️</div>
-            <p className="text-gray-500 text-sm">点击选择角色</p>
+          <div className="p-4 sm:p-8 text-center">
+            <div className="text-2xl sm:text-4xl mb-1 sm:mb-2">⚔️</div>
+            <p className="text-gray-500 text-xs sm:text-sm">点击选择</p>
           </div>
         )}
 
         {/* 下拉列表 */}
         {open && (
           <div
-            className="absolute top-full left-0 right-0 mt-2 bg-[#1a1a1a] border border-gray-700 rounded-xl z-50 max-h-64 overflow-y-auto shadow-2xl"
+            className="absolute top-full left-0 right-0 mt-2 bg-[#1a1a1a] border border-gray-700 rounded-xl z-50 max-h-56 sm:max-h-64 overflow-y-auto shadow-2xl"
             onClick={e => e.stopPropagation()}
           >
             {list.map(c => (
               <div
                 key={c.id}
-                className="flex items-center gap-3 p-3 hover:bg-[#2a2a2a] cursor-pointer transition-colors"
+                className="flex items-center gap-2 sm:gap-3 p-2 sm:p-3 hover:bg-[#2a2a2a] cursor-pointer transition-colors"
                 onClick={() => { onSelect(c); setOpen(false) }}
               >
                 <div
-                  className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
+                  className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold text-white flex-shrink-0"
                   style={{ background: c.accentColor }}
                 >
                   {c.name[0]}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-white text-sm font-semibold">{c.name}</p>
-                  <p className="text-gray-500 text-xs truncate">{c.description.slice(0, 28)}…</p>
+                  <p className="text-white text-xs sm:text-sm font-semibold truncate">{c.name}</p>
+                  <p className="text-gray-500 text-[10px] sm:text-xs truncate hidden sm:block">{c.description.slice(0, 28)}…</p>
                 </div>
-                <span className="text-xs font-mono flex-shrink-0" style={{ color: c.accentColor }}>
+                <span className="text-[10px] sm:text-xs font-mono flex-shrink-0 whitespace-nowrap" style={{ color: c.accentColor }}>
                   {c.overallScore.toLocaleString()}
                 </span>
               </div>
@@ -316,7 +315,7 @@ export default function BattlePage() {
 
   return (
     <div className="min-h-screen bg-[#0f0f0f] pt-20 pb-16">
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-3 sm:px-4">
 
         {/* 标题 */}
         <div className="text-center mb-10">
@@ -324,21 +323,21 @@ export default function BattlePage() {
             <span className="w-1.5 h-1.5 bg-red-400 rounded-full animate-pulse" />
             回合制战斗引擎 · 技能冷却 · 暴击判定
           </div>
-          <h1 className="text-4xl font-black text-white mb-2">
-            🔥 <span className="text-gradient">模拟对战</span>
-          </h1>
           <p className="text-gray-400 text-sm">选择两位角色，观看一场专属于他们的战斗叙事</p>
         </div>
 
         {/* 角色选择 + 技能预览 */}
-        <div className="bg-[#1a1a1a] rounded-2xl p-6 mb-6 border border-gray-800">
-          <div className="flex gap-6 items-start">
-            <CharacterSelector label="⚡ 先手方" selected={charA}
+        <div className="bg-[#1a1a1a] rounded-2xl p-3 sm:p-6 mb-6 border border-gray-800">
+          <div className="flex flex-row gap-2 sm:gap-6 items-start">
+            <CharacterSelector label="⚡ 先手" selected={charA}
               onSelect={c => { setCharA(c); reset() }} exclude={charB?.id} />
-            <div className="flex flex-col items-center justify-start pt-16 px-2 flex-shrink-0">
+            <div className="hidden sm:flex flex-col items-center justify-start pt-16 px-2 flex-shrink-0">
               <div className="text-4xl font-black text-orange-400 drop-shadow-[0_0_20px_rgba(249,115,22,0.5)]">VS</div>
             </div>
-            <CharacterSelector label="🛡️ 后手方" selected={charB}
+            <div className="sm:hidden flex items-center justify-center flex-shrink-0 pt-8">
+              <div className="text-xl font-black text-orange-400">VS</div>
+            </div>
+            <CharacterSelector label="🛡️ 后手" selected={charB}
               onSelect={c => { setCharB(c); reset() }} exclude={charA?.id} />
           </div>
 

@@ -12,11 +12,11 @@ export default function Navbar() {
   const location = useLocation()
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0f0f0f]/90 backdrop-blur-md border-b border-[#2d2d4e]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center text-white font-black text-sm shadow-lg shadow-orange-500/30">R</div>
-            <span className="font-black text-xl tracking-tight">
+            <div className="w-7 sm:w-8 h-7 sm:h-8 rounded-lg bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center text-white font-black text-xs sm:text-sm shadow-lg shadow-orange-500/30">R</div>
+            <span className="font-black text-lg sm:text-xl tracking-tight">
               <span className="text-gradient">Roles</span><span className="text-white">PK</span>
             </span>
           </Link>
@@ -31,10 +31,7 @@ export default function Navbar() {
               </Link>
             ))}
           </div>
-          <div className="flex items-center gap-3">
-            <button className="text-sm text-gray-400 hover:text-white transition-colors hidden sm:block">登录</button>
-            <button className="px-4 py-1.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white text-sm font-semibold rounded-lg hover:from-orange-400 hover:to-orange-500 transition-all shadow-lg shadow-orange-500/25">注册</button>
-          </div>
+
         </div>
       </div>
       <div className="md:hidden flex border-t border-[#2d2d4e]">

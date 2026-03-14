@@ -12,7 +12,7 @@ export default function CharacterCard({ character, showRank }: Props) {
 
   return (
     <Link to={`/characters/${character.id}`}>
-      <div className="relative rounded-xl bg-[#1a1a2e] border border-[#2d2d4e] p-4 cursor-pointer transition-all duration-300 card-glow hover:scale-[1.02] hover:border-orange-500/40 group overflow-hidden h-full">
+      <div className="relative rounded-xl bg-[#1a1a2e] border border-[#2d2d4e] p-3 sm:p-4 cursor-pointer transition-all duration-300 card-glow hover:scale-[1.02] hover:border-orange-500/40 group overflow-hidden h-full">
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           style={{ background: `radial-gradient(circle at 50% 0%, ${character.accentColor}15 0%, transparent 70%)` }} />
         {showRank && character.rank && (
@@ -21,7 +21,7 @@ export default function CharacterCard({ character, showRank }: Props) {
             #{character.rank}
           </div>
         )}
-        <div className="w-14 h-14 rounded-xl flex items-center justify-center text-3xl mb-3 border border-[#2d2d4e]"
+        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center text-2xl sm:text-3xl mb-2 sm:mb-3 border border-[#2d2d4e]"
           style={{ background: `${character.accentColor}22`, color: character.accentColor }}>
           {character.name[0]}
         </div>

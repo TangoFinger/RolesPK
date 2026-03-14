@@ -57,7 +57,7 @@ export default function RankingPage() {
   const currentSortTab = SORT_TABS.find(t => t.key === sortKey)!
 
   return (
-    <div className="min-h-screen pt-20 pb-16 px-4">
+    <div className="min-h-screen pt-20 pb-16 px-3">
       <div className="max-w-4xl mx-auto">
 
         {/* ── Header ── */}
@@ -221,11 +221,11 @@ export default function RankingPage() {
         {sorted.length > 0 ? (
           <div className="bg-[#1a1a2e] border border-[#2d2d4e] rounded-2xl overflow-hidden">
             {/* Table header */}
-            <div className="flex items-center px-4 py-2.5 bg-[#0f0f1a] border-b border-[#2d2d4e] text-xs text-gray-500 font-semibold uppercase tracking-wider">
-              <div className="w-8 text-center shrink-0">#</div>
-              <div className="flex-1 min-w-0 pl-3">角色</div>
-              <div className="w-28 shrink-0 hidden sm:block">宇宙</div>
-              <div className="w-32 text-right shrink-0">
+            <div className="flex items-center px-3 py-2.5 bg-[#0f0f1a] border-b border-[#2d2d4e] text-xs text-gray-500 font-semibold uppercase tracking-wider">
+              <div className="w-7 text-center shrink-0">#</div>
+              <div className="flex-1 min-w-0 pl-2">角色</div>
+              <div className="w-24 shrink-0 hidden sm:block">宇宙</div>
+              <div className="w-24 sm:w-28 text-right shrink-0">
                 {currentSortTab.icon} {currentSortTab.label}
               </div>
             </div>
@@ -253,9 +253,9 @@ export default function RankingPage() {
                     </div>
 
                     {/* Avatar + Name */}
-                    <div className="flex-1 min-w-0 flex items-center gap-3 pl-3">
+                    <div className="flex-1 min-w-0 flex items-center gap-2 pl-2">
                       <div
-                        className="w-9 h-9 rounded-xl flex items-center justify-center text-sm font-black shrink-0"
+                        className="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-black shrink-0"
                         style={{ background: char.accentColor + '20', color: char.accentColor }}
                       >
                         {char.name[0]}
@@ -271,7 +271,7 @@ export default function RankingPage() {
                     </div>
 
                     {/* Universe tag */}
-                    <div className="w-28 shrink-0 hidden sm:flex items-center">
+                    <div className="w-24 shrink-0 hidden sm:flex items-center">
                       {universe && (
                         <span
                           className="text-xs px-2 py-0.5 rounded-full font-medium truncate max-w-full"
@@ -287,7 +287,7 @@ export default function RankingPage() {
                     </div>
 
                     {/* Score + bar */}
-                    <div className="w-32 text-right shrink-0">
+                    <div className="w-24 sm:w-28 text-right shrink-0">
                       <span
                         className="font-black text-lg tabular-nums leading-none"
                         style={{ color: char.accentColor }}

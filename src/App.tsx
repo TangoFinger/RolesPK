@@ -5,7 +5,6 @@ import HomePage from './pages/HomePage'
 import CharactersPage from './pages/CharactersPage'
 import CharacterDetailPage from './pages/CharacterDetailPage'
 import RankingPage from './pages/RankingPage'
-import VSPage from './pages/VSPage'
 import BattlePage from './pages/BattlePage'
 
 export default function App() {
@@ -17,7 +16,6 @@ export default function App() {
         <Route path="/characters" element={<CharactersPage />} />
         <Route path="/characters/:id" element={<CharacterDetailPage />} />
         <Route path="/ranking" element={<RankingPage />} />
-        <Route path="/vs" element={<VSPage />} />
         <Route path="/battle" element={<BattlePage />} />
         <Route path="*" element={
           <div className="min-h-screen flex flex-col items-center justify-center text-gray-500">

@@ -108,12 +108,8 @@ export default function CharacterDetailPage() {
               <p className="text-gray-300 leading-relaxed text-base mb-5 max-w-xl">{char.description}</p>
               {work && <p className="text-sm text-gray-500">📺 出自：<span className="text-gray-300">{work.title}</span><span className="text-gray-600 ml-2">({work.year})</span></p>}
               <div className="flex gap-3 mt-5 flex-wrap">
-                <button onClick={() => navigate(`/vs?a=${char.id}`)}
-                  className="px-6 py-2.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-xl hover:from-orange-400 hover:to-orange-500 transition-all shadow-lg shadow-orange-500/25 text-sm">
-                  ⚡ 发起 VS 对战
-                </button>
                 <button onClick={() => navigate(`/battle`)}
-                  className="px-6 py-2.5 bg-gradient-to-r from-red-600 to-orange-600 text-white font-bold rounded-xl hover:from-red-500 hover:to-orange-500 transition-all text-sm">
+                  className="px-6 py-2.5 bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold rounded-xl hover:from-orange-400 hover:to-red-500 transition-all shadow-lg shadow-orange-500/25 text-sm">
                   🔥 模拟对战
                 </button>
               </div>

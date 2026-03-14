@@ -36,9 +36,7 @@ export default function HomePage() {
               <Link to="/battle" className="px-8 py-3 bg-gradient-to-r from-red-600 to-orange-600 text-white font-bold rounded-xl hover:from-red-500 hover:to-orange-500 transition-all shadow-xl shadow-red-500/30 hover:scale-105 text-base">
                 模拟对战 🔥
               </Link>
-              <Link to="/vs" className="px-8 py-3 bg-white/5 border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 transition-all hover:scale-105 text-base">
-                发起 VS 对战 ⚡
-              </Link>
+
             </div>
           </div>
           <div className="grid grid-cols-3 gap-4 max-w-sm mx-auto">
@@ -107,7 +105,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-black text-white flex items-center gap-2">🔥 热议对战</h2>
-            <Link to="/vs" className="text-orange-400 text-sm hover:text-orange-300 font-medium">发起对战 →</Link>
+            <Link to="/battle" className="text-orange-400 text-sm hover:text-orange-300 font-medium">发起对战 →</Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {hotBattles.map(battle => <BattleCard key={battle.id} battle={battle} />)}

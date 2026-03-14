@@ -14,7 +14,7 @@ export default function BattleCard({ battle }: { battle: BattleRecord }) {
   const uB = getUniverseById(charB.universeId)
 
   return (
-    <Link to={`/vs?a=${charA.id}&b=${charB.id}`}>
+    <Link to={`/battle`}>
       <div className="rounded-xl bg-[#1a1a2e] border border-[#2d2d4e] p-4 hover:border-orange-500/40 transition-all card-glow group cursor-pointer">
         {battle.hot && (
           <div className="flex items-center gap-1 mb-3">

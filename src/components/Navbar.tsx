@@ -5,7 +5,6 @@ const navItems = [
   { path: '/', label: '首页', icon: '🏠' },
   { path: '/characters', label: '角色库', icon: '⚔️' },
   { path: '/ranking', label: '战力榜', icon: '🏆' },
-  { path: '/vs', label: 'VS对战', icon: '⚡' },
   { path: '/battle', label: '模拟对战', icon: '🔥' },
 ]
 

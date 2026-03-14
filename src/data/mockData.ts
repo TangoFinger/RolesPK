@@ -343,6 +343,104 @@ export const skillsMap: Record<string, Skill[]> = {
     },
   ],
 
+  ichigo: [
+    {
+      id: 'ichigo-getsuga-tensho', name: '月牙天冲', type: 'energy',
+      description: '以斩魄刀凝聚灵压斩出的新月形斩击',
+      damageMult: 1.8, staminaCost: 20, cooldown: 1, hitRate: 0.92,
+      effectDesc: '黑色月牙形斩击撕裂空间',
+      narrativeTemplates: [
+        '{attacker}高举斩月，灵压在刀身凝聚至极限，"月牙——天冲！"——漆黑的新月形斩击以毁灭之势横扫{target}！',
+        '{attacker}眼中赤红闪烁，斩月散发出死亡般的黑色灵压，月牙天冲斩出，{target}感到死神的气息扑面而来！',
+      ]
+    },
+    {
+      id: 'ichigo-bankai', name: '卍解·天锁斩月', type: 'special',
+      description: '卍解状态下压缩全部灵压于刀刃',
+      damageMult: 2.4, staminaCost: 35, cooldown: 2, hitRate: 0.90,
+      effectDesc: '灵压极度压缩，刀身细长如锋',
+      narrativeTemplates: [
+        '"卍解——天锁斩月。"——{attacker}的斩月缩短为一柄细长黑刀，却凝聚了全部的灵压，一击之下{target}感受到的是压倒性的纯粹斩击！',
+      ]
+    },
+    {
+      id: 'ichigo-final-getsuga', name: '最终月牙天冲', type: 'ultimate',
+      description: '与斩月合一，成为月牙天冲本身',
+      damageMult: 4.0, staminaCost: 80, cooldown: 6, hitRate: 0.88,
+      effectDesc: '黑色发丝蔓延，存在本身化为斩击',
+      narrativeTemplates: [
+        '{attacker}黑色发丝蔓延全身，眼神平静如死，"我……就是月牙天冲。"——与{target}之间的距离消失，那一击无声无息，却将一切斩断！',
+      ]
+    },
+    {
+      id: 'ichigo-hollow-mask', name: '虚化·暴走', type: 'physical',
+      description: '佩戴虚之面具爆发虚的力量',
+      damageMult: 2.0, staminaCost: 28, cooldown: 2, hitRate: 0.88,
+      effectDesc: '白色面具浮现，战意变为纯粹的暴力',
+      narrativeTemplates: [
+        '{attacker}白色面具自脸上浮现，虚的本能接管意识，"给我——消失！"——速度与力量暴涨，对{target}发动不计代价的狂暴猛攻！',
+      ]
+    },
+    {
+      id: 'ichigo-fullbring', name: '完现术·觉醒', type: 'defense',
+      description: '以完现术强化身体进行反击',
+      damageMult: 1.4, staminaCost: 15, cooldown: 0, hitRate: 0.93,
+      effectDesc: '灵压与完现术融合强化防御',
+      narrativeTemplates: [
+        '{attacker}感知到{target}的攻击轨迹，完现术在身上激活，以最小的动作化解来袭，随即反手一击精准切入破绽！',
+      ]
+    },
+  ],
+
+  aizen: [
+    {
+      id: 'aizen-kyoka-suigetsu', name: '镜花水月·完全催眠', type: 'special',
+      description: '斩魄刀释放后永久催眠所有见过其刀的人',
+      damageMult: 2.0, staminaCost: 10, cooldown: 0, hitRate: 1.0,
+      effectDesc: '感官被完全欺骗，所见皆为幻象',
+      narrativeTemplates: [
+        '{attacker}嘴角微微上扬，"你所见到的一切……从一开始就是幻象。"——{target}猛然发现自己的攻击打在了空气上，而蓝染已在身后出现！',
+        '"镜花水月的催眠，对你而言已经毫无意义了吗？"——{attacker}平静地绕过{target}毫无预兆的一击，所有感官都在对{target}说谎！',
+      ]
+    },
+    {
+      id: 'aizen-hogyoku', name: '崩玉·觉醒', type: 'ultimate',
+      description: '崩玉融合后超越死神与虚的界限',
+      damageMult: 3.8, staminaCost: 60, cooldown: 5, hitRate: 0.95,
+      effectDesc: '存在层次的跨越，凡人的攻击不再有效',
+      narrativeTemplates: [
+        '{attacker}胸口崩玉散发出柔和的光，身体的形态已超越了死神与虚的界限，"这才是……我本来的样子。"——降临在{target}面前的，是不可名状的压迫感！',
+      ]
+    },
+    {
+      id: 'aizen-hado-90', name: '破道九十·黑棺', type: 'energy',
+      description: '以咒文省略施展最高等级破道',
+      damageMult: 2.8, staminaCost: 40, cooldown: 3, hitRate: 0.90,
+      effectDesc: '黑色棺椁将目标与外界彻底隔绝',
+      narrativeTemplates: [
+        '{attacker}抬起一只手，不发一言，"破道之九十——黑棺。"——漆黑的能量瞬间将{target}封入棺椁之中，重压从四面八方将其压碎！',
+      ]
+    },
+    {
+      id: 'aizen-overwhelming', name: '绝对灵压·碾压', type: 'physical',
+      description: '以远超对手的灵压直接压制',
+      damageMult: 1.8, staminaCost: 20, cooldown: 1, hitRate: 0.95,
+      effectDesc: '灵压差异使对手连移动都困难',
+      narrativeTemplates: [
+        '{attacker}缓步走向{target}，不施展任何技巧，仅仅是靠近——然而{target}感受到的是如山岳般碾压的灵压，双腿开始颤抖！',
+      ]
+    },
+    {
+      id: 'aizen-shunko', name: '瞬步·残像虚晃', type: 'defense',
+      description: '以超高速瞬步制造残像迷惑对手',
+      damageMult: 1.2, staminaCost: 12, cooldown: 0, hitRate: 0.98,
+      effectDesc: '真实的身影消失在残像之中',
+      narrativeTemplates: [
+        '{target}的攻击穿透了{attacker}的身体——那只是残像。蓝染已在三步之外，"你以为你打中了什么？"随即从容反击！',
+      ]
+    },
+  ],
+
   eren: [
     {
       id: 'eren-titan-punch', name: '始祖巨人·轰天拳', type: 'physical',
@@ -400,6 +498,7 @@ export const universes: Universe[] = [
   { id: 'one-piece', name: '海贼王宇宙', tier: 'B', tierCoeff: 1.0, color: '#10b981' },
   { id: 'attack-on-titan', name: '进击的巨人', tier: 'C', tierCoeff: 0.8, color: '#6b7280' },
   { id: 'mcu', name: 'MCU', tier: 'A', tierCoeff: 1.1, color: '#dc2626' },
+  { id: 'bleach', name: '死神宇宙', tier: 'B', tierCoeff: 1.0, color: '#38bdf8' },
 ]
 
 export const works: Work[] = [
@@ -409,6 +508,7 @@ export const works: Work[] = [
   { id: 'naruto-s', title: '火影忍者疾风传', type: 'anime', universeId: 'naruto', year: 2007, cover: '' },
   { id: 'one-piece-s', title: '海贼王', type: 'anime', universeId: 'one-piece', year: 1999, cover: '' },
   { id: 'aot-s', title: '进击的巨人', type: 'anime', universeId: 'attack-on-titan', year: 2013, cover: '' },
+  { id: 'bleach-s', title: '死神 BLEACH', type: 'anime', universeId: 'bleach', year: 2004, cover: '' },
 ]
 
 export const characters: Character[] = [
@@ -595,6 +695,58 @@ export const characters: Character[] = [
     ],
     evidence: [{ desc: '驱动万千巨人踏平陆地', source: '进击的巨人 第131话' }],
     rank: 8,
+  },
+  {
+    id: 'ichigo',
+    name: '黑崎一护',
+    alias: ['替身死神', '最强死神', 'Ichigo Kurosaki'],
+    workId: 'bleach-s',
+    universeId: 'bleach',
+    tags: ['死神', '虚', '混血', '卍解', '速度型'],
+    race: '死神/虚/完现术者',
+    faction: '护廷十三队',
+    description: '拥有死神、虚、完现术者三重血脉的最强替身死神，卍解天锁斩月压缩全部灵压于一刃，最终月牙天冲更与斩月合而为一。',
+    coverImage: '',
+    accentColor: '#38bdf8',
+    stats: { attack: 96, defense: 84, speed: 96, intelligence: 74, stamina: 92, special: 94 },
+    overallScore: 6350,
+    baseScore: 6350,
+    forms: [
+      { name: '普通死神态', description: '替身死神基础形态', overallScore: 2400, stats: { attack: 72, defense: 65, speed: 74, intelligence: 74, stamina: 76, special: 68 } },
+      { name: '卍解·天锁斩月', description: '灵压极度压缩的黑刀形态', overallScore: 4800, stats: { attack: 88, defense: 76, speed: 90, intelligence: 74, stamina: 84, special: 86 } },
+      { name: '最终月牙天冲', description: '与斩月合一，成为月牙天冲', overallScore: 6350, stats: { attack: 96, defense: 84, speed: 96, intelligence: 74, stamina: 92, special: 94 } },
+    ],
+    evidence: [
+      { desc: '卍解状态下与藍染持续交战', source: 'BLEACH 第388话' },
+      { desc: '最终月牙天冲将藍染斩落', source: 'BLEACH 第420话' },
+    ],
+    rank: 9,
+  },
+  {
+    id: 'aizen',
+    name: '蓝染惣右介',
+    alias: ['前五番队队长', '神に最も近い男', 'Sosuke Aizen'],
+    workId: 'bleach-s',
+    universeId: 'bleach',
+    tags: ['死神', '崩玉', '完全催眠', '智力型', '反派'],
+    race: '死神/崩玉融合体',
+    faction: '虚圈',
+    description: '前护廷十三队五番队队长，以镜花水月操控一切感官，融合崩玉后超越死神与虚的界限，是整个死神世界最危险的存在。',
+    coverImage: '',
+    accentColor: '#c084fc',
+    stats: { attack: 93, defense: 90, speed: 88, intelligence: 99, stamina: 90, special: 99 },
+    overallScore: 6720,
+    baseScore: 6000,
+    forms: [
+      { name: '队长态', description: '护廷十三队五番队队长', overallScore: 4500, stats: { attack: 85, defense: 82, speed: 84, intelligence: 99, stamina: 82, special: 90 } },
+      { name: '崩玉融合·第一阶段', description: '身体开始融合崩玉', overallScore: 5800, stats: { attack: 90, defense: 87, speed: 86, intelligence: 99, stamina: 87, special: 96 } },
+      { name: '崩玉融合·完全体', description: '超越死神与虚的界限', overallScore: 6720, stats: { attack: 93, defense: 90, speed: 88, intelligence: 99, stamina: 90, special: 99 } },
+    ],
+    evidence: [
+      { desc: '镜花水月同时催眠护廷十三队全员', source: 'BLEACH 第176话' },
+      { desc: '崩玉融合后独自对抗四大貴族战力', source: 'BLEACH 第411话' },
+    ],
+    rank: 10,
   },
 ]
 

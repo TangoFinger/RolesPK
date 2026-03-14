@@ -36,7 +36,6 @@ export default function CharactersPage() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
           <h1 className="text-3xl font-black text-white mb-1">⚔️ 角色库</h1>
-          <p className="text-gray-400">收录 {characters.length} 位影视/动漫角色战力数据</p>
         </div>
 
         <div className="bg-[#1a1a2e] border border-[#2d2d4e] rounded-2xl p-4 mb-8 space-y-4">

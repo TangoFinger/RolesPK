@@ -1,0 +1,566 @@
+{
+  "luffy": [
+    {
+      "id": "luffy-red-hawk", "name": "红鹰", "type": "physical",
+      "description": "Gear2结合武装色霸气的火焰拳",
+      "damageMult": 1.8, "staminaCost": 20, "cooldown": 1, "hitRate": 0.90,
+      "effectDesc": "拳头燃起真实的火焰",
+      "narrativeTemplates": [
+        "{attacker}双腿蒸汽喷涌，整个人化为残影，拳头燃起烈焰，「红鹰！」——带着火焰的重拳命中{target}，爆炸性的冲击瞬间扩散！"
+      ]
+    },
+    {
+      "id": "luffy-kong-gun", "name": "Gear4·空气炮", "type": "energy",
+      "description": "将自身压缩弹出的超级重拳",
+      "damageMult": 2.2, "staminaCost": 30, "cooldown": 2, "hitRate": 0.88,
+      "effectDesc": "压缩的空气随着拳头爆炸性释放",
+      "narrativeTemplates": [
+        "{attacker}吹气膨胀进入Gear4形态，肌肉上的黑色武装霸气纹路浮现，「空气炮！」——压缩到极致的拳头轰出，{target}被冲击波正面击中！"
+      ]
+    },
+    {
+      "id": "luffy-gear5", "name": "Gear5·太阳神炮", "type": "ultimate",
+      "description": "太阳神形态下将一切变成橡皮的终极攻击",
+      "damageMult": 3.5, "staminaCost": 60, "cooldown": 4, "hitRate": 0.85,
+      "effectDesc": "白色蓬蒙中，一切规则都变成了笑话",
+      "narrativeTemplates": [
+        "{attacker}白发飘舞，红晕浮现，太阳神的力量涌现！笑声之中，{attacker}随手将周围的地面捏成一颗巨球，笑嘻嘻地朝{target}砸去，然而这力量却比任何招式都更加恐怖！"
+      ]
+    },
+    {
+      "id": "luffy-haki-burst", "name": "霸王色霸气·迸发", "type": "special",
+      "description": "爆发霸王色霸气震慑对手",
+      "damageMult": 1.5, "staminaCost": 25, "cooldown": 2, "hitRate": 0.92,
+      "effectDesc": "无形的意志压垮周围一切",
+      "narrativeTemplates": [
+        "{attacker}怒吼一声，金色的霸王色霸气从体内爆发，如同闪电般在空中蔓延，{target}感到一股难以抗拒的王者意志将自己压制！"
+      ]
+    },
+    {
+      "id": "luffy-gator", "name": "Gear4·蛇人·Python", "type": "physical",
+      "description": "扭曲轨迹的弹射重击",
+      "damageMult": 1.6, "staminaCost": 18, "cooldown": 1, "hitRate": 0.82,
+      "effectDesc": "拳头以不可思议的曲线命中",
+      "narrativeTemplates": [
+        "{attacker}的拳头以匪夷所思的曲线绕过{target}的防御，从背后猛然爆发，「蛇人Python！」——{target}根本没有预判到这个角度！"
+      ]
+    }
+  ],
+  "roger": [
+    {
+      "id": "roger-divine-departure", "name": "天神退场", "type": "special",
+      "description": "凝聚极致霸王色霸气的一击，镀满黑色霸气的剑斩",
+      "damageMult": 3.8, "staminaCost": 55, "cooldown": 4, "hitRate": 0.93,
+      "effectDesc": "霸气缠绕的斩击让天地颤抖",
+      "narrativeTemplates": [
+        "{attacker}握紧船锚，全身霸王色霸气如狂涛涌现，黑色电弧在刀刃上炸裂——「天神退场！」一击之下，{target}身旁的空气都被撕碎！"
+      ]
+    },
+    {
+      "id": "roger-haki-roar", "name": "霸王色·王者咆哮", "type": "special",
+      "description": "海贼王级别的霸王色霸气全力释放",
+      "damageMult": 2.5, "staminaCost": 35, "cooldown": 3, "hitRate": 0.96,
+      "effectDesc": "方圆数百米内敌人精神崩溃",
+      "narrativeTemplates": [
+        "{attacker}无声地站立着，但那无形的王者意志如海浪般扩散，{target}感到骨髓都在颤抖，脚下的地面被霸气压出裂缝！"
+      ]
+    },
+    {
+      "id": "roger-blade-storm", "name": "真剑切·霸气斩", "type": "physical",
+      "description": "以完美剑道结合霸气的连续斩击",
+      "damageMult": 2.0, "staminaCost": 28, "cooldown": 2, "hitRate": 0.94,
+      "effectDesc": "剑气与霸气融合的连击",
+      "narrativeTemplates": [
+        "{attacker}步伐如风，剑光与黑色霸气交织，三道斩击在眨眼间先后落下，{target}的防御在这行云流水的攻势前几乎毫无意义！"
+      ]
+    },
+    {
+      "id": "roger-conqueror-slash", "name": "征服者之剑", "type": "ultimate",
+      "description": "海贼王的终极一击，霸气与剑意的完美融合",
+      "damageMult": 4.2, "staminaCost": 70, "cooldown": 5, "hitRate": 0.90,
+      "effectDesc": "一剑劈开天地的传说级攻击",
+      "narrativeTemplates": [
+        "大海与天空同时沉默——{attacker}缓缓抬起剑，金色与黑色霸气交织如日月重叠，「这就是……海贼王的剑！」剑光落下，{target}所在方向的海面被劈开一道深渊！"
+      ]
+    },
+    {
+      "id": "roger-presence", "name": "王者气场", "type": "buff",
+      "description": "单纯以存在感压制对手，削弱其战斗意志",
+      "damageMult": 0.8, "staminaCost": 15, "cooldown": 2, "hitRate": 0.99,
+      "effectDesc": "对手战斗意志下降，命中率与攻击力减弱",
+      "narrativeTemplates": [
+        "{attacker}只是站在那里，眼神淡然地望向{target}——但{target}感到手脚发颤，那双眼睛里仿佛映着无数个海洋与岛屿，那是真正站在顶点的人才有的眼神。"
+      ]
+    }
+  ],
+  "whitebeard": [
+    {
+      "id": "wb-quake-fist", "name": "震震裂拳", "type": "physical",
+      "description": "拳头凝聚震动力制造空气扭曲后爆发冲击",
+      "damageMult": 2.4, "staminaCost": 30, "cooldown": 2, "hitRate": 0.88,
+      "effectDesc": "空间扭曲，冲击波向外扩散",
+      "narrativeTemplates": [
+        "{attacker}的拳头缓缓握紧，空气开始扭曲颤抖，随即爆发出巨大的震动，「震震裂拳！」——无形的冲击波将{target}与周围的一切同时轰飞！"
+      ]
+    },
+    {
+      "id": "wb-bisento-slam", "name": "薙刀·大地裂", "type": "physical",
+      "description": "以巨型薙刀配合震动力重击地面，引发地裂",
+      "damageMult": 2.8, "staminaCost": 38, "cooldown": 3, "hitRate": 0.85,
+      "effectDesc": "地面裂开，范围伤害",
+      "narrativeTemplates": [
+        "{attacker}双手握紧薙刀，将震动灌入刀刃，猛地劈向地面——裂缝从脚下延伸向{target}所在方向，大地像纸张一样撕裂！"
+      ]
+    },
+    {
+      "id": "wb-tsunami", "name": "震震·海啸", "type": "ultimate",
+      "description": "以震动力引发海啸级灾难性攻击",
+      "damageMult": 3.6, "staminaCost": 65, "cooldown": 5, "hitRate": 0.82,
+      "effectDesc": "制造海啸级冲击，范围极大",
+      "narrativeTemplates": [
+        "{attacker}双拳对击，震动从海面向四面八方扩散，水墙如山岳般涌起——「海啸！」这一击不是针对{target}一人，而是要将整片战场吞噬！"
+      ]
+    },
+    {
+      "id": "wb-haki-pressure", "name": "霸气碾压", "type": "special",
+      "description": "武装色霸气全覆，震动附加的霸气攻击",
+      "damageMult": 1.9, "staminaCost": 25, "cooldown": 2, "hitRate": 0.91,
+      "effectDesc": "霸气与震动双重压制",
+      "narrativeTemplates": [
+        "{attacker}的身体被武装色霸气染成漆黑，震动频率与霸气共鸣，爆发出难以想象的压迫感，{target}感到自己的防御正在层层剥落！"
+      ]
+    },
+    {
+      "id": "wb-dying-roar", "name": "垂死之吼", "type": "buff",
+      "description": "重伤后激发的意志加成，越战越勇",
+      "damageMult": 1.0, "staminaCost": 10, "cooldown": 3, "hitRate": 1.0,
+      "effectDesc": "自身攻击力大幅提升，忽视伤势",
+      "narrativeTemplates": [
+        "{attacker}胸口鲜血横流，但那巨大的身躯岿然不动。「我的儿子们……」声音如雷鸣，白须老人的眼中燃起战意，伤势反而化为了力量！"
+      ]
+    }
+  ],
+  "kaido": [
+    {
+      "id": "kaido-boro-breath", "name": "鬼轮火·Boro Breath", "type": "energy",
+      "description": "龙形态下喷出的霸气炽焰，能灼烧霸气覆体的对手",
+      "damageMult": 2.6, "staminaCost": 35, "cooldown": 3, "hitRate": 0.87,
+      "effectDesc": "霸气火焰灼烧，穿透普通防御",
+      "narrativeTemplates": [
+        "{attacker}张开巨口，金色的霸王色闪电与炽焰在喉间蓄积——「Boro Breath！」足以烧毁一座城市的霸气炎柱喷向{target}，连空气都被烤焦！"
+      ]
+    },
+    {
+      "id": "kaido-thunder-bagua", "name": "雷鸣·八卦", "type": "physical",
+      "description": "挥动棒球棍配合霸王色霸气的超级重击",
+      "damageMult": 3.0, "staminaCost": 42, "cooldown": 3, "hitRate": 0.90,
+      "effectDesc": "霸王色电弧炸裂，强力击飞",
+      "narrativeTemplates": [
+        "{attacker}人形态下高高举起棒球棍，黑色与金色的霸气电弧缠绕其上，「八卦！」一棒挥下，{target}连同地面一起被砸出一个深坑！"
+      ]
+    },
+    {
+      "id": "kaido-demolition-rain", "name": "鬼ヶ島·一撃", "type": "ultimate",
+      "description": "龙形态全力俯冲撞击，以体重与霸气碾压一切",
+      "damageMult": 4.0, "staminaCost": 70, "cooldown": 5, "hitRate": 0.85,
+      "effectDesc": "龙躯撞击，如陨石坠落",
+      "narrativeTemplates": [
+        "{attacker}化为青龙盘旋云端，随后以整具龙躯加速俯冲——「鬼ヶ島！」山岳般的重量砸向{target}，大地在这一击之下深陷下去！"
+      ]
+    },
+    {
+      "id": "kaido-conqueror-haki", "name": "霸王色·覆体", "type": "special",
+      "description": "霸王色霸气覆盖全身，强化攻防并震慑对手",
+      "damageMult": 1.8, "staminaCost": 28, "cooldown": 2, "hitRate": 0.94,
+      "effectDesc": "霸王色覆体，周围敌人受到震慑",
+      "narrativeTemplates": [
+        "{attacker}金色的霸王色霸气如闪电般在全身炸裂，「强者才能以霸气覆体！」{target}感到空气本身都在对自己施压，连呼吸都变得困难！"
+      ]
+    },
+    {
+      "id": "kaido-dragon-twister", "name": "鬼台风", "type": "physical",
+      "description": "龙形态旋转制造龙卷风，大范围攻击",
+      "damageMult": 2.2, "staminaCost": 30, "cooldown": 2, "hitRate": 0.86,
+      "effectDesc": "范围龙卷风，持续伤害",
+      "narrativeTemplates": [
+        "{attacker}的青龙巨躯高速旋转，狂风呼啸而起，云层被搅得翻腾——龙卷风将{target}卷入其中，在空中反复撞击！"
+      ]
+    }
+  ],
+  "bigmom": [
+    {
+      "id": "bigmom-soul-pocus", "name": "灵魂霸气·献出寿命", "type": "special",
+      "description": "释放霸王色霸气强制剥夺对手寿命制造傀儡",
+      "damageMult": 2.0, "staminaCost": 30, "cooldown": 3, "hitRate": 0.88,
+      "effectDesc": "夺走对手一部分战斗力，同时恢复自身",
+      "narrativeTemplates": [
+        "{attacker}眼神凶狠，「把你的寿命……给我！」魂魄之力如触手伸向{target}，对方感到生命力正在被一点点抽离，而{attacker}的气势却越发强盛！"
+      ]
+    },
+    {
+      "id": "bigmom-prometheus", "name": "普罗米修斯·太阳火焰", "type": "energy",
+      "description": "召唤仆从普罗米修斯发动太阳级别的火焰攻击",
+      "damageMult": 2.4, "staminaCost": 32, "cooldown": 2, "hitRate": 0.87,
+      "effectDesc": "仆从火球，灼烧范围大",
+      "narrativeTemplates": [
+        "{attacker}大手一挥，身旁的火焰仆从普罗米修斯膨胀成一颗燃烧的小太阳，「烧！」炽烈的火焰倾泻向{target}，连海面都开始沸腾！"
+      ]
+    },
+    {
+      "id": "bigmom-napoleon-slash", "name": "拿破仑·巨剑斩", "type": "physical",
+      "description": "骑乘宙斯以巨型灵魂附体剑斩击",
+      "damageMult": 2.8, "staminaCost": 38, "cooldown": 3, "hitRate": 0.89,
+      "effectDesc": "巨剑加闪电双重伤害",
+      "narrativeTemplates": [
+        "{attacker}手持巨剑拿破仑，宙斯的雷电缠绕在刀刃上，「拿破仑！」——雷霆与剑刃同时落下，{target}被劈在方圆数十米的焦土中！"
+      ]
+    },
+    {
+      "id": "bigmom-rampaging", "name": "饥饿暴走", "type": "buff",
+      "description": "陷入暴食发作，失去理智但战斗力暴增",
+      "damageMult": 1.2, "staminaCost": 5, "cooldown": 4, "hitRate": 1.0,
+      "effectDesc": "攻击力与防御力大幅提升，但命中率下降",
+      "narrativeTemplates": [
+        "{attacker}突然停下，眼神变得空洞而疯狂，「……甜甜……蛋糕……」饥饿发作的暴走模式开启，周围的一切都变成了她眼中的食物，那破坏力已经超越了理性！"
+      ]
+    },
+    {
+      "id": "bigmom-soul-living-world", "name": "魂魄·众生法", "type": "ultimate",
+      "description": "向大范围释放魂魄之力，将周围自然物化为仆从军团",
+      "damageMult": 3.2, "staminaCost": 60, "cooldown": 5, "hitRate": 0.84,
+      "effectDesc": "召唤大量仆从同时攻击目标",
+      "narrativeTemplates": [
+        "{attacker}张开双臂，魂魄之力如海潮涌出，周围的树木、岩石、海浪纷纷睁开眼睛——「众生法！」无数仆从同时向{target}扑去，铺天盖地无处可躲！"
+      ]
+    }
+  ],
+  "shanks": [
+    {
+      "id": "shanks-divine-departure", "name": "天神退场", "type": "special",
+      "description": "以极致霸气覆体的一剑，令对手在攻击前便精神崩溃",
+      "damageMult": 3.5, "staminaCost": 50, "cooldown": 4, "hitRate": 0.95,
+      "effectDesc": "霸气先行压制，命中后精神破损",
+      "narrativeTemplates": [
+        "{attacker}单手握刀，金色霸王色霸气瞬间炸裂——「天神退场。」连剑光都尚未看清，{target}已感到灵魂被撕裂，那一剑不知何时已落！"
+      ]
+    },
+    {
+      "id": "shanks-haki-clash", "name": "霸王色·意志冲突", "type": "special",
+      "description": "霸王色霸气正面冲击，意志对意志",
+      "damageMult": 2.0, "staminaCost": 30, "cooldown": 2, "hitRate": 0.97,
+      "effectDesc": "精神冲击，大概率压制对手行动",
+      "narrativeTemplates": [
+        "{attacker}与{target}四目相对，无形的意志在两者之间剧烈碰撞，金色电弧撕裂空气——周围的人纷纷倒地，只有{target}还在硬撑着那难以承受的王者压迫！"
+      ]
+    },
+    {
+      "id": "shanks-slash-wave", "name": "剑气波动", "type": "energy",
+      "description": "以霸气注入剑中释放远程剑气斩击",
+      "damageMult": 2.2, "staminaCost": 28, "cooldown": 2, "hitRate": 0.91,
+      "effectDesc": "远程剑气，穿透力强",
+      "narrativeTemplates": [
+        "{attacker}一刀挥出，肉眼不可见的剑气裹挟着黑色武装霸气呼啸而出，{target}所在位置的地面沿着斩击轨迹整齐裂开！"
+      ]
+    },
+    {
+      "id": "shanks-one-arm-thrust", "name": "独臂·霸气贯穿", "type": "physical",
+      "description": "用仅剩的一条手臂发出的极致一刺",
+      "damageMult": 2.6, "staminaCost": 35, "cooldown": 3, "hitRate": 0.93,
+      "effectDesc": "霸气集中于剑尖，穿透防御",
+      "narrativeTemplates": [
+        "{attacker}独臂持刀，将全部意志与霸气凝聚于刀尖，「失去的那条手臂……早就补偿回来了。」刀尖一刺，霸气穿透{target}的一切防御！"
+      ]
+    },
+    {
+      "id": "shanks-stop-war", "name": "王者降临", "type": "ultimate",
+      "description": "以绝对的霸王色霸气使战场上所有人动弹不得",
+      "damageMult": 1.5, "staminaCost": 60, "cooldown": 6, "hitRate": 1.0,
+      "effectDesc": "冻结场上所有敌方行动一回合",
+      "narrativeTemplates": [
+        "{attacker}缓步踏入战场，不拔剑，不出招——仅仅是将霸王色霸气缓缓释放。顿时，{target}感到双腿如铸入混凝土，那无形的王者气场已经宣告：「这场战斗……到此为止。」"
+      ]
+    }
+  ],
+  "aokiji": [
+    {
+      "id": "aokiji-ice-age", "name": "Ice Age·冰河时代", "type": "ultimate",
+      "description": "将大面积海面或地面瞬间冻结的冰系大招",
+      "damageMult": 3.0, "staminaCost": 55, "cooldown": 5, "hitRate": 0.86,
+      "effectDesc": "大范围冻结，持续限制行动",
+      "narrativeTemplates": [
+        "{attacker}将手掌缓缓摊开，冰冷的气息像潮水般涌出——「Ice Age。」转眼之间，{target}周围一切化为白色冰封，连空气都凝固了！"
+      ]
+    },
+    {
+      "id": "aokiji-ice-block-pheasant", "name": "冰块·雉", "type": "energy",
+      "description": "射出冰制箭矢洞穿目标",
+      "damageMult": 1.8, "staminaCost": 20, "cooldown": 1, "hitRate": 0.90,
+      "effectDesc": "冰箭射入，冻结中弹部位",
+      "narrativeTemplates": [
+        "{attacker}食指轻弹，数道冰制利箭呼啸而出，「冰块·雉！」{target}中箭处迅速蔓延出白色冰晶，那种寒冷从伤口直入骨髓！"
+      ]
+    },
+    {
+      "id": "aokiji-ice-time", "name": "Ice Time·时间冻结", "type": "special",
+      "description": "触碰目标将其完全冰封",
+      "damageMult": 2.0, "staminaCost": 28, "cooldown": 3, "hitRate": 0.85,
+      "effectDesc": "触碰即冻结，完全封禁行动",
+      "narrativeTemplates": [
+        "{attacker}悠然迈步上前，手指轻触{target}——「Ice Time。」刹那之间，寒气从接触点向全身蔓延，{target}被封存在晶莹的冰棺之中，只有意识还清醒着！"
+      ]
+    },
+    {
+      "id": "aokiji-ice-saber", "name": "冰剑·寒流斩", "type": "physical",
+      "description": "以冰制成长剑进行近身斩击",
+      "damageMult": 1.6, "staminaCost": 18, "cooldown": 1, "hitRate": 0.92,
+      "effectDesc": "冰剑斩击，附带减速效果",
+      "narrativeTemplates": [
+        "{attacker}右手伸出，冰晶在掌心聚合成一柄长剑，寒气逼人，「算是勉强应战吧。」懒洋洋地一挥，剑气带着冰霜袭向{target}！"
+      ]
+    },
+    {
+      "id": "aokiji-ice-bird", "name": "冰鸟·冻结风暴", "type": "energy",
+      "description": "化身冰鸟形态，制造大范围冻结暴风",
+      "damageMult": 2.4, "staminaCost": 35, "cooldown": 3, "hitRate": 0.88,
+      "effectDesc": "范围冰暴，大幅降低对手速度",
+      "narrativeTemplates": [
+        "{attacker}身体化作漫天冰晶，冰鸟翱翔而起，「冻结风暴！」冰冷的旋风席卷战场，{target}在漫天冰霜之中举步维艰！"
+      ]
+    }
+  ],
+  "kizaru": [
+    {
+      "id": "kizaru-yasakani-magatama", "name": "八尺镜勾玉", "type": "energy",
+      "description": "以光速射出无数束激光弹幕覆盖目标",
+      "damageMult": 2.5, "staminaCost": 32, "cooldown": 2, "hitRate": 0.93,
+      "effectDesc": "激光弹幕，几乎无法全部躲开",
+      "narrativeTemplates": [
+        "{attacker}双臂展开，指尖闪烁着金光，「八尺镜勾玉喽～」数百道激光如暴雨般倾泻而下，{target}无论向哪个方向闪避，光束都无处不在！"
+      ]
+    },
+    {
+      "id": "kizaru-speed-kick", "name": "光速踢", "type": "physical",
+      "description": "以光速移动后发出的一踢，速度等同光速",
+      "damageMult": 2.0, "staminaCost": 22, "cooldown": 1, "hitRate": 0.95,
+      "effectDesc": "光速移动，命中前几乎无法反应",
+      "narrativeTemplates": [
+        "{attacker}身影瞬间消失，下一刻已出现在{target}旁边，「太慢了喽～」踢击带着光的轨迹砸向{target}，对方根本没有时间反应！"
+      ]
+    },
+    {
+      "id": "kizaru-sacred-yata-mirror", "name": "八咫镜·光剑", "type": "special",
+      "description": "以光形成的长剑进行斩击，切断任何防御",
+      "damageMult": 2.2, "staminaCost": 28, "cooldown": 2, "hitRate": 0.91,
+      "effectDesc": "光剑斩击，穿透物理防御",
+      "narrativeTemplates": [
+        "{attacker}伸手凝聚光芒成剑，「挺麻烦的呢～」光剑挥出的一刹那，{target}的防御被切开，那道光不是热量，而是纯粹的速度！"
+      ]
+    },
+    {
+      "id": "kizaru-laser-beam", "name": "光束炮", "type": "energy",
+      "description": "集中光能射出高密度激光束",
+      "damageMult": 2.8, "staminaCost": 40, "cooldown": 3, "hitRate": 0.90,
+      "effectDesc": "穿透性激光，破坏力极强",
+      "narrativeTemplates": [
+        "{attacker}身体凝聚成一道光，从正面以光速对准{target}射出集束激光——「啊……这下应该没问题了吧～」能量如铁棒般贯穿，{target}身后的地形被切开一道深沟！"
+      ]
+    },
+    {
+      "id": "kizaru-light-speed-barrage", "name": "光速乱舞", "type": "ultimate",
+      "description": "以光速分身连续踢击目标，瞬间打出无数次攻击",
+      "damageMult": 3.8, "staminaCost": 65, "cooldown": 5, "hitRate": 0.88,
+      "effectDesc": "多段命中，速度快到无法防御",
+      "narrativeTemplates": [
+        "{attacker}化为纯粹的光，在{target}周围高速循环——一脚、两脚、十脚、百脚……每一次冲击都带着光速的力量，{target}还来不及感到痛楚就已经承受了下一击！"
+      ]
+    }
+  ],
+  "akainu": [
+    {
+      "id": "akainu-meigo", "name": "冥狗", "type": "physical",
+      "description": "以岩浆凝聚成狗头形态的贯穿攻击",
+      "damageMult": 2.8, "staminaCost": 38, "cooldown": 3, "hitRate": 0.90,
+      "effectDesc": "岩浆贯穿，灼烧内伤",
+      "narrativeTemplates": [
+        "{attacker}手臂化为岩浆，凝聚成一个冲锋的狗头形态——「冥狗！」滚烫的岩浆以不可阻挡之势刺穿{target}，即便是霸气覆体也会被熔穿！"
+      ]
+    },
+    {
+      "id": "akainu-ryusei-kazan", "name": "流星火山", "type": "energy",
+      "description": "向空中射出多个岩浆拳，如陨石般落下",
+      "damageMult": 2.5, "staminaCost": 35, "cooldown": 3, "hitRate": 0.87,
+      "effectDesc": "多段岩浆陨石，大范围攻击",
+      "narrativeTemplates": [
+        "{attacker}猛地向上挥拳，数颗炽热的岩浆拳飞上天空，「流星火山！」随即如陨石雨般砸向{target}所在范围，落点处的地面迅速融化成岩浆坑！"
+      ]
+    },
+    {
+      "id": "akainu-great-eruption", "name": "大地火山喷发", "type": "ultimate",
+      "description": "将岩浆从地面涌出，制造大范围熔岩灾难",
+      "damageMult": 3.8, "staminaCost": 65, "cooldown": 5, "hitRate": 0.84,
+      "effectDesc": "大范围岩浆涌出，持续灼烧",
+      "narrativeTemplates": [
+        "{attacker}双掌拍向地面，炽热的岩浆从地裂中狂涌而出，「绝对正义！」{target}脚下的地面开始融化，滚烫的熔岩将四面八方的退路全部封死！"
+      ]
+    },
+    {
+      "id": "akainu-magma-fist", "name": "岩浆拳", "type": "physical",
+      "description": "岩浆化拳的近身重击，融化一切",
+      "damageMult": 2.0, "staminaCost": 25, "cooldown": 1, "hitRate": 0.91,
+      "effectDesc": "岩浆重拳，命中后持续灼烧",
+      "narrativeTemplates": [
+        "{attacker}拳头化为滚烫的岩浆，「彻底的正义！」一拳砸向{target}，接触点瞬间高温熔化，灼热不是冰火能抵消的——那是地球深处才有的温度！"
+      ]
+    },
+    {
+      "id": "akainu-absolute-justice", "name": "绝对正义·意志", "type": "buff",
+      "description": "以绝对正义的信念强化自身，无视轻伤继续战斗",
+      "damageMult": 1.0, "staminaCost": 15, "cooldown": 3, "hitRate": 1.0,
+      "effectDesc": "忽视小于30%的伤害，提升攻击力",
+      "narrativeTemplates": [
+        "{attacker}盯住{target}，「恶即是恶，正义不需要感情。」那无情的眼神如同灼热的岩浆，任何伤痛在这钢铁意志面前都是浮云！"
+      ]
+    }
+  ],
+  "zoro": [
+    {
+      "id": "zoro-oni-giri", "name": "鬼斩", "type": "physical",
+      "description": "三刀流经典招式，交叉斩击",
+      "damageMult": 1.7, "staminaCost": 18, "cooldown": 1, "hitRate": 0.91,
+      "effectDesc": "交叉斩击，命中率高",
+      "narrativeTemplates": [
+        "{attacker}三把刀同时出鞘，交叉斩击在瞬间展开——「鬼斩！」三道刀光交织成X形扑向{target}，迅猛而精准！"
+      ]
+    },
+    {
+      "id": "zoro-asura", "name": "九刀流·修罗", "type": "ultimate",
+      "description": "化身三头六臂的阿修罗形态，九刀流最强招式",
+      "damageMult": 3.8, "staminaCost": 65, "cooldown": 5, "hitRate": 0.89,
+      "effectDesc": "九道斩击同时落下，防无可防",
+      "narrativeTemplates": [
+        "{attacker}意志达到极致，身后出现三头六臂的阿修罗幻影——「九刀流·修罗！」九道刀光如怒涛般同时涌向{target}，那不是技术，那是意志本身的具象化！"
+      ]
+    },
+    {
+      "id": "zoro-iai-slash", "name": "阎魔·一刀流·居合", "type": "physical",
+      "description": "以阎魔进行武装色霸气覆体的居合斩",
+      "damageMult": 2.4, "staminaCost": 30, "cooldown": 2, "hitRate": 0.93,
+      "effectDesc": "居合出鞘，切割内部",
+      "narrativeTemplates": [
+        "{attacker}右手握住阎魔刀柄，沉默片刻——闪电般出鞘，黑色武装霸气在刀身上炸裂，「居合！」{target}感到切割的不只是肉体，还有内在的生命力！"
+      ]
+    },
+    {
+      "id": "zoro-conqueror-slash", "name": "霸王色·斩月", "type": "special",
+      "description": "霸王色霸气灌注三刀的斩击，兼具震慑与伤害",
+      "damageMult": 2.8, "staminaCost": 40, "cooldown": 3, "hitRate": 0.90,
+      "effectDesc": "霸王色随斩击扩散，压制对手意志",
+      "narrativeTemplates": [
+        "{attacker}三把刀上金色霸气闪烁，「我才不会死在这里……」斩击带着霸王色的电弧轰向{target}，那种压迫感直透灵魂！"
+      ]
+    },
+    {
+      "id": "zoro-three-sword-dragon", "name": "三刀流·龙巻", "type": "energy",
+      "description": "旋转三刀制造龙卷风形斩击",
+      "damageMult": 2.0, "staminaCost": 25, "cooldown": 2, "hitRate": 0.88,
+      "effectDesc": "旋风斩击，命中后持续伤害",
+      "narrativeTemplates": [
+        "{attacker}三刀高速旋转，风压聚集成龙卷——「三刀流·龙巻！」气刃混合真实刀刃将{target}卷入漩涡，切割伤害如浪涛连绵！"
+      ]
+    }
+  ],
+  "sanji": [
+    {
+      "id": "sanji-diable-jambe", "name": "地狱腿·Diable Jambe", "type": "physical",
+      "description": "旋转摩擦使腿燃烧的火焰踢击",
+      "damageMult": 1.9, "staminaCost": 22, "cooldown": 1, "hitRate": 0.92,
+      "effectDesc": "燃火踢击，灼烧伤害",
+      "narrativeTemplates": [
+        "{attacker}高速旋转，腿部摩擦生热，火焰在腿上燃起——「Diable Jambe！」炽热的旋踢砸向{target}，灼热与冲击双重叠加！"
+      ]
+    },
+    {
+      "id": "sanji-ifrit-jambe", "name": "Ifrit Jambe·业火腿", "type": "ultimate",
+      "description": "改造人基因觉醒后的极焰腿，温度超越地狱腿数倍",
+      "damageMult": 3.6, "staminaCost": 60, "cooldown": 5, "hitRate": 0.90,
+      "effectDesc": "极焰踢击，能融穿高硬度防御",
+      "narrativeTemplates": [
+        "{attacker}改造人的骨骼散发蓝白色高温，腿上的火焰不再是橙色而是近乎白色的极焰——「Ifrit Jambe！」这一踢的温度已近乎太阳表面，{target}的防御在接触瞬间开始崩解！"
+      ]
+    },
+    {
+      "id": "sanji-collier-shoot", "name": "颈椎射击", "type": "physical",
+      "description": "以旋转踢击瞄准颈部的精准踢击",
+      "damageMult": 1.6, "staminaCost": 16, "cooldown": 1, "hitRate": 0.94,
+      "effectDesc": "精准命中，有概率眩晕",
+      "narrativeTemplates": [
+        "{attacker}侧身旋转，踢腿精准指向{target}颈部——「颈椎射击！」那踢法如同艺术，优雅中却蕴含着令人窒息的力量！"
+      ]
+    },
+    {
+      "id": "sanji-skywalk", "name": "空中步·奇袭踢", "type": "special",
+      "description": "以空中步快速突进后发出出其不意的踢击",
+      "damageMult": 2.0, "staminaCost": 25, "cooldown": 2, "hitRate": 0.93,
+      "effectDesc": "高速突进，出其不意",
+      "narrativeTemplates": [
+        "{attacker}脚踏空气，以空中步绕到{target}侧方，「绅士不用手……但这一脚可不客气！」一踢从毫无防备的角度轰出！"
+      ]
+    },
+    {
+      "id": "sanji-hell-memories", "name": "恐惧回忆·火焰地狱", "type": "special",
+      "description": "回忆地狱厨房的恐惧经历，爆发出超高温火焰",
+      "damageMult": 2.6, "staminaCost": 35, "cooldown": 3, "hitRate": 0.89,
+      "effectDesc": "爆发性火焰，火焰面积大",
+      "narrativeTemplates": [
+        "{attacker}神情突然变得扭曲，「……女人岛……」那段地狱般的记忆点燃了愤怒，全身业火爆发，{target}被超高温的火焰海洋淹没！"
+      ]
+    }
+  ],
+  "nami": [
+    {
+      "id": "nami-thunderbolt-tempo", "name": "雷霆节奏", "type": "energy",
+      "description": "召唤宙斯释放超大型闪电",
+      "damageMult": 2.2, "staminaCost": 28, "cooldown": 3, "hitRate": 0.89,
+      "effectDesc": "超大型闪电，范围伤害",
+      "narrativeTemplates": [
+        "{attacker}仰望天空，「宙斯！」忠实的仆从大笑着从云端俯冲，化为一道粗如树干的闪电劈向{target}，电弧四溅将周围炸得焦黑！"
+      ]
+    },
+    {
+      "id": "nami-clima-cyclone", "name": "气候棒·龙卷风", "type": "energy",
+      "description": "操控气候制造强烈龙卷风",
+      "damageMult": 1.8, "staminaCost": 22, "cooldown": 2, "hitRate": 0.87,
+      "effectDesc": "龙卷风卷起，限制目标行动",
+      "narrativeTemplates": [
+        "{attacker}天候棒旋转，「龙卷风！」气流聚集旋转，一道狂暴的龙卷风席卷向{target}，将其卷入空中反复撕扯！"
+      ]
+    },
+    {
+      "id": "nami-mirage-tempo", "name": "幻影节奏", "type": "special",
+      "description": "制造幻影迷惑对手，降低命中率",
+      "damageMult": 0.5, "staminaCost": 15, "cooldown": 2, "hitRate": 1.0,
+      "effectDesc": "制造幻影，对手下次攻击命中率大幅下降",
+      "narrativeTemplates": [
+        "{attacker}天候棒一挥，光线折射制造出多个幻影——「幻影节奏！」{target}眼前出现数个{attacker}的虚像，真身究竟在哪里？"
+      ]
+    },
+    {
+      "id": "nami-zeus-breeze", "name": "宙斯·充能闪电", "type": "energy",
+      "description": "宙斯吸收云层能量蓄力后释放的强化闪电",
+      "damageMult": 2.8, "staminaCost": 40, "cooldown": 4, "hitRate": 0.88,
+      "effectDesc": "蓄力强化版闪电，伤害极高",
+      "narrativeTemplates": [
+        "{attacker}轻抚宙斯，「吃饱了吗，宙斯？」宙斯贪婪地吞噬周围的云层，膨胀到车轮大小后骤然爆发，一道白色电柱笔直砸向{target}！"
+      ]
+    },
+    {
+      "id": "nami-perfect-clima", "name": "完美气候棒·冰雷交织", "type": "ultimate",
+      "description": "同时操控雷电与冰雪的终极气候攻击",
+      "damageMult": 3.0, "staminaCost": 55, "cooldown": 5, "hitRate": 0.85,
+      "effectDesc": "冰冻与电击双重效果，强力限制",
+      "narrativeTemplates": [
+        "{attacker}天候棒双管齐下，一端聚冰一端聚雷——「完美气候棒！」冰雪与闪电交织成一张天网，{target}被冰冻的同时承受电击，动弹不得！"
+      ]
+    }
+  ]
+}

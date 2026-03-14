@@ -1,0 +1,98 @@
+{
+  "naruto": [
+    {
+      "id": "naruto-rasengan", "name": "螺旋丸", "type": "physical",
+      "description": "汇聚查克拉于掌心形成旋转球体",
+      "damageMult": 1.7, "staminaCost": 20, "cooldown": 0, "hitRate": 0.90,
+      "effectDesc": "旋转的查克拉球贯穿防御",
+      "narrativeTemplates": [
+        "{attacker}掌心凝聚出蓝色旋转球体，「螺旋丸！」——直接贯入{target}的防御中，爆炸性的查克拉将对方炸飞！",
+        "{attacker}猛地冲向{target}，将蓄满查克拉的螺旋丸硬压在对方身上，旋转的能量将防御撕碎！"
+      ]
+    },
+    {
+      "id": "naruto-shadow-clone", "name": "多重影分身", "type": "special",
+      "description": "召唤大量实体分身群攻",
+      "damageMult": 2.0, "staminaCost": 30, "cooldown": 2, "hitRate": 0.85,
+      "effectDesc": "千名分身从四面八方涌来",
+      "narrativeTemplates": [
+        "「影分身之术！」——瞬间，数百个一模一样的{attacker}包围了{target}，从四面八方同时冲来，密集的拳脚让对方完全无法防御！"
+      ]
+    },
+    {
+      "id": "naruto-tailed-beast-bomb", "name": "尾兽玉", "type": "energy",
+      "description": "九尾模式下压缩正负查克拉发射",
+      "damageMult": 2.8, "staminaCost": 45, "cooldown": 3, "hitRate": 0.88,
+      "effectDesc": "黑白相间的压缩球体爆发毁灭性能量",
+      "narrativeTemplates": [
+        "{attacker}化为九尾查克拉模式，口中凝聚出正负查克拉交织的漆黑球体，轰然射出，{target}所在位置被爆炸吞噬！"
+      ]
+    },
+    {
+      "id": "naruto-sage-art", "name": "仙法·超大玉螺旋手里剑", "type": "ultimate",
+      "description": "仙人模式下的终极忍术",
+      "damageMult": 3.3, "staminaCost": 58, "cooldown": 4, "hitRate": 0.82,
+      "effectDesc": "巨大的风刃螺旋吞噬目标",
+      "narrativeTemplates": [
+        "{attacker}进入仙人模式，静止片刻汲取自然能量，随即召唤出巨大的风属性螺旋手里剑，「超大玉螺旋手里剑！」——{target}被席卷进切割一切的风刃旋涡中！"
+      ]
+    },
+    {
+      "id": "naruto-talk", "name": "话术·鸣人之道", "type": "special",
+      "description": "以言语触动对手内心",
+      "damageMult": 0.8, "staminaCost": 5, "cooldown": 1, "hitRate": 0.95,
+      "effectDesc": "意外地让对手产生动摇",
+      "narrativeTemplates": [
+        "{attacker}直视着{target}，眼中没有恐惧只有坚定：「我绝对不会放弃！」——这份意志竟让{target}微微一愣，给了鸣人可乘之机！"
+      ]
+    }
+  ],
+  "sasuke": [
+    {
+      "id": "sasuke-chidori", "name": "千鸟", "type": "energy",
+      "description": "汇聚雷遁查克拉于手中刺穿目标",
+      "damageMult": 2.0, "staminaCost": 25, "cooldown": 1, "hitRate": 0.88,
+      "effectDesc": "雷光在手中咆哮如千鸟鸣叫",
+      "narrativeTemplates": [
+        "{attacker}手中雷鸣大作，蓝白色闪电将手掌包裹，「千鸟！」——以穿透一切的速度直刺{target}，雷遁查克拉撕裂了防御！",
+        "{attacker}以超速冲向{target}，雷光轰鸣，千鸟破空而出，那声音如真的鸟鸣一般刺穿耳膜，更刺穿了{target}的防线！"
+      ]
+    },
+    {
+      "id": "sasuke-amaterasu", "name": "天照", "type": "special",
+      "description": "以万花筒写轮眼引燃不灭的黑焰",
+      "damageMult": 2.5, "staminaCost": 35, "cooldown": 3, "hitRate": 0.90,
+      "effectDesc": "黑色火焰燃烧七天七夜",
+      "narrativeTemplates": [
+        "{attacker}左眼鲜血流下，目光锁定{target}——猝然间，黑色火焰无声蔓延，天照之焰将{target}的一切防御燃为灰烬，且永不熄灭！"
+      ]
+    },
+    {
+      "id": "sasuke-susanoo", "name": "须佐能乎", "type": "defense",
+      "description": "召唤出守护佐助的完全体神明",
+      "damageMult": 1.8, "staminaCost": 40, "cooldown": 2, "hitRate": 0.95,
+      "effectDesc": "紫色的巨神降临战场",
+      "narrativeTemplates": [
+        "{attacker}双眸同时开启万花筒写轮眼，一声低吼，紫色骸骨外壳逐渐成形——须佐能乎完全体降临！巨神持剑横扫，{target}被迫全力应对这无差别的攻击！"
+      ]
+    },
+    {
+      "id": "sasuke-rinnegan-space", "name": "轮回眼·空间跳跃", "type": "special",
+      "description": "利用轮回眼进行空间置换奇袭",
+      "damageMult": 1.6, "staminaCost": 20, "cooldown": 1, "hitRate": 0.93,
+      "effectDesc": "瞬间出现在目标身后",
+      "narrativeTemplates": [
+        "{attacker}左眼轮回眼闪动，与预先布置的标记瞬间置换位置，出现在{target}毫无防备的侧面，千鸟从近距离贯穿而出！"
+      ]
+    },
+    {
+      "id": "sasuke-kirin", "name": "麒麟", "type": "ultimate",
+      "description": "操控天雷引发的究极雷击",
+      "damageMult": 3.8, "staminaCost": 65, "cooldown": 5, "hitRate": 0.85,
+      "effectDesc": "整片天空的雷电化为一击",
+      "narrativeTemplates": [
+        "{attacker}望向阴云密布的天空，大量火遁将积雨云点燃，随即以查克拉引导整片天空的雷电，「麒麟！」——如神罚般的天雷以光速轰向{target}，连逃跑都来不及！"
+      ]
+    }
+  ]
+}

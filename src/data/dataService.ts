@@ -17,7 +17,14 @@ export async function fetchWorks(): Promise<Work[]> {
 }
 
 export async function fetchCharacters(): Promise<Character[]> {
-  return fetchJson('characters.json')
+  const universes = await fetchUniverses()
+  const universeIds = universes.map(u => u.id)
+  const results = await Promise.all(
+    universeIds.map(id =>
+      fetchJson<Character[]>(`characters/${id}.json`).catch(() => [] as Character[])
+    )
+  )
+  return results.flat()
 }
 
 export async function fetchHotBattles(): Promise<BattleRecord[]> {
@@ -25,7 +32,14 @@ export async function fetchHotBattles(): Promise<BattleRecord[]> {
 }
 
 export async function fetchSkillsMap(): Promise<Record<string, Skill[]>> {
-  return fetchJson('skills.json')
+  const universes = await fetchUniverses()
+  const universeIds = universes.map(u => u.id)
+  const results = await Promise.all(
+    universeIds.map(id =>
+      fetchJson<Record<string, Skill[]>>(`skills/${id}.json`).catch(() => ({} as Record<string, Skill[]>))
+    )
+  )
+  return Object.assign({}, ...results)
 }
 
 // ---- 便捷查找函数（基于已加载数据）----

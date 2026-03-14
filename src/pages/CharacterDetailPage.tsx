@@ -213,17 +213,19 @@ export default function CharacterDetailPage() {
               ))}
             </div>
             {currentForm && (
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
-                <div className="flex-1 min-w-0">
+              <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+                {/* 文字信息 */}
+                <div className="text-center sm:text-left sm:flex-1 sm:min-w-0">
                   <h3 className="font-bold text-white text-lg mb-1">{currentForm.name}</h3>
-                  <p className="text-gray-400 text-sm mb-2">{currentForm.description}</p>
-                  <div className="flex items-baseline gap-2">
+                  <p className="text-gray-400 text-sm mb-3 sm:mb-4 leading-relaxed">{currentForm.description}</p>
+                  <div className="flex items-baseline gap-2 justify-center sm:justify-start">
                     <span className="text-xs sm:text-sm text-gray-500">战力</span>
                     <span className="text-2xl sm:text-3xl font-black" style={{ color: char.accentColor }}>{currentForm.overallScore.toLocaleString()}</span>
                   </div>
                 </div>
-                <div className="shrink-0 sm:mt-1">
-                  <RadarChart stats={currentForm.stats} color={char.accentColor} size={160} />
+                {/* 雷达图 */}
+                <div className="shrink-0">
+                  <RadarChart stats={currentForm.stats} color={char.accentColor} size={260} />
                 </div>
               </div>
             )}
